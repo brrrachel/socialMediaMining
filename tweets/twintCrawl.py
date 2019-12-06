@@ -13,8 +13,10 @@ for user in userNames:
     c.Retweets = True
     c.Profile_full = True
     c.Location = True
-    c.Proxy_host="Tor"
-    c.Tor_control_port = 9051
-    c.Tor_control_password = "kekse"
-    c.Output = './twintTweets/' + user + '_tweets9051brewTor.csv'
+    #c.Proxy_host = "127.0.0.1"
+    #c.Proxy_port = 9050
+    #c.Proxy_type = "socks5"
+    #c.Tor_control_port = 9051
+    #c.Tor_control_password = "kekse"
+    c.Output = './twintTweets/' + user + '_tweets.csv'
     twint.run.Search(c)

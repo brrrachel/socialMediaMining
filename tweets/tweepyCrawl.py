@@ -5,7 +5,7 @@ from tweepy.streaming import StreamListener
 import csv
 import re
 from googletrans import Translator
-import time
+from datetime import datetime
 import goslate
 import json
 
@@ -50,14 +50,46 @@ for user in userNames:
     csvFile = open('./tweepyTweets/' + user + 'Result.csv', 'a')
     csvWriter = csv.writer(csvFile)
     try:
-        csvWriter.writerow(['Tweet ID', 'User ID', 'Username', 'Mentions', 'Fav Count', 'Hashtags', 'Date', 'Tweet'])
+        csvWriter.writerow(['id','conversation_id', 'created_at', 'date', 'time', 'timezone', 'user_id', 'username', 'name', 'place', 'tweet', 'mentions', 'urls', 'photos', 'replies_count', 'retweets_count', 'likes_count', 'hashtags', 'cashtags', 'link', 'retweet', 'quote_url', 'video', 'near', 'geo', 'source', 'user_rt_id', 'user_rt', 'retweet_id', 'reply_to', 'retweet_date'])
 
         for tweet in tweepy.Cursor(api.user_timeline,id=user, tweet_mode='extended').items():
             tweetText = str(tweet.full_text).replace("&amp;","&")
             tweetTextNoEmojis = remove_emoji(tweetText)
             print(tweetTextNoEmojis)
-            #translation = translator.translate(tweetTextNoEmojis)
-            csvWriter.writerow([tweet.id, tweet.user.id_str, tweet.user.name, tweet.entities['user_mentions'], tweet.favorite_count, tweet.entities['hashtags'], tweet.created_at, tweetTextNoEmojis])
+            
+            id = tweet.id_str
+            conversation_id = '' 
+
+            createdAtDate = tweet.created_at
+            date = str(createdAtDate.year) + "-" + str(createdAtDate.month) + "-" + str(createdAtDate.day)
+            time = str(createdAtDate.hour) + ":" + str(createdAtDate.minute) + ":" + str(createdAtDate.second)
+            timezone = createdAtDate.tzinfo
+                        
+            user_id = tweet.user.id_str
+            username = tweet.user.screen_name
+            name = tweet.user.name
+            place = tweet.place
+            mentions = tweet.entities['user_mentions']
+            urls = tweet.entities['urls']
+            photos = ''
+            replies_count = tweet.contributors
+            retweets_count = tweet.retweet_count
+            likes_count = tweet.favorite_count
+            hashtags = tweet.entities['hashtags']
+            cashtags = ''
+            link = ''
+            retweet = ''
+            quote_url = ''
+            video = ''
+            near = ''
+            geo = tweet.geo
+            source = ''
+            user_rt_id = ''
+            user_rt = ''
+            retweet_id = ''
+            reply_to = ''
+            retweet_date = ''
+            csvWriter.writerow([id,conversation_id, createdAtDate, date, time, timezone, user_id, username, name, place, tweetTextNoEmojis, mentions, urls, photos, replies_count, retweets_count, likes_count, hashtags, cashtags, link, retweet, quote_url, video, near, geo, source, user_rt_id, user_rt, retweet_id, reply_to, retweet_date])
             #time.sleep(3)
         csvFile.close()
     except tweepy.TweepError as e:
