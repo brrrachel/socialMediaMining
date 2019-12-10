@@ -1,7 +1,12 @@
 <div class="party-selector-bar">
-  <button type="button" [class.btn-active]="selectedParties.cdu"
-          class="btn btn-default btn-circle btn-xl btn-cdu" (click)="selectParty('cdu')">
-  </button>
+  <div class="cdu-csu-wrapper">
+    <button type="button" [class.btn-active]="selectedParties.cdu"
+            class="btn btn-default btn-circle btn-xl btn-cdu" (click)="selectParty('cdu')">
+    </button>
+    <button type="button" [class.btn-active]="selectedParties.csu"
+            class="btn btn-default btn-circle btn-sm btn-csu" (click)="selectParty('csu')">
+    </button>
+  </div>
   <button type="button" [class.btn-active]="selectedParties.spd"
           class="btn btn-default btn-circle btn-xl btn-spd" (click)="selectParty('spd')">
   </button>
