@@ -8,7 +8,8 @@ $big-button-size: 80px;
   font-size: 24px;
   line-height: 1.33;
   border-radius: calc(#{$small-button-size} / 2);
-  margin-right: 50px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .btn-circle.btn-xl:hover {

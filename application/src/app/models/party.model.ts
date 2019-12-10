@@ -4,5 +4,5 @@ export class PartyState {
   fdp: boolean = false;
   gruene: boolean = false;
   linke: boolean = false;
-  afd: boolean = true;
+  afd: boolean = false;
 }
