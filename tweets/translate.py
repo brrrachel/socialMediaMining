@@ -12,6 +12,6 @@ for tweet in tweets:
     translation = translator.translate(tweet[10])
     tweet[10] = translation
     print(translation)
-    sleep(1)
+    time.sleep(3)
 writer = csv.writer(open("translations/" + sys.argv[1], 'w'))
 writer.writerows(lines)
