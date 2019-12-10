@@ -8,13 +8,15 @@ import goslate
 
 
 
-r = csv.reader(open(sys.argv[1]))
+r = csv.reader(open(sys.argv[1], encoding='utf8'))
 tweets = list(r)
-for tweet in tweets:
+result = list()
+for tweet in tweets[:10]:
     try:
         translator = Translator()
         translation = translator.translate(tweet[10])
         tweet[10] = translation.text
+        result.append(tweet)
         print(tweet[10])
         time.sleep(3)
     except json.decoder.JSONDecodeError:
@@ -22,7 +24,8 @@ for tweet in tweets:
         translator = goslate.Goslate()
         translation = translator.translate(tweet[10], 'en')
         tweet[10] = translation
+        result.append(tweet)
         print(tweet[10])
         time.sleep(3)
-writer = csv.writer(open("translations/" + sys.argv[1], 'w'))
-writer.writerows(tweets)
+writer = csv.writer(open("translations/" + sys.argv[1], 'w', encoding="utf8"))
+writer.writerows(result)
