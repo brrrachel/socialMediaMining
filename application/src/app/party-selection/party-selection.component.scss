@@ -1,0 +1,75 @@
+$small-button-size: 70px;
+$big-button-size: 80px;
+
+.btn-circle.btn-xl {
+  width: $small-button-size;
+  height: $small-button-size;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: calc(#{$small-button-size} / 2);
+  margin-right: 50px;
+}
+
+.btn-circle.btn-xl:hover {
+  width: $big-button-size;
+  height: $big-button-size;
+  border-radius: calc(#{$big-button-size} / 2);
+}
+
+.party-selector-bar {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-cdu {
+    background-image: url("img/cdu.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn-spd {
+    background-image: url("img/spd.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn-fdp {
+    background-image: url("img/fdp.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn-gruene {
+    background-image: url("img/gruene.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn-linke {
+    background-image: url("img/linke.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn-afd {
+    background-image: url("img/afd.png");
+    background-size: cover;
+    display: inline-block;
+  }
+
+  .btn {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  .btn.btn-active {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+
+  .btn:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,24 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="party-selector-bar">
+  <button type="button" [class.btn-active]="selectedParties.cdu"
+          class="btn btn-default btn-circle btn-xl btn-cdu" (click)="selectParty('cdu')">
+  </button>
+  <button type="button" [class.btn-active]="selectedParties.spd"
+          class="btn btn-default btn-circle btn-xl btn-spd" (click)="selectParty('spd')">
+  </button>
+  <button type="button" [class.btn-active]="selectedParties.fdp"
+          class="btn btn-default btn-circle btn-xl btn-fdp" (click)="selectParty('fdp')">
+  </button>
+  <button type="button" [class.btn-active]="selectedParties.gruene"
+          class="btn btn-default btn-circle btn-xl btn-gruene" (click)="selectParty('gruene')">
+  </button>
+  <button type="button" [class.btn-active]="selectedParties.linke"
+          class="btn btn-default btn-circle btn-xl btn-linke" (click)="selectParty('linke')">
+  </button>
+  <button type="button" [class.btn-active]="selectedParties.afd"
+          class="btn btn-default btn-circle btn-xl btn-afd" (click)="selectParty('afd')">
+  </button>
+</div>
