@@ -13,7 +13,6 @@ export class PartySelectionComponent implements OnInit {
   selectedParties: PartyState = new PartyState();
 
   constructor() {
-
   }
 
   ngOnInit() {

@@ -1,0 +1,10 @@
+.slider-wrapper {
+  margin: 50px 0;
+}
+
+:host::ng-deep.slider.slider-horizontal {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 28px;
+  margin-right: 5%;
+}

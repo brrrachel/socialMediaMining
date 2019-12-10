@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="">
+    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="Timeline und Kleinigkeiten">
+      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/translate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +76,20 @@
     <select />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Maximilian Götz" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/brrrachel/socialMediaMining.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1UnQx7uy8KbVKCB2dV0581CURoc" />
   <component name="ProjectViewState">
@@ -109,8 +132,37 @@
       <option name="presentableId" value="Default" />
       <updated>1575558969338</updated>
       <workItem from="1575558975453" duration="1363000" />
-      <workItem from="1575990143283" duration="242000" />
+      <workItem from="1575990143283" duration="6909000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
+      <created>1575990610670</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575990610670</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixes">
+      <created>1575990681396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575990681396</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixes">
+      <created>1575990833484</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575990833484</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Erstes Übersetztes CSV">
+      <created>1575995989192</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575995989192</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,46 +181,73 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixing Python noob mistakes" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="Erstes Übersetztes CSV" />
+    <MESSAGE value="Timeline und Kleinigkeiten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timeline und Kleinigkeiten" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Inspections" timestamp="1575990231753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1575990231753" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1575990581603">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1575999124161">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575990581603" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1575990089594">
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999124161" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575990831383" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1575990793897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575990089594" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1575990089594">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1575990793897" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1575991977595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575990089594" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1575990089593">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575991977595" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1575991977595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575990089593" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1575990089594">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575991977595" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1575991977595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575990089594" />
-    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1575981787954">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575991977595" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1575991977595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575991977595" />
+    <state x="129" y="54" key="MergeDialog" timestamp="1575996233841">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="54" key="MergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233841" />
+    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1575996233850">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233850" />
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575981787954" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575996078851">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996078851" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575990839784" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575990146017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1575990146017" />
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575986084204">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575991768141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1575986084204" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575986633597">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1575991768141" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1575990646323">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1575990646323" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575997576682">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575997576682" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575986633597" />
   </component>
   <component name="masterDetails">

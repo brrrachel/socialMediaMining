@@ -15,13 +15,15 @@ $big-button-size: 80px;
     padding: 10px 16px;
     font-size: 24px;
     line-height: 1.33;
-    border: none;
+    border: 2px #92b8d2 solid;
     margin-right: 25px;
     margin-left: 25px;
 
     &:hover {
       width: $big-button-size;
       height: $big-button-size;
+      margin-right: 20px;
+      margin-left: 20px;
       border-radius: calc(#{$big-button-size} / 2);
     }
   }
@@ -32,7 +34,6 @@ $big-button-size: 80px;
     line-height: 35px;
     font-size: 0.9rem;
     border: none;
-    border-color: black;
 
     &:hover {
       width: 45px;
@@ -69,7 +70,7 @@ $big-button-size: 80px;
     position: absolute;
     right: 5px;
     bottom: 5px;
-    margin: 0px;
+    margin: 0;
   }
 
   .btn-spd {
@@ -105,6 +106,7 @@ $big-button-size: 80px;
   .btn {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    //background-color: white;
   }
 
   .btn.btn-active {

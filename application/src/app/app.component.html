@@ -1,7 +1,9 @@
 <div style="text-align:center">
   <app-party-selection (selectedPartiesChange)="selectedParties = $event"></app-party-selection>
 </div>
-
+<app-timeline (yearRangeChange)="selectedYears = $event"></app-timeline>
+<p style="margin-left: 10px" *ngIf="selectedYears"
+>Aktuell sind die Jahre von {{selectedYears[0]}} bis {{selectedYears[1]}} ausgewählt.</p>
 <div class="analyze-tabs">
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
