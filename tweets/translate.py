@@ -11,7 +11,7 @@ import goslate
 r = csv.reader(open(sys.argv[1], encoding='utf8'))
 tweets = list(r)
 result = list()
-for tweet in tweets[10]:
+for tweet in tweets:
     try:
         translator = Translator()
         translation = translator.translate(tweet[10])
