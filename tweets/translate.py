@@ -1,15 +1,17 @@
 #googletrans library: https://pypi.org/project/googletrans/
 from googletrans import Translator
+import csv
+import sys
+import time
+
 translator = Translator()
-translation = translator.translate('»Wir haben es geschafft und werden nun bis zur #Btw17 rocken - die #AfD ist stärker als je zuvor!« https://www.youtube.com/watch?v=z9h7eZu6pbE&feature=youtu.be …')
-print(translation)
 
-#for bulk translating
-translations = translator.translate(['The quick brown fox', 'jumps over', 'the lazy dog'], dest='ko')
->>> for translation in translations:
-...    print(translation.origin, ' -> ', translation.text)
-
-#goslate library: https://pythonhosted.org/goslate/
-import goslate
-gs = goslate.Goslate()
-print(gs.translate('Wir haben es geschafft und werden nun bis zur #Btw17 rocken - die #AfD ist stärker als je zuvor!« https://www.youtube.com/watch?v=z9h7eZu6pbE&feature=youtu.be …', 'en'))
+r = csv.reader(open(sys.argv[1]))
+tweets = list(r)
+for tweet in tweets:
+    translation = translator.translate(tweet[10])
+    tweet[10] = translation
+    print(translation)
+    sleep(1)
+writer = csv.writer(open("translations/" + sys.argv[1], 'w'))
+writer.writerows(lines)
