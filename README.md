@@ -20,3 +20,16 @@ In this folder you find all collected tweets by running:
 ```
 cd tweets && python3 tweetie.py
 ```
+
+## Backend
+For the backend to run, you have to start the server. 
+```
+cd backend
+npm run build
+npm run start
+```
+After every change you have to stop the server and run the build and start command again.
+The server runs on port 3000. For communication with the backend use the Access-Service in 
+```
+application/src/app/services/access.service.ts
+```
