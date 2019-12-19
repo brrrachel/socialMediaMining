@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {PartySelectionComponent} from './party-selection/party-selection.component';
 import {NgxBootstrapSliderModule} from 'ngx-bootstrap-slider';
 import { TimelineComponent } from './timeline/timeline.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TimelineComponent } from './timeline/timeline.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxBootstrapSliderModule
+    NgxBootstrapSliderModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

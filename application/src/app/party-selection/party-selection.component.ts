@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {PartyState} from "../models/party.model";
+import {AccessService} from "../services/access.service";
 
 @Component({
   selector: 'app-party-selection',
@@ -11,12 +12,13 @@ export class PartySelectionComponent implements OnInit {
   @Output() readonly selectedPartiesChange: EventEmitter<PartyState> = new EventEmitter();
 
   selectedParties: PartyState = new PartyState();
+  parties: string;
 
-  constructor() {
+  constructor(public access: AccessService) {
   }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    this.parties = await this.access.getParties();
   }
 
   selectParty(party: string) {

@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="Timeline und Kleinigkeiten">
-      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/timeline/timeline.component.ts" afterDir="false" />
+    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="Backend-Anbindung + Doku">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/services/access.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/rest/party.router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/socialMediaMining.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/socialMediaMining.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +77,17 @@
     </expand>
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Maximilian Götz &lt;mpg.goetz@gmail.com&gt;" />
         <option value="Maximilian Götz" />
       </list>
     </option>
@@ -109,6 +119,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\node_modules\typescript\lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\backend\src" />
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining" />
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\backend\rest" />
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\backend" />
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -132,7 +151,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575558969338</updated>
       <workItem from="1575558975453" duration="1363000" />
-      <workItem from="1575990143283" duration="6909000" />
+      <workItem from="1575990143283" duration="7155000" />
+      <workItem from="1576101976792" duration="1255000" />
+      <workItem from="1576580888970" duration="1097000" />
+      <workItem from="1576587632868" duration="3902000" />
+      <workItem from="1576591618908" duration="7292000" />
+      <workItem from="1576766081003" duration="1188000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
       <created>1575990610670</created>
@@ -162,11 +186,23 @@
       <option name="project" value="LOCAL" />
       <updated>1575995989192</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Timeline und Kleinigkeiten">
+      <created>1575999175366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575999175366</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="additionalRoots">
+      <list>
+        <option value="$PROJECT_DIR$/backend/node_modules" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -186,18 +222,19 @@
     <MESSAGE value="Fixes" />
     <MESSAGE value="Erstes Übersetztes CSV" />
     <MESSAGE value="Timeline und Kleinigkeiten" />
-    <option name="LAST_COMMIT_MESSAGE" value="Timeline und Kleinigkeiten" />
+    <MESSAGE value="Backend-Anbindung + Doku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend-Anbindung + Doku" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Inspections" timestamp="1575990231753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1575990231753" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1575999124161">
+    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1576767264532">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999124161" />
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575990831383" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999172794" />
+    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576767264532" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1575990793897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -218,35 +255,43 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575991977595" />
-    <state x="129" y="54" key="MergeDialog" timestamp="1575996233841">
+    <state x="129" y="54" key="MergeDialog" timestamp="1576581399812">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="54" key="MergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233841" />
-    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1575996233850">
+    <state x="129" y="54" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1576581399812" />
+    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1576581399823">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233850" />
-    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575981787954" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575996078851">
+    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1576581399823" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575999185155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996078851" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999185155" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575990839784" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575990146017">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1576766171718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1575990146017" />
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575991768141">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576591619857" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576766171718" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576767195923">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1575991768141" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1575990646323">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1576767195923" />
+    <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1576597170463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1575990646323" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575997576682">
+    <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576597170463" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1576767192991">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576596310688" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1576767192991" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1576596484617">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576596484617" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575997576682" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575986633597" />
   </component>
