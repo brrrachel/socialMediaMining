@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/pg": "^7.14.1",
     "express": "^4.17.1",
+    "pg-promise": "^10.3.2",
     "typescript": "^3.7.3"
   },
   "devDependencies": {

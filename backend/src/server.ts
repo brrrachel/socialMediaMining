@@ -1,5 +1,5 @@
 import express from 'express';
-import {router as partyRouter} from './rest/party.router'
+import {router as partyRouter} from './party.router'
 
 const hostname = 'localhost';
 const port = 3000;
