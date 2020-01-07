@@ -10,7 +10,6 @@ const cn = {
     password: 'postgres'
 };
 
-
 export class PartyDao {
     public async getAllTweets(): Promise<any> {
         const db = pgp(cn);

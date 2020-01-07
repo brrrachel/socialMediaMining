@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/party.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tweets/finishTweets.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tweets/setupTweets.sql" afterDir="false" />
+    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="build process / setup complete">
+      <change afterPath="$PROJECT_DIR$/setup/buildDb.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/dbSetup.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/finishTweets.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/rest/party.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/loadAllCsvFiles.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/loadAllCsvFiles.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/Linke_SWagenknechtResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets/Linke_SWagenknechtResult.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_JuliaKloeckner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_JuliaKloeckner_tweets.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/FdP_c_lindner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/translations/twintTweets/FdP_c_lindner_tweets.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/twintTweets/AfD_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/party.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/party.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/finishTweets.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/loadAllCsvFiles.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/loadAllCsvFiles.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/setupTweets.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setupTweets.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +59,15 @@
         <item name="postgres: database" type="162271b6:PgImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -114,11 +118,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\setup" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\backend\src" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\backend\rest" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\backend" />
-      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -134,12 +138,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:PostgreSQL - postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@537f44cd" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3eb8efcc" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:PostgreSQL - postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7fd6b3d5" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@713e25b8" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -166,7 +170,8 @@
       <workItem from="1576591618908" duration="7292000" />
       <workItem from="1576766081003" duration="1452000" />
       <workItem from="1577982812813" duration="706000" />
-      <workItem from="1578246729839" duration="24590000" />
+      <workItem from="1578246729839" duration="25503000" />
+      <workItem from="1578389657542" duration="16705000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
       <created>1575990610670</created>
@@ -210,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576767342416</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Database Anschluss + Example Zugriff + Update zum laden der tweets. Aufsetzten der Datenbank erfolgt persöhnlich ^^">
+      <created>1578280469868</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578280469868</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixing absolute path">
+      <created>1578406318370</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578406318371</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,46 +259,49 @@
     <MESSAGE value="Erstes Übersetztes CSV" />
     <MESSAGE value="Timeline und Kleinigkeiten" />
     <MESSAGE value="Backend-Anbindung + Doku" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend-Anbindung + Doku" />
+    <MESSAGE value="Database Anschluss + Example Zugriff + Update zum laden der tweets. Aufsetzten der Datenbank erfolgt persöhnlich ^^" />
+    <MESSAGE value="fixing absolute path" />
+    <MESSAGE value="build process / setup complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="build process / setup complete" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#Inspections" timestamp="1575990231753">
+    <state x="275" y="22" key="#Inspections" timestamp="1578417850407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1575990231753" />
-    <state x="275" y="22" key="#SQL_Dialects" timestamp="1578270514390">
+    <state x="275" y="22" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1578417850407" />
+    <state x="275" y="22" key="#SQL_Dialects" timestamp="1578406518340">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1578270514390" />
+    <state x="275" y="22" key="#SQL_Dialects/0.0.1366.728@0.0.1366.728" timestamp="1578406518340" />
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578254910116">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578254910116" />
-    <state x="285" y="0" key="CommitChangelistDialog2" timestamp="1578280431995">
+    <state x="187" y="0" key="CommitChangelistDialog2" timestamp="1578417792704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999172794" />
-    <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578280431995" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1575990793897">
+    <state x="187" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578417792704" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1578417893639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1575990793897" />
-    <state width="905" height="179" key="GridCell.Tab.0.bottom" timestamp="1578280288092">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1578417893639" />
+    <state width="905" height="185" key="GridCell.Tab.0.bottom" timestamp="1578416979594">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578280288092" />
-    <state width="905" height="179" key="GridCell.Tab.0.center" timestamp="1578280288092">
+    <state width="905" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578416979594" />
+    <state width="905" height="185" key="GridCell.Tab.0.center" timestamp="1578416979593">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578280288092" />
-    <state width="905" height="179" key="GridCell.Tab.0.left" timestamp="1578280288092">
+    <state width="905" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578416979593" />
+    <state width="905" height="185" key="GridCell.Tab.0.left" timestamp="1578416979593">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578280288092" />
-    <state width="905" height="179" key="GridCell.Tab.0.right" timestamp="1578280288092">
+    <state width="905" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578416979593" />
+    <state width="905" height="185" key="GridCell.Tab.0.right" timestamp="1578416979593">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578280288092" />
+    <state width="905" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578416979593" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1578254868913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -294,37 +316,37 @@
     </state>
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233850" />
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1576581399823" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1576767346709">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1578406326454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999185155" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1576767346709" />
-    <state x="582" y="253" width="326" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578280171275">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578406326454" />
+    <state x="582" y="253" width="326" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578416237067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="582" y="253" width="326" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1578280171275" />
+    <state x="582" y="253" width="326" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1578416237067" />
     <state x="437" y="117" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1578275275389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="117" key="com.intellij.database.run.ParametersPanel.Standalone/0.0.1366.728@0.0.1366.728" timestamp="1578275275389" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1578246902223">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1578389666275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576591619857" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578246902223" />
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578247554373">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578389666275" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578417705437">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578247554373" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578417705437" />
     <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1576597170463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576597170463" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1578270754245">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1578407942707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576596310688" />
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1578270754245" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1578407942707" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1576596484617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
