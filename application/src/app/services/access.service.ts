@@ -1,25 +1,23 @@
-import {of} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {catchError, map, tap} from "rxjs/operators";
 import {Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
+import {Tweet} from "../models/tweet.model";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AccessService {
   private baseUrl = environment.endpoint + '/api/parties';
 
   constructor(public http: HttpClient) {
   }
 
-  getParties(): Promise<string> {
-    return this.http.get<{text: string}>(this.baseUrl).pipe(
-      tap(result => console.log('Parties returned: ', result)),
-      map(result => result.text),
-      catchError(err => {
-        console.error(err);
-        return of(err);
-      })
-    ).toPromise()
+  getParties(): Promise<Tweet[]> {
+    return this.http.get<Tweet[]>(this.baseUrl)
+      // .pipe(
+      //   take(1),
+      //   tap(result => console.log('Parties returned: ', result)),
+      //   map(result => result.text)
+      // )
+      .toPromise();
   }
 }
 

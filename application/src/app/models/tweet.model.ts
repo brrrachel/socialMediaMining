@@ -1,0 +1,34 @@
+export class Tweet {
+  id: string;
+  account_id: number;
+  conversation_id: string;
+  created_at: Date;
+  date: Date;
+  time: string;
+  timezone: string;
+  user_id: string;
+  username: string;
+  name: string;
+  place: string;
+  tweet: string;
+  mentions: string[];
+  urls: string[];
+  photos: string[];
+  replies_count: number;
+  retweets_count: number;
+  likes_count: number;
+  hashtags: string[];
+  cashtags: string[];
+  link: string;
+  retweet: boolean;
+  quote_url: string;
+  video: string;
+  near: string;
+  geo: string;
+  source: string;
+  user_rt_id: string;
+  user_rt: string;
+  retweet_id: string;
+  reply_to: string[];
+  retweet_date: Date;
+}

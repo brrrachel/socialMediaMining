@@ -59,7 +59,7 @@ SELECT
     ins.name, ins.alias, ins.follower, ins.tweet_count, parties.id
 FROM
     parties JOIN ins
-             ON ins.party = parties.name ;
+             ON ins.party = parties.name;
 
 -- creating BigFive table
 create table big5_emotions (
