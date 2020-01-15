@@ -45,8 +45,8 @@ export class BasicsComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.accessService.getTweetCount().then(value => {
-      this.loadedData = value.text;
-      console.log('loadedData', value.text);
+      this.loadedData = value;
+      console.log('loadedData', value);
       //this.data = this.prepareData(loadedData);
       //this.adaptDataToSelection();
     });
@@ -55,11 +55,11 @@ export class BasicsComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     let hasChanged: Boolean = false;
-    if (changes['selectedParties']['currentValue']) {
+    if (changes['selectedParties']) {
       this.currentParties = changes['selectedParties']['currentValue'];
       hasChanged = true;
     }
-    if (changes['selectedYears']['currentValue']) {
+    if (changes['selectedYears']) {
       this.currentYears = changes['selectedYears']['currentValue'];
       hasChanged = true;
     }

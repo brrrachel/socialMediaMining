@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/src/app/models/tweet.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/party-selection/party-selection.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/services/access.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/services/access.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/party.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/party.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/dbSetup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/dbSetup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/party.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +68,26 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="parties: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tweet_count: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
@@ -106,7 +129,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575655428721" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eslint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -134,7 +157,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:PostgreSQL - postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@e81ebec" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@56da70bc" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:PostgreSQL - postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@280856c5" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -163,7 +191,8 @@
       <workItem from="1577982812813" duration="706000" />
       <workItem from="1578246729839" duration="25503000" />
       <workItem from="1578389657542" duration="18126000" />
-      <workItem from="1579009815079" duration="14183000" />
+      <workItem from="1579009815079" duration="15920000" />
+      <workItem from="1579098012949" duration="2046000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
       <created>1575990610670</created>
@@ -228,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578417906924</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="build process / setup complete">
+      <created>1579094920886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579094920886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,35 +312,35 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578254910116" />
-    <state x="187" y="0" key="CommitChangelistDialog2" timestamp="1578417904406">
+    <state x="187" y="0" key="CommitChangelistDialog2" timestamp="1579100147576">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="285" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999172794" />
-    <state x="187" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578417904406" />
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1579094906004">
+    <state x="187" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579100147576" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1579097055588">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1579094906004" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1579097055588" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1578423130425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578423130425" />
-    <state width="442" height="185" key="GridCell.Tab.0.bottom" timestamp="1579094867672">
+    <state width="442" height="185" key="GridCell.Tab.0.bottom" timestamp="1579100062574">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="442" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579094867672" />
-    <state width="442" height="185" key="GridCell.Tab.0.center" timestamp="1579094867672">
+    <state width="442" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579100062574" />
+    <state width="442" height="185" key="GridCell.Tab.0.center" timestamp="1579100062573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="442" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579094867672" />
-    <state width="442" height="185" key="GridCell.Tab.0.left" timestamp="1579094867671">
+    <state width="442" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579100062573" />
+    <state width="442" height="185" key="GridCell.Tab.0.left" timestamp="1579100062572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="442" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579094867671" />
-    <state width="442" height="185" key="GridCell.Tab.0.right" timestamp="1579094867672">
+    <state width="442" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579100062572" />
+    <state width="442" height="185" key="GridCell.Tab.0.right" timestamp="1579100062573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="442" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579094867672" />
+    <state width="442" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579100062573" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1579017660242">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -319,11 +355,11 @@
     </state>
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575996233850" />
     <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1576581399823" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1578417912219">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1579095553630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575999185155" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578417912219" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579095553630" />
     <state x="582" y="253" width="326" height="237" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578416237067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -337,38 +373,26 @@
     </state>
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576591619857" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578389666275" />
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578417705437">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579096980900">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1578417705437" />
-    <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1579011795603">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579096980900" />
+    <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1579098573807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576597170463" />
-    <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579011795603" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1579022437620">
+    <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1579098573807" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1579098907694">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576596310688" />
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1579022437620" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1579098907694" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1576596484617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-261.1920.1160@0.0.1366.728" timestamp="1576596484617" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1160@0.0.1366.728" timestamp="1575997576682" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575986633597" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/application/src/app/services/access.service.ts</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

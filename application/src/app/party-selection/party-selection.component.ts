@@ -12,7 +12,7 @@ import {Tweet} from "../models/tweet.model";
 export class PartySelectionComponent implements OnInit {
   @Output() readonly selectedPartiesChange: EventEmitter<Parties[]> = new EventEmitter();
 
-  parties: Tweet[];
+  tenTweets: Tweet[];
   selectedParties: Parties[];
 
   partiesEnum = Parties;
@@ -22,8 +22,8 @@ export class PartySelectionComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.parties = await this.access.getParties();
-    console.log('parties resolved: ', this.parties);
+    this.tenTweets = await this.access.getTenTweets();
+    console.log('parties resolved: ', this.tenTweets);
     for (let party of Object.values(this.partiesEnum)){
         this.selectParty(party);
     }

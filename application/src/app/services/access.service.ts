@@ -1,8 +1,8 @@
-import {Observable, of} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
 import {Tweet} from "../models/tweet.model";
+import {TweetCount} from "../models/tweetCount.model";
 
 @Injectable({providedIn: 'root'})
 export class AccessService {
@@ -11,12 +11,12 @@ export class AccessService {
   constructor(public http: HttpClient) {
   }
 
-  getParties(): Promise<Tweet[]> {
+  getTenTweets(): Promise<Tweet[]> {
     return this.http.get<Tweet[]>(this.baseUrl).toPromise();
   }
 
-  getTweetCount(): Promise<{text: string}> {
-    return this.http.get<{text: string}>(this.baseUrl + '/tweetCount').toPromise()
+  getTweetCount(): Promise<TweetCount[]> {
+    return this.http.get<TweetCount[]>(this.baseUrl + '/tweetCount').toPromise()
   }
 }
 
