@@ -9,4 +9,9 @@ export class PartyService {
         console.log(results);
         return results;
     }
+
+    public async getTweetCount() {
+        const results = await this.dao.getTweetCount();
+        return results;
+    }
 }

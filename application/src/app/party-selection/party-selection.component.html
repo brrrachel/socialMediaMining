@@ -1,26 +1,26 @@
 <div class="party-selector-bar">
   <div class="cdu-csu-wrapper">
-    <button type="button" [class.btn-active]="selectedParties.cdu"
-            class="btn btn-default btn-circle btn-xl btn-cdu" (click)="selectParty('cdu')">
+    <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.cdu)"
+            class="btn btn-default btn-circle btn-xl btn-cdu" (click)="selectParty(partiesEnum.cdu)">
     </button>
-    <button type="button" [class.btn-active]="selectedParties.csu"
-            class="btn btn-default btn-circle btn-sm btn-csu" (click)="selectParty('csu')">
+    <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.csu)"
+            class="btn btn-default btn-circle btn-sm btn-csu" (click)="selectParty(partiesEnum.csu)">
     </button>
   </div>
-  <button type="button" [class.btn-active]="selectedParties.spd"
-          class="btn btn-default btn-circle btn-xl btn-spd" (click)="selectParty('spd')">
+  <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.spd)"
+          class="btn btn-default btn-circle btn-xl btn-spd" (click)="selectParty(partiesEnum.spd)">
   </button>
-  <button type="button" [class.btn-active]="selectedParties.fdp"
-          class="btn btn-default btn-circle btn-xl btn-fdp" (click)="selectParty('fdp')">
+  <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.fdp)"
+          class="btn btn-default btn-circle btn-xl btn-fdp" (click)="selectParty(partiesEnum.fdp)">
   </button>
-  <button type="button" [class.btn-active]="selectedParties.gruene"
-          class="btn btn-default btn-circle btn-xl btn-gruene" (click)="selectParty('gruene')">
+  <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.gruene)"
+          class="btn btn-default btn-circle btn-xl btn-gruene" (click)="selectParty(partiesEnum.gruene)">
   </button>
-  <button type="button" [class.btn-active]="selectedParties.linke"
-          class="btn btn-default btn-circle btn-xl btn-linke" (click)="selectParty('linke')">
+  <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.linke)"
+          class="btn btn-default btn-circle btn-xl btn-linke" (click)="selectParty(partiesEnum.linke)">
   </button>
-  <button type="button" [class.btn-active]="selectedParties.afd"
-          class="btn btn-default btn-circle btn-xl btn-afd" (click)="selectParty('afd')">
+  <button type="button" [class.btn-active]="selectedParties.includes(partiesEnum.afd)"
+          class="btn btn-default btn-circle btn-xl btn-afd" (click)="selectParty(partiesEnum.afd)">
   </button>
 </div>
 <div>{{parties}}</div>

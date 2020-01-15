@@ -17,4 +17,13 @@ export class PartyDao {
         const query = 'SELECT * from tweets LIMIT 10';
         return db.manyOrNone<any>(query);
     }
+
+    public async getTweetCount(): Promise<any> {
+        const db = pgp(cn);
+        //language=PostgreSQL
+        const query = ' SELECT pa.name as party, ac.name as account, tc.start_time, tc.count ' +
+            ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
+            ' WHERE pa.id = ac.party_id and tc.account_id = ac.id';
+        return db.manyOrNone<any>(query);
+    }
 }

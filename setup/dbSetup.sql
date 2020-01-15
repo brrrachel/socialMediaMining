@@ -113,3 +113,10 @@ create table tweets (
                         reply_to        TEXT,
                         retweet_date    TEXT
 );
+
+CREATE table tweet_count(
+                        id BIGSERIAL PRIMARY KEY,
+                        account_id integer references accounts,
+                        start_time timestamp,
+                        count integer
+);

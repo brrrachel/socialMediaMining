@@ -8,3 +8,9 @@ router.get('/', async (req, res, _) => {
     const tweets = await partyService.getAllTweets();
     return res.status(200).send(tweets);
 });
+
+router.get('/tweetCount', async (req, res, _) => {
+    const tweets = await partyService.getTweetCount();
+    return res.status(200).send({result: tweets});
+});
+
