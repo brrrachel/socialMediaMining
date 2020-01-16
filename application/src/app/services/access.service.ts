@@ -19,9 +19,3 @@ export class AccessService {
     return this.http.get<TweetCount[]>(this.baseUrl + '/tweetCount').toPromise()
   }
 }
-
-export class tweetsPerAccount {
-  account_name: string;
-  start: string;
-  total: number;
-}

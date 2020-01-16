@@ -31,7 +31,7 @@ def _calculate_occurrences_for_file(file, account_name, id):
         def save_as_csv(identifier):
             with open('experiments/total_num_of_tweets.csv', 'a') as fp:
                 wr = csv.writer(fp, dialect='excel')
-                result = [account_name, current.__str__(), counter, identifier]
+                result = [account_name, current.year, current.month, counter, identifier]
                 wr.writerow(result)
 
         save_as_csv(id)

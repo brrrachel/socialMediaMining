@@ -117,6 +117,7 @@ create table tweets (
 CREATE table tweet_count(
                         id BIGSERIAL PRIMARY KEY,
                         account_id integer references accounts,
-                        start_time timestamp,
-                        count integer
+                        year integer,
+                        month integer,
+                        total integer
 );

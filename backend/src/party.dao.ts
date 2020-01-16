@@ -21,7 +21,7 @@ export class PartyDao {
     public async getTweetCount(): Promise<any> {
         const db = pgp(cn);
         //language=PostgreSQL
-        const query = ' SELECT pa.name as party, ac.name as account, tc.start_time, tc.count ' +
+        const query = ' SELECT pa.name as party, ac.name as account, tc.year, tc.month, tc.total ' +
             ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
             ' WHERE pa.id = ac.party_id and tc.account_id = ac.id';
         const result = await db.manyOrNone<any>(query);
@@ -33,7 +33,8 @@ function toTweetCountDto(tweets: any): any {
     return {
         party: tweets.party,
         account: tweets.account,
-        startTime: tweets.start_time,
-        count: tweets.count
+        year: tweets.year,
+        month: tweets.month,
+        total: tweets.total
     }
 }

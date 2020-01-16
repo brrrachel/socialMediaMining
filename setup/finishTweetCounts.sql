@@ -1,9 +1,10 @@
 INSERT INTO tweet_count (
     account_id,
-    start_time,
-    "count"
+    year,
+    month,
+    total
 )
-SELECT ac.id, tw.start_time, tw.count
+SELECT ac.id, tw.year, tw.month, tw.total
 FROM public.accounts as ac join public.evaluated_tweets as tw
 on '@'||tw.name = ac.name;
 
