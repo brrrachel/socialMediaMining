@@ -6,7 +6,7 @@ create table parties(
 
 -- populate party table
 insert into parties(name) values
-    ('CDU'), ('SPD'), ('FDP'), ('CSU'), ('Die Linke'), ('Die Grünen'), ('AFD');
+    ('CDU'), ('SPD'), ('FDP'), ('CSU'), ('Die Linke'), ('Die Grünen'), ('AfD');
 
 -- create account table
 create table accounts(
