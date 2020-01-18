@@ -31,7 +31,7 @@ def _calculate_occurrences_for_file(file, account_name, id):
         def save_as_csv(identifier):
             with open('experiments/total_num_of_tweets.csv', 'a') as fp:
                 wr = csv.writer(fp, dialect='excel')
-                result = [account_name, current.year, current.month, counter, identifier]
+                result = [adapt_AccountName(account_name), current.year, current.month, counter, identifier]
                 wr.writerow(result)
 
         save_as_csv(id)
@@ -46,6 +46,15 @@ def save_as_json(file):
     with open('experiments/total_num_of_tweets.json', 'a') as fp:
         json.dump(file, fp)
 
+def adapt_AccountName(account):
+    if account == 'Gruenen':
+        return 'Die_Gruenen'
+    elif account == 'Fdp':
+        return 'fdp'
+    elif account == 'Spdde':
+        return 'spdde'
+    else:
+        return account
 
 def total_num_of_tweets():
     id = 0
