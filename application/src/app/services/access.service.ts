@@ -16,6 +16,6 @@ export class AccessService {
   }
 
   getTweetCount(): Promise<TweetCount[]> {
-    return this.http.get<TweetCount[]>(this.baseUrl + '/tweetCount').toPromise()
+    return this.http.get<TweetCount[]>(this.baseUrl + '/tweetCount').toPromise();
   }
 }
