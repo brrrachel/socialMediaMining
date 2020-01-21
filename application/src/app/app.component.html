@@ -16,10 +16,12 @@
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-pane fade show active" id="nav-factor" role="tabpanel" aria-labelledby="nav-factor-tab">
+      <app-radar-chart></app-radar-chart>
+    </div>
+    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <app-basics [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-basics>
     </div>
-    <div class="tab-pane fade" id="nav-factor" role="tabpanel" aria-labelledby="nav-factor-tab"></div>
     <div class="tab-pane fade" id="nav-topics" role="tabpanel" aria-labelledby="nav-topics-tab"></div>
     <div class="tab-pane fade" id="nav-geolocation" role="tabpanel" aria-labelledby="nav-geolocation-tab"></div>
   </div>

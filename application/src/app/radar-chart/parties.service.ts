@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Party } from './parties';
 
 import 'rxjs/add/operator/toPromise';
@@ -9,7 +8,7 @@ export class CompaniesService {
 
   private companiesUrl = 'assets/companies.json';  // URL to web api
 
-  constructor(private http: Http) { }
+  // constructor(private http: Http) { }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
