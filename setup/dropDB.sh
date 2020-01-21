@@ -1,3 +1,3 @@
 #!/bin/bash
 
-psql -U postgres -f "dropAllTables.sql"
+psql -U postgres -f "querys/dropAllTables.sql"

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-psql -U postgres -f "dbSetup.sql"
+psql -U postgres -f "querys/dbSetup.sql"
