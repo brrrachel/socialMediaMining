@@ -10,13 +10,15 @@ import {NgxBootstrapSliderModule} from 'ngx-bootstrap-slider';
 import {TimelineComponent} from './timeline/timeline.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BasicsComponent} from './tabs/basics/basics.component';
+import {RadarChartComponent} from "./radar-chart/radar-chart.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PartySelectionComponent,
     TimelineComponent,
-    BasicsComponent
+    BasicsComponent,
+    RadarChartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import * as D3 from './bundle-d3';
+import * as d3 from "d3";
 import { Party } from './parties'
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class RadarChartService {
 
   private host;
@@ -45,11 +45,11 @@ export class RadarChartService {
       'Neuroticism'];
     this.totalAxes = this.axisProperties.length;
     this.radius = Math.min(this.config.width / 2, this.config.height / 2);
-    this.colorScale = D3.scaleOrdinal().range(D3.schemeSet2);
+    this.colorScale = d3.scaleOrdinal().range(d3.schemeSet2);
   }
 
   public setup(htmlElement: HTMLElement): void {
-    this.host = D3.select(htmlElement);
+    this.host = d3.select(htmlElement);
     this.buildSVG();
     this.drawAxes();
     this.drawLevels();
@@ -180,7 +180,7 @@ export class RadarChartService {
       html += '<div class="rating">' + this.axisLabels[index] + ': ' + val + '</div>';
     });
     this.tooltip.html(html);
-    this.tooltip.style('left', (D3.event.pageX + 25) + 'px').style('top', (D3.event.pageY - 20) + 'px')
+    this.tooltip.style('left', (d3.event.pageX + 25) + 'px').style('top', (d3.event.pageY - 20) + 'px')
       .style('border-color', party.color);
   }
 
