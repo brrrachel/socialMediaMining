@@ -1,14 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
+import {DatePipe} from '@angular/common'
+import {ChartsModule} from 'ng2-charts';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {PartySelectionComponent} from './party-selection/party-selection.component';
 import {NgxBootstrapSliderModule} from 'ngx-bootstrap-slider';
-import { TimelineComponent } from './timeline/timeline.component';
+import {TimelineComponent} from './timeline/timeline.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BasicsComponent } from './tabs/basics/basics.component';
+import {BasicsComponent} from './tabs/basics/basics.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { BasicsComponent } from './tabs/basics/basics.component';
     HttpClientModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {

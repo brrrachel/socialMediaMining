@@ -1,7 +1,9 @@
-import {Component, OnChanges, OnInit, SimpleChanges, Input} from '@angular/core';
-import {AccessService, tweetsPerAccount} from "../../services/access.service";
-import {Parties} from "../../models/party.model";
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {DatePipe} from '@angular/common'
+import {AccessService} from "../../services/access.service";
+import {getColorForParty, Parties} from "../../models/party.model";
 import * as Chart from 'chart.js'
+import {TweetCount} from "../../models/tweetCount.model";
 
 @Component({
   selector: 'app-basics',
@@ -11,8 +13,6 @@ import * as Chart from 'chart.js'
 export class BasicsComponent implements OnInit, OnChanges {
 
   accessService: AccessService;
-  loadedData;
-  data: ChartData[];
 
   @Input() selectedParties: Parties[];
   @Input() selectedYears: [number, number];
@@ -23,8 +23,8 @@ export class BasicsComponent implements OnInit, OnChanges {
   chart: Chart;
   ctx: CanvasRenderingContext2D;
 
-  preparedLabels: Date[] = [];
-  preparedData: ChartData[] = [];
+  preparedLabels: string[];
+  preparedData: ChartData[];
 
   chartOptions: Chart.ChartOptions = {
     responsive: true,
@@ -38,22 +38,18 @@ export class BasicsComponent implements OnInit, OnChanges {
     }
   };
 
-  constructor(public access: AccessService) {
+  constructor(public access: AccessService, public datepipe: DatePipe) {
     this.accessService = access;
     this.initChart();
   }
 
   ngOnInit() {
     this.accessService.getTweetCount().then(value => {
-      this.loadedData = value;
-      console.log('loadedData', value);
-      //this.data = this.prepareData(loadedData);
-      //this.adaptDataToSelection();
+      this.prepareData(value);
     });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     let hasChanged: Boolean = false;
     if (changes['selectedParties']) {
       this.currentParties = changes['selectedParties']['currentValue'];
@@ -69,39 +65,85 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   adaptDataToSelection() {
-    let newData: ChartData[] = new Array<ChartData>();
-    let newLabels: Date[] = new Array<Date>();
+    if(this.preparedData) {
+      let newDataSet: ChartData[] = [];
+      let newLabels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], (this.currentYears[1] === 2019 ? 11 : 12) );
+      let accountNames: string[] = this.generateAccountNames(this.currentParties);
+
+      for (let set of this.preparedData) {
+        if(accountNames.indexOf(set.label) > -1) {
+          let newData = {label: set.label, data: [], borderColor: getColorForParty(set.label === 'CDU/CSU'? Parties.csu : set.label), fill: false} as ChartData;
+          for (let label of newLabels) {
+            let dateIndex = this.preparedLabels.findIndex(oldLabel => oldLabel === label);
+            newData.data.push(set.data[dateIndex]);
+          }
+          newDataSet.push(newData);
+        }
+      }
+      this.chart.data.labels = newLabels;
+      this.chart.data.datasets = newDataSet;
+      this.chart.update();
+    }
   }
 
-  prepareData(unpreparedData: tweetsPerAccount[]) {
+  prepareData(unpreparedData: TweetCount[]) {
+    let labels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], 11);
     let preparedDataSet: ChartData[] = new Array<ChartData>();
 
-    for (let label of this.getAccountNames(unpreparedData)) {
-      //this.createDataSetForAccount(label);
-      //preparedDataSet.push({data: sortedValues.map(data => data.total), label: label, fill: false} as ChartData);
+    for (let party of this.generateAccountNames(this.currentParties)) {
+
+      let accountsOfParty: TweetCount[];
+      if (party === 'CDU/CSU'){
+        let dataCDU = unpreparedData.filter(data => data.party == 'CDU');
+        let dataCSU = unpreparedData.filter(data => data.party == 'CSU');
+        dataCDU.forEach(data => {
+          let matchingElement = dataCSU.find(element => element.year == data.year && element.month == data.month);
+          data.party = 'CDU/CSU';
+          data.total += matchingElement.total;
+        });
+        accountsOfParty = dataCDU;
+      } else {
+        accountsOfParty = unpreparedData.filter(data => data.party == party);
+      }
+
+      let dataSetForAccount = this.createDataSetForAccount(labels, accountsOfParty);
+      dataSetForAccount.label = party;
+      dataSetForAccount.borderColor = getColorForParty(party === 'CDU/CSU' ? Parties.csu : party);
+      preparedDataSet.push(dataSetForAccount);
     }
 
     this.preparedData = preparedDataSet;
-    return preparedDataSet;
+    this.preparedLabels = labels;
+    this.adaptDataToSelection();
   }
 
-  createDataSetForAccount(party: string, start, end) {
-    /**let sortedValues = unpreparedData
-     .filter(data => data.account_name === party)
-     .sort((data1, data2) => {
-        let sorted = moment(data1.start) > moment(data2.start) ? 1 : -1;
-        return sorted;
-      });
-     this.preparedLabels = this.preparedLabels ? this.preparedLabels : sortedValues.map(data => new Date(data.start));
-     return {data: sortedValues.map(data => data.total), label: label, fill: false} as ChartData */
+  createDataSetForAccount(labels: string[], dataSet: TweetCount[]) {
+    let values: number[] = [];
+
+    for (let month of labels){
+      let countsOfMonth: number = dataSet.filter(data => {
+        let date = this.datepipe.transform(new Date(data.year, data.month), 'yyyy-MM-dd');
+          return date === month
+      }).map( data => data.total)
+        .reduce((prev, curr) => prev + curr);
+      values.push(countsOfMonth);
+    }
+     return {data: values, fill: false} as ChartData
   }
 
-  getAccountNames(data): string[] {
-    let labels = new Array<string>();
-    for (let account of data.map(data => data.account_name)) {
-      if (labels.indexOf(account) === -1) {
-        labels.push(account);
+  generateAccountNames(parties: Parties[]): string[] {
+    let labels = parties.map(value => value.toString());
+    let indexCDU = labels.indexOf(Parties.cdu);
+    let indexCSU = labels.indexOf(Parties.csu);
+    if (indexCDU > -1 && indexCSU > -1 ) {
+      if (indexCSU > indexCDU) {
+        labels.splice(indexCSU, 1);
+        labels.splice(indexCDU, 1);
+      } else {
+        labels.splice(indexCDU, 1);
+        labels.splice(indexCSU, 1);
       }
+      labels.push('CDU/CSU');
     }
     return labels;
   }
@@ -116,15 +158,38 @@ export class BasicsComponent implements OnInit, OnChanges {
         data: {},
         options: self.chartOptions
       });
-
+      self.chart.update();
     };
   }
 
+  //TODO: Date for combination of startyear and startmonth isn't created - i don't know why
+  createLabels(startYear: number, startMonth: number, endYear: number, endMonth: number) {
+    let range = function(start, end): number[] {
+      var list = [];
+      for (var i = start; i <= end; i++) {
+        list.push(i);
+      }
+      return list;
+    };
+
+    let labels: string[] = [];
+    let months: number[] = range(1, 12);
+    let years: number[] = range(startYear, endYear);
+    for (let year of years) {
+      for (let month of months) {
+        if (year < 2019 || (year === 2019 && month <= endMonth)) {
+          labels.push(this.datepipe.transform(new Date(year, month), 'yyyy-MM-dd'));
+        }
+      }
+    }
+    return labels;
+  }
 }
 
 export class ChartData {
   data: number[];
   label: string;
+  borderColor: string;
   fill: boolean;
 }
 

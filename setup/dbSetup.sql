@@ -6,7 +6,7 @@ create table parties(
 
 -- populate party table
 insert into parties(name) values
-    ('CDU'), ('SPD'), ('FDP'), ('CSU'), ('Die Linke'), ('Die Grünen'), ('AFD');
+    ('CDU'), ('SPD'), ('FDP'), ('CSU'), ('Die Linke'), ('Die Grünen'), ('AfD');
 
 -- create account table
 create table accounts(
@@ -41,12 +41,12 @@ WITH ins (name, alias, follower, tweet_count, party) AS
            ( '@RenateKuenast', 'Renate Künast', 51000, 0, 'Die Grünen'),
            ( '@bueti', 'Reinhard Bütikofer', 25000, 0, 'Die Grünen'),
            ( '@cem_oezdemir', 'Cem Özdemir', 157000, 0, 'Die Grünen'),
-           ( '@AFD', 'AFD-Hauptaccount', 147000, 0, 'AFD'),
-           ( '@Alice_Weidel', 'Alice Weidel', 84000, 0, 'AFD'),
-           ( '@Beatrix_vStorch', 'Beatrix von Storch', 50000, 0, 'AFD'),
-           ( '@MarcusPretzell', 'Marcus Pretzell', 11000, 0, 'AFD'),
-           ( '@PoggenburgAndre', 'André Poggenburg', 23000, 0, 'AFD'),
-           ( '@FraukePetry', 'Frauke Petry', 52000, 0, 'AFD'),
+           ( '@AfD', 'AFD-Hauptaccount', 147000, 0, 'AfD'),
+           ( '@Alice_Weidel', 'Alice Weidel', 84000, 0, 'AfD'),
+           ( '@Beatrix_vStorch', 'Beatrix von Storch', 50000, 0, 'AfD'),
+           ( '@MarcusPretzell', 'Marcus Pretzell', 11000, 0, 'AfD'),
+           ( '@PoggenburgAndre', 'André Poggenburg', 23000, 0, 'AfD'),
+           ( '@FraukePetry', 'Frauke Petry', 52000, 0, 'AfD'),
            ( '@dieLinke', 'Die Linke-Hauptaccount', 276000, 0, 'Die Linke'),
            ( '@GregorGysi', 'Gregor Gysi', 347000, 0, 'Die Linke'),
            ( '@MartinaRenner', 'Martina Renner', 14000, 0, 'Die Linke'),
@@ -117,6 +117,7 @@ create table tweets (
 CREATE table tweet_count(
                         id BIGSERIAL PRIMARY KEY,
                         account_id integer references accounts,
-                        start_time timestamp,
-                        count integer
+                        year integer,
+                        month integer,
+                        total integer
 );

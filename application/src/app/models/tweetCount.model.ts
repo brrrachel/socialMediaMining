@@ -1,6 +1,7 @@
 export class TweetCount {
   party: string;
   account: string;
-  startTime: Date;
-  count: number;
+  year: number;
+  month: number;
+  total: number;
 }
