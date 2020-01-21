@@ -30,19 +30,26 @@ export class RadarChartService {
       height: 250,
       radians: 2 * Math.PI,
       levels: 5,
+      showLevels: true,
+      showLevelsLabels: true,
+      showAxesLabels: true,
+      showAxes: true,
+      showLegend: true,
+      showVertices: true,
+      showPolygons: true
     };
     this.axisProperties = [
       'openess',
-      'conscientiousness',
+      'neuroticism',
       'extraversion',
       'agreeableness',
-      'neuroticism'];
+      'conscientiousness'];
     this.axisLabels = [
       'Openness to experience ',
-      'Conscientiousness',
+      'Neuroticism',
       'Extraversion',
       'Agreeableness',
-      'Neuroticism'];
+      'Conscientiousness'];
     this.totalAxes = this.axisProperties.length;
     this.radius = Math.min(this.config.width / 2, this.config.height / 2);
     this.colorScale = d3.scaleOrdinal().range(d3.schemeSet2);
@@ -83,14 +90,16 @@ export class RadarChartService {
       .attr('x1', this.config.width / 2)
       .attr('y1', this.config.width / 2)
       .attr('x2', (d, i) => { return this.config.width / 2 * (1 - Math.sin(i * this.config.radians / this.totalAxes)); })
-      .attr('y2', (d, i) => { return this.config.height / 2 * (1 - Math.cos(i * this.config.radians / this.totalAxes)); });
+      .attr('y2', (d, i) => { return this.config.height / 2 * (1 - Math.cos(i * this.config.radians / this.totalAxes)); })
+      .attr('stroke-width', '1px')
+      .attr('stroke', 'rgb(0,0,0)');
 
     this.axes.append('text')
       .attr('class', 'label')
       .text((d: string) => d)
       .attr('text-anchor', 'middle')
-      .attr('x', (d, i) => { return this.config.width / 2 * (1 - 1.3 * Math.sin(i * this.config.radians / this.totalAxes)); })
-      .attr('y', (d, i) => { return this.config.height / 2 * (1 - 1.1 * Math.cos(i * this.config.radians / this.totalAxes)); });
+      .attr('x', (d, i) => { return this.config.width / 2 * (1 - 1.5 * Math.sin(i * this.config.radians / this.totalAxes)); })
+      .attr('y', (d, i) => { return this.config.height / 2 * (1 - 1.17 * Math.cos(i * this.config.radians / this.totalAxes)); });
   }
 
   private drawLevels(): void {
@@ -109,6 +118,8 @@ export class RadarChartService {
         .attr('y1', (d, i) => { return levelFactor * (1 - Math.cos(i * this.config.radians / this.totalAxes)); })
         .attr('x2', (d, i) => { return levelFactor * (1 - Math.sin((i + 1) * this.config.radians / this.totalAxes)); })
         .attr('y2', (d, i) => { return levelFactor * (1 - Math.cos((i + 1) * this.config.radians / this.totalAxes)); })
+        .attr('stroke-width', '1px')
+        .attr('stroke', 'rgb(0,0,0)')
         .attr('transform', 'translate(' + (this.config.width / 2 - levelFactor) + ', ' + (this.config.height / 2 - levelFactor) + ')');
     }
   }
@@ -128,12 +139,13 @@ export class RadarChartService {
     enterSelection.append('polygon')
       .attr('class', 'area')
       .attr('points', (party: Party) => this.getPartyCoordinatesString(party))
-      .attr('stroke-width', '1.5px')
+      .attr('stroke-width', '2px')
       .attr('stroke', (party: Party) => {
-        party.color = this.colorScale(party.openess);
-        return this.colorScale(party.openess);
+        return party.color
+        // party.color = this.colorScale(party.openess);
+        // return this.colorScale(party.openess);
       })
-      .attr('fill', (party: Party) => this.colorScale(party.openess))
+      .attr('fill', (party: Party) => party.color)
       .attr('fill-opacity', 0.3)
       .attr('stroke-opacity', 1)
       .on(over, (party: Party) => {
@@ -173,7 +185,7 @@ export class RadarChartService {
 
   // show tooltip of vertices
   private tooltipShow(party: Party): void {
-    this.tooltip.transition().duration(200).style('opacity', .9);
+    this.tooltip.transition().duration(200).style('opacity', 1);
     let html = '<h3 class="header">' + party.name + '</h3>';
     this.axisProperties.forEach((prop, index) => {
       const val = party[prop];
