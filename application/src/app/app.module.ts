@@ -10,7 +10,7 @@ import {NgxBootstrapSliderModule} from 'ngx-bootstrap-slider';
 import {TimelineComponent} from './timeline/timeline.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BasicsComponent} from './tabs/basics/basics.component';
-import {RadarChartComponent} from "./radar-chart/radar-chart.component";
+import {RadarChartComponent} from "./tabs/radar-chart/radar-chart.component";
 
 @NgModule({
   declarations: [

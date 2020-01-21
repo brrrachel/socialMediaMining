@@ -15,6 +15,7 @@ export class Party {
     this.extraversion = jsonObject.extraversion;
     this.agreeableness = jsonObject.agreeableness;
     this.neuroticism = jsonObject.neuroticism;
+    this.color = jsonObject.color;
     this.setCompanySlug();
   }
 
