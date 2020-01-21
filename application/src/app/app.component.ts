@@ -8,7 +8,7 @@ import {Parties} from "./models/party.model";
 })
 export class AppComponent {
   title = 'application';
-  selectedParties: Parties;
+  selectedParties: Parties[];
   value: number = 0;
   selectedYears: [number, number] = [2008, 2019];
 }
