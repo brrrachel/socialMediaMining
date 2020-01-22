@@ -24,7 +24,7 @@ if __name__ == '__main__':
                 filename = str('fiveFactorFiles/' + str(party) + '_' + datetime.date(year, from_month, 1).__str__() + '_' + datetime.date(year, end_month, 1).__str__())
 
                 if result:
-                    with open(filename + '.csv', "w") as output:
+                    with open(filename + '.csv', "w", encoding="utf-8") as output:
                         writer = csv.writer(output, dialect='excel')
                         for row in result:
                             writer.writerow(row)
