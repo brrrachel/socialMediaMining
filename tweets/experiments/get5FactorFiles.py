@@ -27,7 +27,7 @@ if __name__ == '__main__':
                 filename = str('fiveFactorFiles/' + str(party) + '_' + from_date.__str__() + '_' + to_date.__str__())
 
                 if result:
-                    with open(filename + '.csv', "w") as output:
+                    with open(filename + '.csv', "w", encoding="utf-8") as output:
                         writer = csv.writer(output, dialect='excel')
                         for row in result:
                             writer.writerow(row)

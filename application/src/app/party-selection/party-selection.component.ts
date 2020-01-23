@@ -33,7 +33,7 @@ export class PartySelectionComponent implements OnInit {
     if (this.selectedParties.includes(party)) {
       this.selectedParties = this.selectedParties.filter(p => p !== party);
     } else {
-      this.selectedParties.push(party);
+      this.selectedParties = [...this.selectedParties, party];
     }
     this.selectedPartiesChange.emit(this.selectedParties);
   }

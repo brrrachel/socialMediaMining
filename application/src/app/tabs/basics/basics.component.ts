@@ -125,7 +125,7 @@ export class BasicsComponent implements OnInit, OnChanges {
         let date = this.datepipe.transform(new Date(data.year, data.month), 'yyyy-MM-dd');
           return date === month
       }).map( data => data.total)
-        .reduce((prev, curr) => prev + curr);
+        .reduce((prev, curr) => prev + curr, 0);
       values.push(countsOfMonth);
     }
      return {data: values, fill: false} as ChartData
