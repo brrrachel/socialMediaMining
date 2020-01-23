@@ -9,3 +9,4 @@ FROM public.accounts as ac join public.evaluated_tweets as tw
 on '@'||tw.name = ac.name;
 
 DROP table evaluated_tweets;
+

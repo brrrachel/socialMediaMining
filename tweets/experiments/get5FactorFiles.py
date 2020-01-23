@@ -5,7 +5,8 @@ import csv
 if __name__ == '__main__':
 
     years = range(2009, 2020)
-    month = [(1,3), (4,6), (7,9), (10,12)]
+    months = [(1,3), (4,6), (7,9), (10,12)]
+    days = [(1,31), (1,30), (1,30), (1,31)]
 
     connection = psycopg2.connect(user="postgres",
                                   password="postgres",
@@ -16,12 +17,14 @@ if __name__ == '__main__':
 
     for party in range(1, 32):
         for year in years:
-            for (from_month, end_month) in month:
-                query_tweets = "select tweet from tweets where account_id = %s and (%s <= date) and (date < %s)"
-                cursor.execute(query_tweets, (party, datetime.date(year, from_month, 1), datetime.date(year, end_month, 1)))
+            for i in range(len(months)):
+                query_tweets = "select tweet from tweets where account_id = %s and (%s <= date) and (date <= %s)"
+                from_date = datetime.date(year, months[i][0], days[i][0])
+                to_date = datetime.date(year, months[i][1], days[i][1])
+                cursor.execute(query_tweets, (party, from_date, to_date))
 
                 result = cursor.fetchall()
-                filename = str('fiveFactorFiles/' + str(party) + '_' + datetime.date(year, from_month, 1).__str__() + '_' + datetime.date(year, end_month, 1).__str__())
+                filename = str('fiveFactorFiles/' + str(party) + '_' + from_date.__str__() + '_' + to_date.__str__())
 
                 if result:
                     with open(filename + '.csv', "w") as output:
@@ -29,5 +32,5 @@ if __name__ == '__main__':
                         for row in result:
                             writer.writerow(row)
                 else:
-                    print('No data for party with id ' + str(party) + 'in ' + datetime.date(year, from_month, 1).__str__() + ' until ' + datetime.date(year, end_month, 1).__str__())
+                    print('No data for party with id ' + str(party) + ' in ' + from_date.__str__() + ' until ' + to_date.__str__())
 

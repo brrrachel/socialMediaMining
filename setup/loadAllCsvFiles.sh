@@ -9,11 +9,11 @@ parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" || exit ; pwd -P )
 
 cd "$parent_path" || exit
 psql -U postgres -f "querys/setupTweets.sql"
-cd "../tweets/translations/tweepyTweets" || exit
+cd "../tweets/translations/tweepyTweets_unique" || exit
 for filename in *.csv; do
   psql -U postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
 done
-cd "../twintTweets" || exit
+cd "../twintTweets_unique" || exit
 for filename in *.csv; do
   psql -U postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
 done

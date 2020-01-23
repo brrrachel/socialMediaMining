@@ -60,14 +60,14 @@ def total_num_of_tweets():
     id = 0
     os.chdir('..')
     for file in os.listdir('translations/tweepyTweets'):
-        with open('translations/tweepyTweets/' + file, 'r') as csv_file:
+        with open('translations/tweepyTweets_unique/' + file, 'r') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             underscore_index = file.find('_')
             result_index = file.find('Result.csv')
             account = file[underscore_index+1:result_index]
             id = _calculate_occurrences_for_file(csv_reader, account, id)
     for file in os.listdir('translations/twintTweets'):
-        with open('translations/twintTweets/' + file, 'r') as csv_file:
+        with open('translations/twintTweets_unique/' + file, 'r') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             underscore_index = file.find('_')
             result_index = file.find('_tweets.csv')
