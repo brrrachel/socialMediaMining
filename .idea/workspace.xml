@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year">
+      <change afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/AfD_Alice_WeidelResult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/CSU_AndiScheuerResult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/FdP_KatjaSudingResult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/Linke_GregorGysiResult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/Linke_SWagenknechtResult.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_Beatrix_vStorch_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_FraukePetry_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_MarcusPretzell_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_PoggenburgAndre_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_JuliaKloeckner_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_akk_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_peteraltmaier_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CSU_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Die_Gruenen_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/FdP_c_lindner_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/FdP_nicolabeerfdp_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Fdp_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_RenateKuenast_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_Volker_Beck_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_bueti_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_cem_oezdemir_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Linke_MartinaRenner_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Linke_PetraPauMaHe_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_MartinSchulz_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_Ralf_Stegner_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_UlrichKelber_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_larsklingbeil_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Spdde_tweets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/dieLinke_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/models/party.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/models/party.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/services/access.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/services/access.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/party.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/dbSetup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/dbSetup.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/finishTweetCounts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/finishTweetCounts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setupTweetCounts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setupTweetCounts.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/total_num_of_tweets.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweets/experiments/basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweets/experiments/basics.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/application/node_modules/" />
     <ignored path="$PROJECT_DIR$/backend/node_modules/" />
@@ -105,12 +126,21 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="164" column="91" selection-start-line="164" selection-start-column="91" selection-end-line="164" selection-end-column="91" />
+            <state relative-caret-position="238">
+              <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
@@ -119,73 +149,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/dbSetup.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="116" selection-start-line="116" selection-end-line="122" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/loadTweetCountFiles.sh">
+        <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/setupTweets.sql">
+        <entry file="file://$PROJECT_DIR$/setup/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/buildDb.sh">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/finishTweetCounts.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -211,6 +208,7 @@
       <find>consol</find>
       <find>cre</find>
       <find>change</find>
+      <find>Afd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,7 +218,6 @@
         <option value="Maximilian Götz" />
       </list>
     </option>
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -243,9 +240,9 @@
         <option value="$PROJECT_DIR$/backend/src/party.dao.ts" />
         <option value="$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts" />
         <option value="$PROJECT_DIR$/application/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" />
         <option value="$PROJECT_DIR$/application/src/app/models/party.model.ts" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" />
-        <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" />
       </list>
     </option>
   </component>
@@ -262,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,30 +291,6 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="party-selection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="tabs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,11 +313,26 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+              <item name="querys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="tweets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -512,13 +501,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20634000" />
+    <option name="totallyTimeSpent" value="25389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21530758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -603,7 +592,8 @@
     <MESSAGE value="Database Anschluss + Example Zugriff + Update zum laden der tweets. Aufsetzten der Datenbank erfolgt persöhnlich ^^" />
     <MESSAGE value="fixing absolute path" />
     <MESSAGE value="build process / setup complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="build process / setup complete" />
+    <MESSAGE value="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year" />
+    <option name="LAST_COMMIT_MESSAGE" value="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Inspections" timestamp="1578417850407">
@@ -757,26 +747,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/finishTweets.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/total_num_of_tweets.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/finishTweets.sql" />
+    <entry file="file://$PROJECT_DIR$/setup/total_num_of_tweets.csv" />
     <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -787,41 +759,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/dbSetup.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" selection-start-line="116" selection-end-line="122" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/dbSetup.sql" />
     <entry file="file://$PROJECT_DIR$/setup/loadTweetCountFiles.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/setupTweets.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/finishTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/setupTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/setupTweets.sql" />
+    <entry file="file://$PROJECT_DIR$/setup/finishTweetCounts.sql" />
+    <entry file="file://$PROJECT_DIR$/setup/setupTweetCounts.sql" />
     <entry file="file://$PROJECT_DIR$/application/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -853,23 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="164" column="91" selection-start-line="164" selection-start-column="91" selection-end-line="164" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -877,6 +804,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/buildDb.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/total_num_of_tweets.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="252" column="23" selection-start-line="252" selection-start-column="23" selection-end-line="252" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

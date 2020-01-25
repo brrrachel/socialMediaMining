@@ -89,19 +89,18 @@ export class BasicsComponent implements OnInit, OnChanges {
   prepareData(unpreparedData: TweetCount[]) {
     let labels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], 11);
     let preparedDataSet: ChartData[] = new Array<ChartData>();
+    const party_keys = Object.keys(Parties);
+    let allAccountNames: string[] = this.generateAccountNames(party_keys.map(k => Parties[k as any]));
+    allAccountNames.push('CDU', 'CSU');
 
-    for (let party of this.generateAccountNames(this.currentParties)) {
+    for (let party of allAccountNames) {
 
       let accountsOfParty: TweetCount[];
       if (party === 'CDU/CSU'){
         let dataCDU = unpreparedData.filter(data => data.party == 'CDU');
         let dataCSU = unpreparedData.filter(data => data.party == 'CSU');
-        dataCDU.forEach(data => {
-          let matchingElement = dataCSU.find(element => element.year == data.year && element.month == data.month);
-          data.party = 'CDU/CSU';
-          data.total += matchingElement.total;
-        });
         accountsOfParty = dataCDU;
+        accountsOfParty.concat(dataCSU);
       } else {
         accountsOfParty = unpreparedData.filter(data => data.party == party);
       }
@@ -162,7 +161,6 @@ export class BasicsComponent implements OnInit, OnChanges {
     };
   }
 
-  //TODO: Date for combination of startyear and startmonth isn't created - i don't know why
   createLabels(startYear: number, startMonth: number, endYear: number, endMonth: number) {
     let range = function(start, end): number[] {
       var list = [];
@@ -178,7 +176,7 @@ export class BasicsComponent implements OnInit, OnChanges {
     for (let year of years) {
       for (let month of months) {
         if (year < 2019 || (year === 2019 && month <= endMonth)) {
-          labels.push(this.datepipe.transform(new Date(year, month), 'yyyy-MM-dd'));
+          labels.push(this.datepipe.transform(new Date(year, month-1), 'yyyy-MM-dd'));
         }
       }
     }

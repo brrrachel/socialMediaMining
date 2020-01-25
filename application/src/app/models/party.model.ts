@@ -5,7 +5,7 @@ export enum Parties {
   fdp = 'FDP',
   gruene = 'Die Grünen',
   linke = 'Die Linke',
-  afd = 'AFD'
+  afd = 'AfD'
 }
 
 export enum PartyColors {
@@ -18,7 +18,7 @@ export enum PartyColors {
   afd = '#009ee0'
 }
 
-export function getColorForParty(party: string): string {
+export function  getColorForParty(party: string): string {
   switch (party) {
     case Parties.afd: return PartyColors.afd;
     case Parties.cdu: return PartyColors.cdu;
