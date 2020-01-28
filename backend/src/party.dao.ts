@@ -11,6 +11,7 @@ const cn = {
 };
 
 export class PartyDao {
+
     public async getTenTweets(): Promise<any> {
         const db = pgp(cn);
         //language=PostgreSQL
@@ -26,6 +27,15 @@ export class PartyDao {
             ' WHERE pa.id = ac.party_id and tc.account_id = ac.id';
         const result = await db.manyOrNone<any>(query);
         return result.map(toTweetCountDto);
+    }
+
+    public async getTweetsForAccount(party: string, start: Date, end: Date): Promise<any> {
+        const db = pgp(cn);
+        //language=PostgreSQL
+        const query = ' SELECT tw.tweet FROM parties as pa, accounts as ac, tweets as tw ' +
+            'WHERE pa.id = ac.party_id and tw.account_id = ac.id and ' +
+            'pa.name = $1 and tw.created_at >= $2 and tw.created_at < $3';
+        return db.manyOrNone<any>(query, [party, start, end]);
     }
 }
 

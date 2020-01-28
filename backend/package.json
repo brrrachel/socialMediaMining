@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/pg": "^7.14.1",
     "express": "^4.17.1",
+    "natural": "^0.6.3",
     "pg-promise": "^10.3.2",
     "typescript": "^3.7.3"
   },

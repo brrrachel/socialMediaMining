@@ -7,3 +7,12 @@ canvas {
   display: flex;
   position: absolute;
 }
+
+.basic-element {
+  float: left;
+  padding: 20px;
+}
+
+.card{
+  margin: 3.33333%;
+}

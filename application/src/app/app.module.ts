@@ -10,7 +10,8 @@ import {NgxBootstrapSliderModule} from 'ngx-bootstrap-slider';
 import {TimelineComponent} from './timeline/timeline.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BasicsComponent} from './tabs/basics/basics.component';
-import {RadarChartComponent} from "./tabs/radar-chart/radar-chart.component";
+import {RadarChartComponent} from "./tabs/five-factor-model/radar-chart.component";
+import {TermFrequencyComponent } from './tabs/topic-mining/term-frequency/term-frequency.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {RadarChartComponent} from "./tabs/radar-chart/radar-chart.component";
     PartySelectionComponent,
     TimelineComponent,
     BasicsComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    TermFrequencyComponent
   ],
   imports: [
     BrowserModule,

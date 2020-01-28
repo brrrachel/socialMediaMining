@@ -1,4 +1,4 @@
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
 import {Tweet} from "../models/tweet.model";
@@ -17,5 +17,13 @@ export class AccessService {
 
   getTweetCount(): Promise<TweetCount[]> {
     return this.http.get<TweetCount[]>(this.baseUrl + '/tweetCount').toPromise();
+  }
+
+  getTopics(parties: string[], start: Date, end: Date): Promise<{party: string, terms: any}[]> {
+    const params: HttpParams = new HttpParams()
+      .set('parties', parties.toString())
+      .set('start', start.toLocaleDateString())
+      .set('end', end.toLocaleDateString());
+    return this.http.get<{party: string, terms: any}[]>(this.baseUrl + '/topics', {params}).toPromise();
   }
 }

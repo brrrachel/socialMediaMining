@@ -12,6 +12,8 @@ import {TweetCount} from "../../models/tweetCount.model";
 })
 export class BasicsComponent implements OnInit, OnChanges {
 
+  partiesEnum = Parties;
+
   accessService: AccessService;
 
   @Input() selectedParties: Parties[];
@@ -130,7 +132,7 @@ export class BasicsComponent implements OnInit, OnChanges {
      return {data: values, fill: false} as ChartData
   }
 
-  generateAccountNames(parties: Parties[]): string[] {
+  generateAccountNames(parties: string[]): string[] {
     let labels = parties.map(value => value.toString());
     let indexCDU = labels.indexOf(Parties.cdu);
     let indexCSU = labels.indexOf(Parties.csu);

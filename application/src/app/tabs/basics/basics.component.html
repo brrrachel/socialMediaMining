@@ -1,4 +1,58 @@
 <div>
-  <div id="canvasLeft"><canvas id="tweetCountChart"></canvas> </div>
-  <div id="canvasRight"></div>
+  <div class="basic-element" id="canvasLeft">
+    <canvas id="tweetCountChart"></canvas>
+  </div>
+
+  <div class="basic-element" id="canvasRight">
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.cdu)">
+      <div class="card-body">
+        <h5 class="card-title">Christlich Demokratische Union Deutschlands (CDU)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@CDU, @akk, @JuliaKloeckner, @peteraltmaier</h6>
+        <p class="card-text">Founded on 26th June 1945 in Berlin</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.csu)">
+      <div class="card-body">
+        <h5 class="card-title">Christlich-Soziale Union in Bayern (CSU)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@CSU, @AndiScheuer</h6>
+        <p class="card-text">Founded on 13th October 1945 in Munich/Würzbug</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.spd)">
+      <div class="card-body">
+        <h5 class="card-title">Sozialdemokratische Partei Deutschlands (SPD)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@spdde, @MartinSchulz, @Ralf_Stegner, @larsklingbeil, @UlrichKelber</h6>
+        <p class="card-text">Founded on 23th May 1863 in Leipzig</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.fdp)">
+      <div class="card-body">
+        <h5 class="card-title">Freie Demokratische Partei (FDP)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@fdp, @c_lindner, @nicolabeerfdp, @KatjaSuding</h6>
+        <p class="card-text">Founded on 12th December 1948 in Heppenheim (Bergstraße)</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.gruene)">
+      <div class="card-body">
+        <h5 class="card-title">Bündnis 90/Die Grünen</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Die_Gruenen, @Volker_Beck, @RenateKuenast, @bueti, @cem_oezdemir</h6>
+        <p class="card-text">Founded on 14th May 1993 in Karlsruhe</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.linke)">
+      <div class="card-body">
+        <h5 class="card-title">Die Linke</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@dieLinke, @GregorGysi, @MartinaRenner, @SWagenknecht, @PetraPauMaHe</h6>
+        <p class="card-text">Founded on 16th June 2007 in Berlin</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;" *ngIf="selectedParties.includes(partiesEnum.afd)">
+      <div class="card-body">
+        <h5 class="card-title">Alternative für Deutschland (AfD)</h5>
+        <h6 class="card-subtitle mb-2 text-muted">@AfD, @Alice_Weidel, @Beatrix_vStorch, @MarcusPretzell, @PoggenburgAndre, @FraukePetry (until 09/2017)</h6>
+        <p class="card-text">Founded on 6th February 2013 in Berlin</p>
+      </div>
+    </div>
+
+  </div>
 </div>
