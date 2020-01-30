@@ -15,12 +15,11 @@ export class PartyService {
         return await this.dao.getTweetCount();
     }
 
-    public async getTopics(parties: string[], start: Date, end: Date): Promise<{party: string, terms: any[]}[]> {
+    public async getTopics(parties: string[], startYear: number, endYear: number): Promise<{party: string, terms: any[]}[]> {
         let score: any[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForAccount(party, start, end);
-            const preprocessed = this.preprocessTweets(tweets);
-            score.push({ party: party, document: preprocessed});
+            const tweets = await this.dao.getTweetsForAccount(party, startYear, endYear);
+            score.push({ party: party, document: this.preprocessTweets(tweets)});
         }));
 
         let partyList: string[] = [];
@@ -46,8 +45,6 @@ export class PartyService {
 
     private preprocessTweets(tweets: any): string {
         const tweets_array: string[] = Object.values(tweets).map(tweet => Object.values(tweet)[0]);
-        let text = tweets_array.reduce((previousValue, currentValue) => previousValue.concat(' ', currentValue))
-            .toLowerCase();
-        return text;
+        return tweets_array.reduce((previousValue, currentValue) => previousValue.concat(' ', currentValue));
     }
 }

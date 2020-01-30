@@ -18,7 +18,7 @@ router.get('/topics', async (req, res, _) => {
     let start = req.query.start.split('.');
     let end = req.query.end.split('.');
     let list_with_parties = req.query.parties.split(',');
-    const topics = await partyService.getTopics(list_with_parties, new Date(start[2], start[1], start[0]), new Date(end[2], end[1], end[0]));
+    const topics = await partyService.getTopics(list_with_parties, start[2], end[2]);
     return res.status(200).send(topics);
 });
 

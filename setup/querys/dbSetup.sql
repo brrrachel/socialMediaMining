@@ -121,3 +121,12 @@ CREATE table tweet_count(
                         month integer,
                         total integer
 );
+
+CREATE table processed_tweets(
+                        id BIGSERIAL PRIMARY KEY,
+                        account_id integer references accounts,
+                        year integer,
+                        month_start integer,
+                        month_end integer,
+                        tokens TEXT
+);

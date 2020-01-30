@@ -1,8 +1,7 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {AccessService} from "../../../services/access.service";
-import {getColorForParty, Parties, PartyColors} from "../../../models/party.model";
+import {getColorForParty, Parties} from "../../../models/party.model";
 import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
 import * as am4plugins_forceDirected from "@amcharts/amcharts4/plugins/forceDirected";
 
 const limitTopics = 5;
@@ -59,27 +58,49 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
     });
   }
 
-  createChart(data: {party: string, terms: any}[]) {
+  createChart(data: { party: string, terms: any }[]) {
 
     this.chartData.data = [];
 
     for (let d of data) {
-
-      for (let i=0; i < limitTopics; i++) {
+      for (let i = 0; i < limitTopics; i++) {
         const term = d.terms[i];
         let nodeAlreadyExist = this.chartData.data.find(node => node.name == term.term);
-        if(!nodeAlreadyExist) {
-          const children: NodeChild[] = [];
-          children.push({name: d.party, value: term.tfidf, color: getColorForParty(d.party)} as NodeChild);
+        if (!nodeAlreadyExist) {
+          const children: Node[] = [];
+
+          if (d.party === "CSU" || d.party === 'CDU') {
+            if (!children.find(child => child.name.includes('CSU') || child.name.includes('CDU'))) {
+              const parentChild: Node = this.createParentNodeForCsuCdu(data, term);
+              if (parentChild) {
+                children.push(parentChild);
+              }
+            }
+          } else {
+            children.push({name: d.party, value: term.tfidf, color: getColorForParty(d.party)} as NodeChild);
+          }
 
           for (let otherData of data) {
-            const matchingTerm = otherData.terms.find(element => element.term === term.term);
-            if(d.party !== otherData.party && matchingTerm) {
-              const newChild: NodeChild = {name: otherData.party, value: matchingTerm.tfidf, color: getColorForParty(otherData.party)};
-              children.push(newChild);
+            if (otherData.party !== "CSU" && otherData.party !== 'CDU') {
+              const matchingTerm = otherData.terms.find(element => element.term === term.term);
+              if (d.party !== otherData.party && matchingTerm) {
+                children.push({
+                  name: otherData.party,
+                  value: matchingTerm.tfidf,
+                  color: getColorForParty(otherData.party)
+                } as NodeChild);
+              }
+            } else {
+              if (!children.find(child => child.name.includes('CSU') || child.name.includes('CDU'))) {
+                const parentChild: Node = this.createParentNodeForCsuCdu(data, term);
+                if (parentChild) {
+                  children.push(parentChild);
+                }
+              }
             }
           }
-          this.chartData.data.push({name: term.term, children: children} as NodeParent);
+
+          this.chartData.data.push({name: term.term, children: children, color: "grey"} as NodeParent);
         }
       }
 
@@ -92,8 +113,9 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
     this.chartData.dataFields.id = "name";
     this.chartData.dataFields.value = "value";
     this.chartData.dataFields.children = "children";
+    this.chartData.dataFields.color = "color";
 
-    this.chartData.nodes.template.tooltipText = "{name}:s {value}";
+    this.chartData.nodes.template.tooltipText = "{name}: {value}";
     this.chartData.nodes.template.fillOpacity = 1;
 
     this.chartData.nodes.template.label.text = "{name}";
@@ -105,17 +127,49 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
     this.chartData.nodes.template.label.truncate = true;
   }
 
+  private createParentNodeForCsuCdu(allData, currentTerm): Node {
+
+    const dataCdu = allData.find(dataSet => dataSet.party === "CDU").terms.find(term => term.term === currentTerm.term);
+    const dataCsu = allData.find(dataSet => dataSet.party === "CSU").terms.find(term => term.term === currentTerm.term);
+
+    const childCdu: NodeChild = dataCdu ? {
+      name: 'CDU',
+      value: dataCdu.tfidf,
+      color: getColorForParty(dataCdu.party)
+    } : null;
+    const childCsu: NodeChild = dataCsu ? {
+      name: 'CSU',
+      value: dataCsu.tfidf,
+      color: getColorForParty(dataCsu.party)
+    } : null;
+
+    if (childCdu && !childCsu) {
+      return childCdu;
+    } else if (!childCdu && childCsu) {
+      return childCsu;
+    } else if (childCdu && childCsu) {
+      return ({
+        name: "CDU/CSU",
+        children: [childCdu, childCsu],
+        color: getColorForParty(dataCdu.party)
+      } as NodeParent);
+    } else {
+      return null;
+    }
+  }
 }
 
 
-export interface NodeChild {
-  name: string;
+export interface NodeChild extends Node {
   value: number;
-  color: string;
 }
 
-export interface NodeParent {
+export interface NodeParent extends Node {
+  children: Node[];
+}
+
+export interface Node {
   name: string;
-  children: NodeChild[]
+  color: string;
 }
 
