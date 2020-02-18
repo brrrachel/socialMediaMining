@@ -1,4 +1,5 @@
 import pgPromise from 'pg-promise';
+import {DatePoint} from "./time-span.model";
 
 const pgp = pgPromise({/* Initialization Options */});
 
@@ -45,7 +46,7 @@ export class PartyDao {
         return db.manyOrNone<{year: number, month: number, tokens: string}[]>(query, [party, startYear, endYear]);
     }
 
-    public async getFiveFactoresForParty(party: string, startYear: number, startQuarter: number, endYear: number, endQuarter: number,): Promise<any> {
+    public async getFiveFactoresForParty(party: string, startYear: number, startQuarter: number, endYear: number, endQuarter: number): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT avg(fac.agreeableness) as agreeableness, avg(fac.conscientiousness) as conscientiousness, avg(fac.extraversion) as extraversion, avg(fac.neuroticism) as neuroticism, avg(fac.openness) as openness ' +
             ' FROM public.parties as pa, public.accounts as ac, public.big5_emotions as fac ' +

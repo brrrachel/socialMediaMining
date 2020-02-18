@@ -1,4 +1,5 @@
 import {fiveFactorModel, PartyDao} from "./party.dao";
+import {Timespan} from "./time-span.model";
 
 let natural = require('natural');
 let TfIdf = natural.TfIdf;
@@ -16,10 +17,10 @@ export class PartyService {
         return await this.dao.getTweetCount();
     }
 
-    public async getTopics(parties: string[], startYear: number, endYear: number): Promise<{ party: string, terms: any[] }[]> {
+    public async getTopics(parties: string[], timespan: Timespan): Promise<{ party: string, terms: any[] }[]> {
         let score: any[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForParty(party, startYear, endYear);
+            const tweets = await this.dao.getTweetsForParty(party, timespan.startTime.year, timespan.endTime.year);
             score.push({party: party, document: this.preprocessTweets(tweets)});
         }));
 
@@ -44,10 +45,10 @@ export class PartyService {
         return result;
     }
 
-    public async getFrequencyForTerm(term: string, parties: string[], startYear: number, endYear: number): Promise<{ party: string, frequency: any[] }[]> {
+    public async getFrequencyForTerm(term: string, parties: string[], timespan: Timespan): Promise<{ party: string, frequency: any[] }[]> {
         let result: { party: string, frequency: any[] }[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForPartyPerYear(party, startYear, endYear);
+            const tweets = await this.dao.getTweetsForPartyPerYear(party, timespan.startTime.year, timespan.endTime.year);
             let frequencies: { year: number, month: number, frequency: number }[] = [];
             for (let set of tweets) {
                 const splittedTokens: string[] = set.tokens.split(' ');
@@ -64,10 +65,10 @@ export class PartyService {
         return tweets_array.reduce((previousValue, currentValue) => previousValue.concat(' ', currentValue));
     }
 
-    public async getFiveFactors(parties: string[], startYear: number, startQuarter: number, endYear: number, endQuarter: number): Promise<{ party: string, factors: fiveFactorModel}[]> {
+    public async getFiveFactors(parties: string[], timespan: Timespan): Promise<{ party: string, factors: fiveFactorModel}[]> {
         let result: { party: string, factors: fiveFactorModel}[] = [];
         await Promise.all(parties.map(async party => {
-            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForParty(party, startYear, startQuarter, endYear, endQuarter)
+            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForParty(party, timespan.startTime.year, timespan.startTime.quarter, timespan.endTime.year, timespan.endTime.quarter)
             result.push({party: party, factors: partyResult});
         }));
         return result;

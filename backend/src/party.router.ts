@@ -30,12 +30,9 @@ router.get('/topics/development', async (req, res, _) => {
 });
 
 router.get('/fiveFactor', async (req, res, _) => {
-    let startYear = req.query.startYear;
-    let startQuarter = req.query.startQuarter;
-    let endYear = req.query.endYear;
-    let endQuarter = req.query.endQuarter;
+    let timespam = JSON.parse(req.query.timespan);
     let list_with_parties = req.query.parties.split(',');
-    const topics = await partyService.getFiveFactors(list_with_parties, startYear, startQuarter, endYear, endQuarter);
+    const topics = await partyService.getFiveFactors(list_with_parties, timespam);
     return res.status(200).send(topics);
 });
 
