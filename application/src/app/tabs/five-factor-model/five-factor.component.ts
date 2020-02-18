@@ -19,9 +19,6 @@ export class FiveFactorComponent implements OnInit, OnChanges {
   @Input() selectedParties: Parties[];
   @Input() selectedYears: [number, number];
 
-  currentParties: Parties[] = [];
-  currentYears: [number, number] = [2009, 2019];
-
   chart;
   ctx: CanvasRenderingContext2D;
   chartOptions: Chart.ChartOptions = {
@@ -59,8 +56,10 @@ export class FiveFactorComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    this.chart.data.datasets = this.datasets;
-    this.chart.update();
+    if (this.chart) {
+      this.chart.data.datasets = this.datasets;
+      this.chart.update();
+    }
   }
 
   initChart() {

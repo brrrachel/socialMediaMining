@@ -13,8 +13,6 @@ const limitTopics = 5;
 })
 export class TermFrequencyComponent implements OnInit, OnChanges {
 
-  accessService: AccessService;
-
   chart;
   chartData;
 
@@ -24,8 +22,7 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
   currentParties: Parties[] = [];
   currentYears: [number, number] = [2009, 2019];
 
-  constructor(accessService: AccessService) {
-    this.accessService = accessService;
+  constructor(private accessService: AccessService) {
   }
 
   ngOnInit() {

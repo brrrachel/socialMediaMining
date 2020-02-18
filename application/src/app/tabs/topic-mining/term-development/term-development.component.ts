@@ -35,10 +35,10 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
   };
 
   constructor(private accessService: AccessService, public datepipe: DatePipe) {
-    this.initChart();
   }
 
   ngOnInit() {
+    this.initChart();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -155,17 +155,14 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
   }
 
   initChart() {
-    let self = this;
-    window.onload = function () {
-      let canvas = <HTMLCanvasElement>document.getElementById('termDevelopment');
-      self.ctx = canvas.getContext('2d');
-      self.chart = new Chart(self.ctx, {
-        type: 'line',
-        data: {},
-        options: self.chartOptions
-      });
-      self.chart.update();
-    };
-  }
+    let canvas = <HTMLCanvasElement>document.getElementById('termDevelopment');
+    this.ctx = canvas.getContext('2d');
+    this.chart = new Chart(this.ctx, {
+      type: 'line',
+      data: {},
+      options: this.chartOptions
+    });
+    this.chart.update();
+  };
 
 }

@@ -4,6 +4,8 @@ import {AccessService} from "../../services/access.service";
 import {getColorForParty, Parties} from "../../models/party.model";
 import * as Chart from 'chart.js'
 import {TweetCount} from "../../models/tweetCount.model";
+import {getMonthFromDatePoint, MAX_TIMESPAN, TimeSpan} from "../../models/time-span.model";
+import {range} from "../../shared/helper-functions";
 
 @Component({
   selector: 'app-basics',
@@ -15,10 +17,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   partiesEnum = Parties;
 
   @Input() selectedParties: Parties[] = [];
-  @Input() selectedYears: [number, number];
-
-  currentParties: Parties[] = [];
-  currentYears: [number, number] = [2009, 2019];
+  @Input() selectedYears: TimeSpan = MAX_TIMESPAN;
 
   chart: Chart;
   ctx: CanvasRenderingContext2D;
@@ -49,16 +48,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    let hasChanged: Boolean = false;
-    if (changes['selectedParties']) {
-      this.currentParties = changes['selectedParties']['currentValue'];
-      hasChanged = true;
-    }
-    if (changes['selectedYears']) {
-      this.currentYears = changes['selectedYears']['currentValue'];
-      hasChanged = true;
-    }
-    if (hasChanged) {
+    if (changes['selectedParties'] || changes['selectedYears']) {
       this.adaptDataToSelection();
     }
   }
@@ -66,8 +56,8 @@ export class BasicsComponent implements OnInit, OnChanges {
   adaptDataToSelection() {
     if (this.preparedData) {
       let newDataSet: ChartData[] = [];
-      let newLabels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], (this.currentYears[1] === 2019 ? 11 : 12));
-      let accountNames: string[] = this.generateAccountNames(this.currentParties);
+      let newLabels: string[] = this.createLabels();
+      let accountNames: string[] = this.generateAccountNames(this.selectedParties);
 
       for (let set of this.preparedData) {
         if (accountNames.indexOf(set.label) > -1) {
@@ -91,7 +81,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   prepareData(unpreparedData: TweetCount[]) {
-    let labels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], 11);
+    let labels: string[] = this.createLabels();
     let preparedDataSet: ChartData[] = new Array<ChartData>();
     const party_keys = Object.keys(Parties);
     let allAccountNames: string[] = this.generateAccountNames(party_keys.map(k => Parties[k as any]));
@@ -162,18 +152,16 @@ export class BasicsComponent implements OnInit, OnChanges {
     this.chart.update();
   }
 
-  createLabels(startYear: number, startMonth: number, endYear: number, endMonth: number) {
-    let range = function (start, end): number[] {
-      var list = [];
-      for (var i = start; i <= end; i++) {
-        list.push(i);
-      }
-      return list;
-    };
+  createLabels() {
+    const startYear = this.selectedYears.startTime.year;
+    const startMonth = getMonthFromDatePoint(this.selectedYears.startTime);
+    const endYear = this.selectedYears.endTime.year;
+    const endMonth = 3;
 
-    let labels: string[] = [];
-    let months: number[] = range(1, 12);
-    let years: number[] = range(startYear, endYear);
+
+    const labels: string[] = [];
+    const months: number[] = range(startMonth, 12);
+    const years: number[] = range(startYear, endYear);
     for (let year of years) {
       for (let month of months) {
         if (year < 2019 || (year === 2019 && month <= endMonth)) {

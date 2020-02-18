@@ -2,9 +2,27 @@
   margin: 50px 0;
 }
 
-:host::ng-deep.slider.slider-horizontal {
-  width: 90%;
-  margin-left: 5%;
-  margin-bottom: 28px;
-  margin-right: 5%;
+:host::ng-deep {
+
+  &.slider.slider-horizontal {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 28px;
+    margin-right: 5%;
+  }
+
+  .slider-tick.round:not(:nth-child(4n+1)) {
+    height: 15px;
+    width: 15px;
+    margin-top: 2.5px;
+  }
+
+  //.slider-tick-label:not(:nth-child(4n+1)) {
+  //  width: 0 !important;
+  //}
+  //
+  //.slider-tick-label:nth-child(4n+1) {
+  //  width: calc(100% / 13) !important;
+  //}
 }
+
