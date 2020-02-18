@@ -1,4 +1,4 @@
-import {PartyDao} from "./party.dao";
+import {fiveFactorModel, PartyDao} from "./party.dao";
 
 let natural = require('natural');
 let TfIdf = natural.TfIdf;
@@ -62,5 +62,14 @@ export class PartyService {
     private preprocessTweets(tweets: any): string {
         const tweets_array: string[] = Object.values(tweets).map(tweet => Object.values(tweet)[0]);
         return tweets_array.reduce((previousValue, currentValue) => previousValue.concat(' ', currentValue));
+    }
+
+    public async getFiveFactors(parties: string[], startYear: number, startQuarter: number, endYear: number, endQuarter: number): Promise<{ party: string, factors: fiveFactorModel}[]> {
+        let result: { party: string, factors: fiveFactorModel}[] = [];
+        await Promise.all(parties.map(async party => {
+            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForParty(party, startYear, startQuarter, endYear, endQuarter)
+            result.push({party: party, factors: partyResult});
+        }));
+        return result;
     }
 }

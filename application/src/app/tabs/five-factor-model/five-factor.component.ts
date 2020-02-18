@@ -86,7 +86,4 @@ export class RadarChartData {
   pointBorderColor: string;
   pointBackgroundColor: string;
   data: number[];
-
 }
-
-

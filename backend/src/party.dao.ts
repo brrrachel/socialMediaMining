@@ -44,6 +44,16 @@ export class PartyDao {
             'pa.name = $1 and $2 <= pt.year and pt.year <= $3';
         return db.manyOrNone<{year: number, month: number, tokens: string}[]>(query, [party, startYear, endYear]);
     }
+
+    public async getFiveFactoresForParty(party: string, startYear: number, startQuarter: number, endYear: number, endQuarter: number,): Promise<any> {
+        //language=PostgreSQL
+        const query = ' SELECT avg(fac.agreeableness) as agreeableness, avg(fac.conscientiousness) as conscientiousness, avg(fac.extraversion) as extraversion, avg(fac.neuroticism) as neuroticism, avg(fac.openness) as openness ' +
+            ' FROM public.parties as pa, public.accounts as ac, public.big5_emotions as fac ' +
+            ' WHERE pa.id = ac.party_id and pa.name = $1 and fac.account_id = ac.id ' +
+            ' and ($2 < fac.year or ($2 = fac.year and $3 <= fac.quarter)) ' +
+            ' and (fac.year < $4 or (fac.year = $4 and fac.quarter < $5));'
+        return db.manyOrNone<fiveFactorModel>(query, [party, startYear, startQuarter, endYear, endQuarter]);
+    }
 }
 
 function toTweetCountDto(tweets: any): any {
@@ -54,4 +64,12 @@ function toTweetCountDto(tweets: any): any {
         month: tweets.month,
         total: tweets.total
     }
+}
+
+export interface fiveFactorModel {
+    agreeableness: number;
+    conscientiousness: number;
+    extraversion: number;
+    neuroticism: number;
+    openness: number;
 }
