@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ALL_DATE_POINTS, TimeSpan} from "../models/time-span.model";
+import {ALL_DATE_POINTS, Timespan} from "../models/time-span.model";
 
 @Component({
   selector: 'app-timeline',
@@ -7,7 +7,7 @@ import {ALL_DATE_POINTS, TimeSpan} from "../models/time-span.model";
   styleUrls: ['./timeline.component.scss']
 })
 export class TimelineComponent implements OnInit {
-  @Output() yearRangeChange: EventEmitter<TimeSpan> = new EventEmitter<TimeSpan>();
+  @Output() yearRangeChange: EventEmitter<Timespan> = new EventEmitter<Timespan>();
 
   dateLabels: string[] = [
     '2008', '', '', '',
@@ -33,7 +33,7 @@ export class TimelineComponent implements OnInit {
   }
 
   onChange(values: TimelineValues) {
-    const selectedTimespan: TimeSpan = {
+    const selectedTimespan: Timespan = {
       startTime: ALL_DATE_POINTS[values.newValue[0]],
       endTime: ALL_DATE_POINTS[values.newValue[1]]
     };

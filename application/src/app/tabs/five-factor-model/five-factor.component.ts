@@ -1,7 +1,8 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {AccessService} from "../../services/access.service";
-import {getColorForParty, Parties} from "../../models/party.model";
+import {Parties} from "../../models/party.model";
 import * as Chart from 'chart.js'
+import {Timespan} from "../../models/time-span.model";
 
 @Component({
   selector: 'app-five-factor',
@@ -17,7 +18,7 @@ export class FiveFactorComponent implements OnInit, OnChanges {
   partiesEnum = Parties;
 
   @Input() selectedParties: Parties[];
-  @Input() selectedYears: [number, number];
+  @Input() selectedYears: Timespan;
 
   chart;
   ctx: CanvasRenderingContext2D;

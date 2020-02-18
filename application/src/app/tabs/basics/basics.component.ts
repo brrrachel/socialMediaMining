@@ -4,8 +4,8 @@ import {AccessService} from "../../services/access.service";
 import {getColorForParty, Parties} from "../../models/party.model";
 import * as Chart from 'chart.js'
 import {TweetCount} from "../../models/tweetCount.model";
-import {getMonthFromDatePoint, MAX_TIMESPAN, TimeSpan} from "../../models/time-span.model";
-import {range} from "../../shared/helper-functions";
+import {MAX_TIMESPAN, Timespan} from "../../models/time-span.model";
+import {createLabels} from "../../shared/helper-functions";
 
 @Component({
   selector: 'app-basics',
@@ -17,7 +17,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   partiesEnum = Parties;
 
   @Input() selectedParties: Parties[] = [];
-  @Input() selectedYears: TimeSpan = MAX_TIMESPAN;
+  @Input() selectedYears: Timespan = MAX_TIMESPAN;
 
   chart: Chart;
   ctx: CanvasRenderingContext2D;
@@ -56,7 +56,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   adaptDataToSelection() {
     if (this.preparedData) {
       let newDataSet: ChartData[] = [];
-      let newLabels: string[] = this.createLabels();
+      let newLabels: string[] = createLabels(this.selectedYears);
       let accountNames: string[] = this.generateAccountNames(this.selectedParties);
 
       for (let set of this.preparedData) {
@@ -81,7 +81,7 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   prepareData(unpreparedData: TweetCount[]) {
-    let labels: string[] = this.createLabels();
+    let labels: string[] = createLabels(this.selectedYears);
     let preparedDataSet: ChartData[] = new Array<ChartData>();
     const party_keys = Object.keys(Parties);
     let allAccountNames: string[] = this.generateAccountNames(party_keys.map(k => Parties[k as any]));
@@ -150,26 +150,6 @@ export class BasicsComponent implements OnInit, OnChanges {
       options: this.chartOptions
     });
     this.chart.update();
-  }
-
-  createLabels() {
-    const startYear = this.selectedYears.startTime.year;
-    const startMonth = getMonthFromDatePoint(this.selectedYears.startTime);
-    const endYear = this.selectedYears.endTime.year;
-    const endMonth = 3;
-
-
-    const labels: string[] = [];
-    const months: number[] = range(startMonth, 12);
-    const years: number[] = range(startYear, endYear);
-    for (let year of years) {
-      for (let month of months) {
-        if (year < 2019 || (year === 2019 && month <= endMonth)) {
-          labels.push(this.datepipe.transform(new Date(year, month - 1), 'yyyy-MM-dd'));
-        }
-      }
-    }
-    return labels;
   }
 }
 

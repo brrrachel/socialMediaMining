@@ -4,6 +4,8 @@ import {AccessService, TopicFrequencyModel} from "../../../services/access.servi
 import * as Chart from 'chart.js'
 import {ChartData} from '../../basics/basics.component'
 import {DatePipe} from "@angular/common";
+import {MAX_TIMESPAN, Timespan} from "../../../models/time-span.model";
+import {createLabels} from "../../../shared/helper-functions";
 
 @Component({
   selector: 'app-term-development',
@@ -12,12 +14,10 @@ import {DatePipe} from "@angular/common";
 })
 export class TermDevelopmentComponent implements OnInit, OnChanges {
 
-  @Input() selectedParties: Parties[];
-  @Input() selectedYears: [number, number];
+  @Input() selectedParties: Parties[] = [];
+  @Input() selectedYears: Timespan = MAX_TIMESPAN;
 
-  currentParties: Parties[] = [];
-  currentYears: [number, number] = [2009, 2019];
-  currentSearchTerm: string = 'hello';
+  currentSearchTerm: string = '';
 
   chart: Chart;
   ctx: CanvasRenderingContext2D;
@@ -42,28 +42,19 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    let hasChanged = false;
-    if (changes['selectedParties']) {
-      this.currentParties = changes['selectedParties']['currentValue'];
-      hasChanged = true;
-    }
-    if (changes['selectedYears']) {
-      this.currentYears = changes['selectedYears']['currentValue'];
-      hasChanged = true;
-    }
-    if (hasChanged) {
+    if (changes['selectedParties'] || changes['selectedYears']) {
       this.getData();
     }
   }
 
   getData() {
-    console.log('Parties', this.currentParties);
-    this.accessService.getFrequencyForTopic(this.currentSearchTerm, this.currentParties, this.currentYears[0], this.currentYears[1])
+    console.log('Parties', this.selectedParties);
+    this.accessService.getFrequencyForTopic(this.currentSearchTerm, this.selectedParties, this.selectedYears)
       .then(data => this.prepareData(data));
   }
 
   private prepareData(data: { party: string, frequency: TopicFrequencyModel[] }[]) {
-    const labels = this.createLabels(this.currentYears[0], 1, this.currentYears[1], 11);
+    const labels = createLabels(this.selectedYears);
     let preparedDataSet: ChartData[] = new Array<ChartData>();
     const party_keys = Object.keys(Parties);
     let allAccountNames: string[] = this.generateAccountNames(party_keys.map(k => Parties[k as any]));
@@ -94,28 +85,6 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
     this.chart.data.datasets = preparedDataSet;
     this.chart.update();
 
-  }
-
-  createLabels(startYear: number, startMonth: number, endYear: number, endMonth: number) {
-    let range = function (start, end): number[] {
-      var list = [];
-      for (var i = start; i <= end; i++) {
-        list.push(i);
-      }
-      return list;
-    };
-
-    let labels: string[] = [];
-    let months: number[] = range(1, 12);
-    let years: number[] = range(startYear, endYear);
-    for (let year of years) {
-      for (let month of months) {
-        if (year < 2019 || (year === 2019 && month <= endMonth)) {
-          labels.push(this.datepipe.transform(new Date(year, month - 1), 'yyyy-MM-dd'));
-        }
-      }
-    }
-    return labels;
   }
 
   generateAccountNames(parties: string[]): string[] {

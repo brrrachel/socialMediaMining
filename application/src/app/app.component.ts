@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Parties} from "./models/party.model";
-import {MAX_TIMESPAN, TimeSpan} from "./models/time-span.model";
+import {MAX_TIMESPAN, Timespan} from "./models/time-span.model";
 
 @Component({
   selector: 'app-root',
@@ -12,5 +12,5 @@ export class AppComponent {
   title = 'application';
   selectedParties: Parties[] = [];
   value: number = 0;
-  selectedYears: TimeSpan = MAX_TIMESPAN;
+  selectedYears: Timespan = MAX_TIMESPAN;
 }

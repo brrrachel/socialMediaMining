@@ -3,6 +3,7 @@ import {AccessService} from "../../../services/access.service";
 import {getColorForParty, Parties} from "../../../models/party.model";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4plugins_forceDirected from "@amcharts/amcharts4/plugins/forceDirected";
+import {MAX_TIMESPAN, Timespan} from "../../../models/time-span.model";
 
 const limitTopics = 5;
 
@@ -16,11 +17,8 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
   chart;
   chartData;
 
-  @Input() selectedParties: Parties[];
-  @Input() selectedYears: [number, number];
-
-  currentParties: Parties[] = [];
-  currentYears: [number, number] = [2009, 2019];
+  @Input() selectedParties: Parties[] = [];
+  @Input() selectedYears: Timespan = MAX_TIMESPAN;
 
   constructor(private accessService: AccessService) {
   }
@@ -32,24 +30,13 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    let hasChanged: Boolean = false;
-    if (changes['selectedParties']) {
-      this.currentParties = changes['selectedParties']['currentValue'];
-      hasChanged = true;
-    }
-    if (changes['selectedYears']) {
-      this.currentYears = changes['selectedYears']['currentValue'];
-      hasChanged = true;
-    }
-    if (hasChanged && this.currentParties) {
+    if (changes['selectedParties'] || changes['selectedYears']) {
       this.getData();
     }
   }
 
   getData() {
-    const start = new Date(this.currentYears[0], 0, 1);
-    const end = new Date(this.currentYears[1], 12, 31);
-    this.accessService.getTopics(this.currentParties, start, end).then(data => {
+    this.accessService.getTopics(this.selectedParties, this.selectedYears).then(data => {
       this.createChart(data);
     });
   }
