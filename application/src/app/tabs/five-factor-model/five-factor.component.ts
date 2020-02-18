@@ -1,8 +1,7 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {AccessService} from "../../services/access.service";
 import {getColorForParty, Parties} from "../../models/party.model";
-import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
+import * as Chart from 'chart.js'
 
 @Component({
   selector: 'app-five-factor',
@@ -12,9 +11,10 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 
 export class FiveFactorComponent implements OnInit, OnChanges {
 
-  chart;
-  chartData;
+  labels: string[] = ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"];
+
   accessService: AccessService;
+  partiesEnum = Parties;
 
   @Input() selectedParties: Parties[];
   @Input() selectedYears: [number, number];
@@ -22,76 +22,71 @@ export class FiveFactorComponent implements OnInit, OnChanges {
   currentParties: Parties[] = [];
   currentYears: [number, number] = [2009, 2019];
 
+  chart;
+  ctx: CanvasRenderingContext2D;
+  chartOptions: Chart.ChartOptions = {
+    title: {
+      display: true
+    }
+  };
+
+  datasets: RadarChartData[] = [
+    {
+      label: "1950",
+      fill: true,
+      backgroundColor: "rgba(179,181,198,0.2)",
+      borderColor: "rgba(179,181,198,1)",
+      pointBorderColor: "#fff",
+      pointBackgroundColor: "rgba(179,181,198,1)",
+      data: [8.77, 55.61, 21.69, 6.62, 6.82]
+    }, {
+      label: "2050",
+      fill: true,
+      backgroundColor: "rgba(255,99,132,0.2)",
+      borderColor: "rgba(255,99,132,1)",
+      pointBorderColor: "#fff",
+      pointBackgroundColor: "rgba(255,99,132,1)",
+      data: [25.48, 54.16, 7.61, 8.06, 4.45]
+    }
+  ];
+
   constructor(accessService: AccessService) {
     this.accessService = accessService;
   }
 
   ngOnInit() {
-    this.chart = am4core.create("five-factor", am4charts.RadarChart);
-    this.chartData = [{
-      "country": "Lithuania",
-      "litres": 501
-    }, {
-      "country": "Czechia",
-      "litres": 301
-    }, {
-      "country": "Ireland",
-      "litres": 266
-    }, {
-      "country": "Germany",
-      "litres": 165
-    }, {
-      "country": "Australia",
-      "litres": 139
-    }, {
-      "country": "Austria",
-      "litres": 336
-    }, {
-      "country": "UK",
-      "litres": 290
-    }, {
-      "country": "Belgium",
-      "litres": 325
-    }, {
-      "country": "The Netherlands",
-      "litres": 40
-    }];
-    //this.getData();
-    this.createChart()
+    this.initChart();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    let hasChanged: Boolean = false;
-    if (changes['selectedParties']) {
-      this.currentParties = changes['selectedParties']['currentValue'];
-      hasChanged = true;
-    }
-    if (changes['selectedYears']) {
-      this.currentYears = changes['selectedYears']['currentValue'];
-      hasChanged = true;
-    }
-    if (hasChanged && this.currentParties) {
-      //this.getData();
-      this.createChart()
-    }
+  ngOnChanges() {
+    this.chart.data.datasets = this.datasets;
+    this.chart.update();
   }
 
-  createChart(): void {
-    /* Create axes */
-    const categoryAxis = this.chart.xAxes.push(new am4charts.CategoryAxis());
-    categoryAxis.dataFields.category = "country";
-
-    const valueAxis = this.chart.yAxes.push(new am4charts.ValueAxis());
-    valueAxis.renderer.axisFills.template.fill = this.chart.colors.getIndex(2);
-    valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
-
-    /* Create and configure series */
-    const series = this.chart.series.push(new am4charts.RadarSeries());
-    series.dataFields.valueY = "litres";
-    series.dataFields.categoryX = "country";
-    series.name = "Sales";
-    series.strokeWidth = 3;
+  initChart() {
+    let canvas = <HTMLCanvasElement>document.getElementById('fiveFactorChart');
+    this.ctx = canvas.getContext('2d');
+    this.chart = new Chart(this.ctx, {
+      type: 'radar',
+      data: {
+        labels: this.labels,
+        datasets: []
+      },
+      options: this.chartOptions
+    });
+    this.chart.update();
   }
+}
+
+export class RadarChartData {
+  label: string;
+  fill: boolean;
+  backgroundColor: string;
+  borderColor: string;
+  pointBorderColor: string;
+  pointBackgroundColor: string;
+  data: number[];
+
 }
 
 
