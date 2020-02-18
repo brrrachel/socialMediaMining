@@ -31,7 +31,6 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.chart = am4core.create("term-frequency", am4plugins_forceDirected.ForceDirectedTree);
     this.chartData = this.chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries());
-    this.chartData.series.dataFields.color = "color";
     this.getData();
   }
 

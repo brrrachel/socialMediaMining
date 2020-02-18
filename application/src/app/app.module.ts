@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BasicsComponent} from './tabs/basics/basics.component';
 import {RadarChartComponent} from "./tabs/five-factor-model/radar-chart.component";
 import {TermFrequencyComponent } from './tabs/topic-mining/term-frequency/term-frequency.component';
+import { TermDevelopmentComponent } from './tabs/topic-mining/term-development/term-development.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {TermFrequencyComponent } from './tabs/topic-mining/term-frequency/term-f
     TimelineComponent,
     BasicsComponent,
     RadarChartComponent,
-    TermFrequencyComponent
+    TermFrequencyComponent,
+    TermDevelopmentComponent
   ],
   imports: [
     BrowserModule,

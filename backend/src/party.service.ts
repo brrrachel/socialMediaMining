@@ -1,4 +1,5 @@
 import {PartyDao} from "./party.dao";
+
 let natural = require('natural');
 let TfIdf = natural.TfIdf;
 
@@ -15,11 +16,11 @@ export class PartyService {
         return await this.dao.getTweetCount();
     }
 
-    public async getTopics(parties: string[], startYear: number, endYear: number): Promise<{party: string, terms: any[]}[]> {
+    public async getTopics(parties: string[], startYear: number, endYear: number): Promise<{ party: string, terms: any[] }[]> {
         let score: any[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForAccount(party, startYear, endYear);
-            score.push({ party: party, document: this.preprocessTweets(tweets)});
+            const tweets = await this.dao.getTweetsForParty(party, startYear, endYear);
+            score.push({party: party, document: this.preprocessTweets(tweets)});
         }));
 
         let partyList: string[] = [];
@@ -40,6 +41,21 @@ export class PartyService {
             result.push({party: partyList[i], terms: tfidf.listTerms(i)})
         }
 
+        return result;
+    }
+
+    public async getFrequencyForTerm(term: string, parties: string[], startYear: number, endYear: number): Promise<{ party: string, frequency: any[] }[]> {
+        let result: { party: string, frequency: any[] }[] = [];
+        await Promise.all(parties.map(async party => {
+            const tweets = await this.dao.getTweetsForPartyPerYear(party, startYear, endYear);
+            let frequencies: { year: number, month: number, frequency: number }[] = [];
+            for (let set of tweets) {
+                const splittedTokens: string[] = set.tokens.split(' ');
+                const numberOfMatching: number = splittedTokens.filter(token => token === term).length;
+                frequencies.push({year: set.year, month: set.month_start, frequency: numberOfMatching});
+            }
+            result.push({party: party, frequency: frequencies});
+        }));
         return result;
     }
 

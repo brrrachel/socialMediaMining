@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year">
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" afterDir="false" />
+    <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="preprocessed Tweets for topic map">
+      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/app/services/access.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/services/access.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/parties.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/parties.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/parties.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/parties.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/parties.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/parties.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/radar-chart/radar-chart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/party.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/party.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/party.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/querys/finishTweets.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/querys/finishTweets.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/application/node_modules/" />
     <ignored path="$PROJECT_DIR$/backend/node_modules/" />
@@ -122,57 +107,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="521">
+              <caret line="86" column="26" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="86" selection-end-column="26" />
               <folding>
                 <element signature="e#0#81#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1170">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es5.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="702" column="4" selection-start-line="702" selection-start-column="4" selection-end-line="702" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -180,8 +121,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+            <state relative-caret-position="393">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="120" column="2" selection-start-line="120" selection-start-column="2" selection-end-line="120" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="435">
+              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -198,20 +160,57 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/package.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es5.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="251">
+              <caret line="1342" column="4" selection-start-line="1342" selection-start-column="4" selection-end-line="1342" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/package.json">
+        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="15">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -222,8 +221,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="Python Script" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -240,6 +239,8 @@
       <find>change</find>
       <find>Afd</find>
       <find>d3</find>
+      <find>www</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,24 +269,33 @@
         <option value="$PROJECT_DIR$/setup/setupTweetCounts.sql" />
         <option value="$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts" />
         <option value="$PROJECT_DIR$/application/src/app/models/party.model.ts" />
-        <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html" />
         <option value="$PROJECT_DIR$/backend/src/topic-mining.py" />
         <option value="$PROJECT_DIR$/backend/src/tfIdf.service.ts" />
         <option value="$PROJECT_DIR$/setup/querys/finishTweets.sql" />
-        <option value="$PROJECT_DIR$/backend/src/party.dao.ts" />
-        <option value="$PROJECT_DIR$/backend/src/party.router.ts" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.service.ts" />
         <option value="$PROJECT_DIR$/application/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/application/src/index.html" />
-        <option value="$PROJECT_DIR$/application/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html" />
+        <option value="$PROJECT_DIR$/application/package.json" />
+        <option value="$PROJECT_DIR$/backend/dist/party.service.js" />
+        <option value="$PROJECT_DIR$/setup/querys/dropAllTables.sql" />
+        <option value="$PROJECT_DIR$/setup/loadProcessedTweets.sh" />
+        <option value="$PROJECT_DIR$/tweets/experiments/preprocessTweets.py" />
+        <option value="$PROJECT_DIR$/setup/querys/dbSetup.sql" />
+        <option value="$PROJECT_DIR$/setup/README.md" />
         <option value="$PROJECT_DIR$/backend/package.json" />
+        <option value="$PROJECT_DIR$/application/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/backend/src/party.router.ts" />
+        <option value="$PROJECT_DIR$/backend/src/party.dao.ts" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" />
+        <option value="$PROJECT_DIR$/application/src/app/services/chartJS.service.ts" />
         <option value="$PROJECT_DIR$/backend/src/party.service.ts" />
         <option value="$PROJECT_DIR$/application/src/app/services/access.service.ts" />
-        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" />
-        <option value="$PROJECT_DIR$/application/package.json" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts" />
       </list>
     </option>
   </component>
@@ -302,8 +312,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,7 +377,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="five-factor-model" type="462c0819:PsiDirectoryNode" />
+              <item name="topic-mining" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
@@ -379,6 +387,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="tabs" type="462c0819:PsiDirectoryNode" />
               <item name="topic-mining" type="462c0819:PsiDirectoryNode" />
+              <item name="term-development" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +414,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -419,19 +430,23 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575655428721" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/setup" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/setup" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/setup/querys" />
       <recent name="$PROJECT_DIR$/setup" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\setup" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\backend\src" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining" />
-      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\application\backend\rest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -445,6 +460,35 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="preprocessTweets" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="socialMediaMining" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tweets/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tweets/experiments/preprocessTweets.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.preprocessTweets" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -497,7 +541,9 @@
       <workItem from="1579098012949" duration="2046000" />
       <workItem from="1579100453144" duration="11514000" />
       <workItem from="1579172234132" duration="9120000" />
-      <workItem from="1579963114240" duration="39448000" />
+      <workItem from="1579963114240" duration="68742000" />
+      <workItem from="1581015092355" duration="1949000" />
+      <workItem from="1581764696385" duration="7172000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
       <created>1575990610670</created>
@@ -576,11 +622,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579963192505</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added term-frequencey-chart with first results">
+      <created>1580234422955</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580234422955</updated>
+    </task>
+    <task id="LOCAL-00013" summary="preprocessed Tweets for topic map">
+      <created>1580393318172</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580393318172</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64837000" />
+    <option name="totallyTimeSpent" value="103252000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,27 +655,27 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.29256082" />
+      <window_info id="Structure" order="1" sideWeight="0.500821" side_tool="true" weight="0.21816881" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="UI Designer" order="6" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.35301206" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="TypeScript" order="7" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.036144577" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.5048193" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -684,7 +744,9 @@
     <MESSAGE value="fixing absolute path" />
     <MESSAGE value="build process / setup complete" />
     <MESSAGE value="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year" />
-    <option name="LAST_COMMIT_MESSAGE" value="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year" />
+    <MESSAGE value="added term-frequencey-chart with first results" />
+    <MESSAGE value="preprocessed Tweets for topic map" />
+    <option name="LAST_COMMIT_MESSAGE" value="preprocessed Tweets for topic map" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Inspections" timestamp="1578417850407">
@@ -782,203 +844,6 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575986633597" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/psycopg2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#2059#2494#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/topic-mining.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/@types/express-serve-static-core/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/loadTweetCountFiles.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweets.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/tfIdf.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/dropAllTables.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/pg-promise/typescript/pg-promise.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="345" column="8" selection-start-line="345" selection-start-column="8" selection-end-line="345" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/@types/node/globals.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="358" column="11" selection-start-line="358" selection-start-column="11" selection-end-line="358" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2017.object.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.core.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="453" column="4" selection-start-line="453" selection-start-column="4" selection-end-line="453" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweets.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/LIWC_results.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-14969">
-          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <folding>
-            <element signature="e#0#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/five-factor-model/parties.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="74" selection-start-line="68" selection-start-column="10" selection-end-line="74" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/test.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/polyfills.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -995,52 +860,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="146" selection-start-line="51" selection-start-column="146" selection-end-line="51" selection-end-column="146" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/models/tweet.model.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/node_modules/natural/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1065,71 +886,327 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
+    <entry file="file://$PROJECT_DIR$/application/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="495">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
+    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="132">
+          <caret line="239" column="4" selection-start-line="239" selection-start-column="4" selection-end-line="239" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/dist/party.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="53" column="80" lean-forward="true" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.core.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
+    <entry file="file://$PROJECT_DIR$/application/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        <state relative-caret-position="-1149" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tweets/experiments/basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="35" selection-start-line="31" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es5.d.ts">
+    <entry file="file://$PROJECT_DIR$/tweets/experiments/get5FactorFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="702" column="4" selection-start-line="702" selection-start-column="4" selection-end-line="702" selection-end-column="4" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
+    <entry file="file://$PROJECT_DIR$/setup/loadTweetCountFiles.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweets.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/dropAllTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweets.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/loadAllCsvFiles.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweetCounts.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tweets/experiments/preprocessed_data.csv" />
+    <entry file="file://$PROJECT_DIR$/tweets/experiments/preprocessTweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="e#42#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/loadProcessedTweets.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="119" column="37" lean-forward="true" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweetCounts.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#0#81#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/preprocessed_tweets.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-428">
+          <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-18" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/services/chartJS.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/node_modules/@angular/common/src/pipes/date_pipe.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="146" column="21" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/models/party.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="300">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
+    <entry file="file://$PROJECT_DIR$/application/src/app/models/tweet.model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/models/tweetCount.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="45">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="1342" column="4" selection-start-line="1342" selection-start-column="4" selection-end-line="1342" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="86" column="26" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="86" selection-end-column="26" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/package.json">
+    <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="393">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="120" column="2" selection-start-line="120" selection-start-column="2" selection-end-line="120" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

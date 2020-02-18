@@ -11,8 +11,10 @@
          aria-controls="nav-home" aria-selected="true">Basics</a>
       <a class="nav-item nav-link" id="nav-factor-tab" data-toggle="tab" href="#factor-model" role="tab"
          aria-controls="nav-link" aria-selected="false">Five Factor Model</a>
-      <a class="nav-item nav-link" id="nav-topic-tab" data-toggle="tab" href="#nav-topics" role="tab"
-         aria-controls="nav-topics" aria-selected="false">Topics</a>
+      <a class="nav-item nav-link" id="nav-topics-frequency-tab" data-toggle="tab" href="#nav-topic-frequency" role="tab"
+         aria-controls="nav-topic-frequency" aria-selected="false">Topics Frequency</a>
+      <a class="nav-item nav-link" id="nav-topic-development-tab" data-toggle="tab" href="#nav-topic-development" role="tab"
+         aria-controls="nav-topic-development" aria-selected="false">Topics Development</a>
       <a class="nav-item nav-link" id="nav-geolocation-tab" data-toggle="tab" href="#nav-geolocation" role="tab"
          aria-controls="nav-geolocation" aria-selected="false">Geolocation</a>
     </div>
@@ -24,8 +26,11 @@
     <div class="tab-pane fade" id="factor-model" role="tabpanel" aria-labelledby="nav-factor-tab">
       <app-radar-chart></app-radar-chart>
     </div>
-    <div class="tab-pane fade" id="nav-topics" role="tabpanel" aria-labelledby="nav-topics-tab">
+    <div class="tab-pane fade" id="nav-topic-frequency" role="tabpanel" aria-labelledby="nav-topics-frequency-tab">
       <app-term-frequency [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-term-frequency>
+    </div>
+    <div class="tab-pane fade" id="nav-topic-development" role="tabpanel" aria-labelledby="nav-topics-development-tab">
+      <app-term-development [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-term-development>
     </div>
     <div class="tab-pane fade" id="nav-geolocation" role="tabpanel" aria-labelledby="nav-geolocation-tab">
       Gelolocation
