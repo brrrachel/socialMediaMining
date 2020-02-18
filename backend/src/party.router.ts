@@ -14,11 +14,20 @@ router.get('/tweetCount', async (req, res, _) => {
     return res.status(200).send(tweets);
 });
 
-router.get('/topics', async (req, res, _) => {
+router.get('/topics/frequency', async (req, res, _) => {
     let start = req.query.start.split('.');
     let end = req.query.end.split('.');
     let list_with_parties = req.query.parties.split(',');
     const topics = await partyService.getTopics(list_with_parties, start[2], end[2]);
+    return res.status(200).send(topics);
+});
+
+router.get('/topics/development', async (req, res, _) => {
+    let start = req.query.start;
+    let end = req.query.end;
+    let list_with_parties = req.query.parties.split(',');
+    let term = req.query.term;
+    const topics = await partyService.getFrequencyForTerm(term, list_with_parties, start, end);
     return res.status(200).send(topics);
 });
 
