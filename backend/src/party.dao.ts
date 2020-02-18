@@ -10,17 +10,17 @@ const cn = {
     password: 'postgres'
 };
 
+const db = pgp(cn);
+
 export class PartyDao {
 
     public async getTenTweets(): Promise<any> {
-        const db = pgp(cn);
         //language=PostgreSQL
         const query = 'SELECT * from tweets LIMIT 10';
         return db.manyOrNone<any>(query);
     }
 
     public async getTweetCount(): Promise<any> {
-        const db = pgp(cn);
         //language=PostgreSQL
         const query = ' SELECT pa.name as party, ac.name as account, tc.year, tc.month, tc.total ' +
             ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
@@ -30,7 +30,6 @@ export class PartyDao {
     }
 
     public async getTweetsForParty(party: string, startYear: number, endYear: number): Promise<any> {
-        const db = pgp(cn);
         //language=PostgreSQL
         const query = ' SELECT pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
             'WHERE pa.id = ac.party_id and pt.account_id = ac.id and ' +
@@ -39,7 +38,6 @@ export class PartyDao {
     }
 
     public async getTweetsForPartyPerYear(party: string, startYear: number, endYear: number): Promise<any> {
-        const db = pgp(cn);
         //language=PostgreSQL
         const query = ' SELECT pt.year, pt.month, pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
             'WHERE pa.id = ac.party_id and pt.account_id = ac.id and ' +

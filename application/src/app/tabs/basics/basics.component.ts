@@ -16,7 +16,7 @@ export class BasicsComponent implements OnInit, OnChanges {
 
   accessService: AccessService;
 
-  @Input() selectedParties: Parties[];
+  @Input() selectedParties: Parties[] = [];
   @Input() selectedYears: [number, number];
 
   currentParties: Parties[] = [];
