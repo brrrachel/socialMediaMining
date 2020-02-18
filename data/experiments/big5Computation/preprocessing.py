@@ -1,3 +1,4 @@
+# coding=utf8
 import csv
 import psycopg2
 import re
@@ -41,7 +42,7 @@ for liwc_results in data:
                 afd.append(liwc_results)
             elif party_name == "CDU":
                 cdu.append(liwc_results)
-            elif party_name == "Die Gruenen":
+            elif party_name == "Die Grünen":
                 gruene.append(liwc_results)
             elif party_name == "Die Linke":
                 linke.append(liwc_results)
@@ -74,12 +75,12 @@ for entry in cdu:
     if timestamp in cdu_combined:
         current_values = cdu_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         cdu_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         cdu_combined[timestamp] = new_values
 
@@ -95,12 +96,12 @@ for entry in csu:
     if timestamp in csu_combined:
         current_values = csu_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         csu_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         csu_combined[timestamp] = new_values
 
@@ -112,17 +113,17 @@ for timestamp_key in csu_combined.keys():
 
 for entry in fdp:
     file_id = str(entry[0]).replace(".txt", "")
-    print(entry)
+    #print(entry)
     timestamp = regexp_timestamp.search(file_id).group(0)
     if timestamp in fdp_combined:
         current_values = fdp_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         fdp_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         fdp_combined[timestamp] = new_values
 
@@ -138,12 +139,12 @@ for entry in gruene:
     if timestamp in gruene_combined:
         current_values = gruene_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         gruene_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         gruene_combined[timestamp] = new_values
 
@@ -159,12 +160,12 @@ for entry in linke:
     if timestamp in linke_combined:
         current_values = linke_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         linke_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         linke_combined[timestamp] = new_values
 
@@ -180,12 +181,12 @@ for entry in afd:
     if timestamp in afd_combined:
         current_values = afd_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         afd_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         afd_combined[timestamp] = new_values
 
@@ -201,12 +202,12 @@ for entry in spd:
     if timestamp in spd_combined:
         current_values = spd_combined[timestamp]
         new_values = []
-        for i in range(0, len(entry)-2):
+        for i in range(0, len(entry)-1):
             new_values.append(float(current_values[i]) + float(entry[i+1]))
         spd_combined[timestamp] = new_values
     else:
         new_values = []
-        for i in range(1, len(entry)-1):
+        for i in range(1, len(entry)):
             new_values.append(float(entry[i]))
         spd_combined[timestamp] = new_values
 
@@ -217,35 +218,35 @@ for timestamp_key in spd_combined.keys():
     spd_combined[timestamp_key] = average
 
 index = 0
-with open('preprocessed_big5.csv', 'w') as csv_file:
+with open('../../../setup/querys/preprocessed_big5.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(table_header)
     for key, value in cdu_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 1] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in csu_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 4] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in fdp_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 3] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in spd_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 2] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in gruene_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 6] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in linke_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 5] + parsed_key + value)
-        index +=1
+        index += 1
     for key, value in afd_combined.items():
         parsed_key = key.split('_')
         writer.writerow([index, 7] + parsed_key + value)
-        index +=1
+        index += 1
     csv_file.close()

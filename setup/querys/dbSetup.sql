@@ -63,7 +63,7 @@ FROM
 
 -- creating BigFive table
 create table big5_emotions (
-    id          serial primary key,
+    id          integer primary key,
     party_id    integer references parties,
     "start"     date,
     "end"       date,
