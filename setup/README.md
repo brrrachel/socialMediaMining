@@ -9,7 +9,7 @@ A common way to authenticate automatically: [Guideline](https://tableplus.com/bl
 ```
 sh buildDB.sh
 sh loadAllCsvFiles.sh
-sh loadTweetCounts.sh
+sh loadTweetCountFiles.sh
 sh loadProcessedTweets.sh
 ```
 

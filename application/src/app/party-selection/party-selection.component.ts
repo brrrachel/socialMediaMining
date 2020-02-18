@@ -13,12 +13,11 @@ export class PartySelectionComponent implements OnInit {
   @Output() readonly selectedPartiesChange: EventEmitter<Parties[]> = new EventEmitter();
 
   tenTweets: Tweet[];
-  selectedParties: Parties[];
+  selectedParties: Parties[] = [];
 
   partiesEnum = Parties;
 
   constructor(public access: AccessService) {
-    this.selectedParties = [];
   }
 
   async ngOnInit() {
