@@ -14,8 +14,6 @@ export class BasicsComponent implements OnInit, OnChanges {
 
   partiesEnum = Parties;
 
-  accessService: AccessService;
-
   @Input() selectedParties: Parties[] = [];
   @Input() selectedYears: [number, number];
 
@@ -41,12 +39,11 @@ export class BasicsComponent implements OnInit, OnChanges {
   };
 
   constructor(public access: AccessService, public datepipe: DatePipe) {
-    this.accessService = access;
-    this.initChart();
   }
 
   ngOnInit() {
-    this.accessService.getTweetCount().then(value => {
+    this.initChart();
+    this.access.getTweetCount().then(value => {
       this.prepareData(value);
     });
   }
@@ -67,14 +64,19 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   adaptDataToSelection() {
-    if(this.preparedData) {
+    if (this.preparedData) {
       let newDataSet: ChartData[] = [];
-      let newLabels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], (this.currentYears[1] === 2019 ? 11 : 12) );
+      let newLabels: string[] = this.createLabels(this.currentYears[0], 1, this.currentYears[1], (this.currentYears[1] === 2019 ? 11 : 12));
       let accountNames: string[] = this.generateAccountNames(this.currentParties);
 
       for (let set of this.preparedData) {
-        if(accountNames.indexOf(set.label) > -1) {
-          let newData = {label: set.label, data: [], borderColor: getColorForParty(set.label === 'CDU/CSU'? Parties.csu : set.label), fill: false} as ChartData;
+        if (accountNames.indexOf(set.label) > -1) {
+          let newData = {
+            label: set.label,
+            data: [],
+            borderColor: getColorForParty(set.label === 'CDU/CSU' ? Parties.csu : set.label),
+            fill: false
+          } as ChartData;
           for (let label of newLabels) {
             let dateIndex = this.preparedLabels.findIndex(oldLabel => oldLabel === label);
             newData.data.push(set.data[dateIndex]);
@@ -98,7 +100,7 @@ export class BasicsComponent implements OnInit, OnChanges {
     for (let party of allAccountNames) {
 
       let accountsOfParty: TweetCount[];
-      if (party === 'CDU/CSU'){
+      if (party === 'CDU/CSU') {
         let dataCDU = unpreparedData.filter(data => data.party == 'CDU');
         let dataCSU = unpreparedData.filter(data => data.party == 'CSU');
         accountsOfParty = dataCDU;
@@ -121,22 +123,22 @@ export class BasicsComponent implements OnInit, OnChanges {
   createDataSetForAccount(labels: string[], dataSet: TweetCount[]) {
     let values: number[] = [];
 
-    for (let month of labels){
+    for (let month of labels) {
       let countsOfMonth: number = dataSet.filter(data => {
         let date = this.datepipe.transform(new Date(data.year, data.month), 'yyyy-MM-dd');
-          return date === month
-      }).map( data => data.total)
+        return date === month
+      }).map(data => data.total)
         .reduce((prev, curr) => prev + curr, 0);
       values.push(countsOfMonth);
     }
-     return {data: values, fill: false} as ChartData
+    return {data: values, fill: false} as ChartData
   }
 
   generateAccountNames(parties: string[]): string[] {
     let labels = parties.map(value => value.toString());
     let indexCDU = labels.indexOf(Parties.cdu);
     let indexCSU = labels.indexOf(Parties.csu);
-    if (indexCDU > -1 && indexCSU > -1 ) {
+    if (indexCDU > -1 && indexCSU > -1) {
       if (indexCSU > indexCDU) {
         labels.splice(indexCSU, 1);
         labels.splice(indexCDU, 1);
@@ -150,21 +152,18 @@ export class BasicsComponent implements OnInit, OnChanges {
   }
 
   initChart() {
-    let self = this;
-    window.onload = function () {
-      let canvas = <HTMLCanvasElement>document.getElementById('tweetCountChart');
-      self.ctx = canvas.getContext('2d');
-      self.chart = new Chart(self.ctx, {
-        type: 'line',
-        data: {},
-        options: self.chartOptions
-      });
-      self.chart.update();
-    };
+    let canvas = <HTMLCanvasElement>document.getElementById('tweetCountChart');
+    this.ctx = canvas.getContext('2d');
+    this.chart = new Chart(this.ctx, {
+      type: 'line',
+      data: {},
+      options: this.chartOptions
+    });
+    this.chart.update();
   }
 
   createLabels(startYear: number, startMonth: number, endYear: number, endMonth: number) {
-    let range = function(start, end): number[] {
+    let range = function (start, end): number[] {
       var list = [];
       for (var i = start; i <= end; i++) {
         list.push(i);
@@ -178,7 +177,7 @@ export class BasicsComponent implements OnInit, OnChanges {
     for (let year of years) {
       for (let month of months) {
         if (year < 2019 || (year === 2019 && month <= endMonth)) {
-          labels.push(this.datepipe.transform(new Date(year, month-1), 'yyyy-MM-dd'));
+          labels.push(this.datepipe.transform(new Date(year, month - 1), 'yyyy-MM-dd'));
         }
       }
     }
