@@ -2,20 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c92aea10-c916-4323-96cc-4003c24e01b9" name="Default Changelist" comment="preprocessed Tweets for topic map">
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/experiments/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/experiments/big5Computation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/querys/loadBig5.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/querys/preprocessed_big5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup/querys/setupBig5.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/application/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/services/access.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/services/access.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/party.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.dao.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/party.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/party.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/party.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/LIWC_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/big5Computation/LIWC_results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/Prediction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/big5Computation/Prediction.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/afd_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/cdu_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/csu_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/cv_svr.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/big5Computation/cv_svr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/fdp_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/gruene_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/linke_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/big5Computation/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/selected_features_boosting.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/big5Computation/selected_features_boosting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/big5Computation/spd_combined.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/querys/dbSetup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/querys/dbSetup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/querys/dropAllTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/setup/querys/dropAllTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/querys/loadAllCsvFiles.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/querys/loadAllCsvFiles.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup/setupDB.sh" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setupDB.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/data/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/experiments/basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/experiments/get5FactorFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/get5FactorFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/experiments/preprocessTweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/experiments/preprocessTweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/getUniqueTweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/getUniqueTweets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/googleTranslate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/googleTranslate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/translate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/AfD_Alice_WeidelResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets/AfD_Alice_WeidelResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/CSU_AndiScheuerResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets/CSU_AndiScheuerResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/FdP_KatjaSudingResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets/FdP_KatjaSudingResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/Linke_GregorGysiResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets/Linke_GregorGysiResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets/Linke_SWagenknechtResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets/Linke_SWagenknechtResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/AfD_Alice_WeidelResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets_unique/AfD_Alice_WeidelResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/CSU_AndiScheuerResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets_unique/CSU_AndiScheuerResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/FdP_KatjaSudingResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets_unique/FdP_KatjaSudingResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/Linke_GregorGysiResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets_unique/Linke_GregorGysiResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/tweepyTweets_unique/Linke_SWagenknechtResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/tweepyTweets_unique/Linke_SWagenknechtResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/AfD_Beatrix_vStorch_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/AfD_Beatrix_vStorch_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/AfD_FraukePetry_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/AfD_FraukePetry_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/AfD_MarcusPretzell_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/AfD_MarcusPretzell_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/AfD_PoggenburgAndre_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/AfD_PoggenburgAndre_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/AfD_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/AfD_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_JuliaKloeckner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/CDU_JuliaKloeckner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_akk_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/CDU_akk_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_peteraltmaier_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/CDU_peteraltmaier_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CDU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/CDU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/CSU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/CSU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Die_Gruenen_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Die_Gruenen_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/FdP_c_lindner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/FdP_c_lindner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/FdP_nicolabeerfdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/FdP_nicolabeerfdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Fdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Fdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Grünen_RenateKuenast_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Grünen_RenateKuenast_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Grünen_Volker_Beck_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Grünen_Volker_Beck_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Grünen_bueti_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Grünen_bueti_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Grünen_cem_oezdemir_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Grünen_cem_oezdemir_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Linke_MartinaRenner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Linke_MartinaRenner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Linke_PetraPauMaHe_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Linke_PetraPauMaHe_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/SPD_MartinSchulz_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/SPD_MartinSchulz_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/SPD_Ralf_Stegner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/SPD_Ralf_Stegner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/SPD_UlrichKelber_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/SPD_UlrichKelber_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/SPD_larsklingbeil_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/SPD_larsklingbeil_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/Spdde_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/Spdde_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets/dieLinke_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets/dieLinke_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_Beatrix_vStorch_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/AfD_Beatrix_vStorch_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_FraukePetry_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/AfD_FraukePetry_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_MarcusPretzell_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/AfD_MarcusPretzell_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_PoggenburgAndre_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/AfD_PoggenburgAndre_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/AfD_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/AfD_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_JuliaKloeckner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/CDU_JuliaKloeckner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_akk_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/CDU_akk_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_peteraltmaier_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/CDU_peteraltmaier_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CDU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/CDU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/CSU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/CSU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Die_Gruenen_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Die_Gruenen_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/FdP_c_lindner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/FdP_c_lindner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/FdP_nicolabeerfdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/FdP_nicolabeerfdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Fdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Fdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_RenateKuenast_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Grünen_RenateKuenast_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_Volker_Beck_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Grünen_Volker_Beck_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_bueti_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Grünen_bueti_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Grünen_cem_oezdemir_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Grünen_cem_oezdemir_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Linke_MartinaRenner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Linke_MartinaRenner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Linke_PetraPauMaHe_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Linke_PetraPauMaHe_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_MartinSchulz_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/SPD_MartinSchulz_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_Ralf_Stegner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/SPD_Ralf_Stegner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_UlrichKelber_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/SPD_UlrichKelber_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/SPD_larsklingbeil_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/SPD_larsklingbeil_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/Spdde_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/Spdde_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/translations/twintTweets_unique/dieLinke_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/translations/twintTweets_unique/dieLinke_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyCrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyCrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyTweets/AfD_Alice_WeidelResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyTweets/AfD_Alice_WeidelResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyTweets/CSU_AndiScheuerResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyTweets/CSU_AndiScheuerResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyTweets/FdP_KatjaSudingResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyTweets/FdP_KatjaSudingResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyTweets/Linke_GregorGysiResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyTweets/Linke_GregorGysiResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/tweepyTweets/Linke_SWagenknechtResult.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tweepyTweets/Linke_SWagenknechtResult.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintCrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintCrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_Beatrix_vStorch_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/AfD_Beatrix_vStorch_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_FraukePetry_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/AfD_FraukePetry_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_MarcusPretzell_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/AfD_MarcusPretzell_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_PoggenburgAndre_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/AfD_PoggenburgAndre_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/AfD_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/AfD_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/CDU_JuliaKloeckner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/CDU_JuliaKloeckner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/CDU_akk_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/CDU_akk_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/CDU_peteraltmaier_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/CDU_peteraltmaier_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/CDU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/CDU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/CSU_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/CSU_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Die_Gruenen_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Die_Gruenen_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/FdP_c_lindner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/FdP_c_lindner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/FdP_nicolabeerfdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/FdP_nicolabeerfdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Fdp_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Fdp_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Grünen_RenateKuenast_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Grünen_RenateKuenast_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Grünen_Volker_Beck_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Grünen_Volker_Beck_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Grünen_bueti_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Grünen_bueti_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Grünen_cem_oezdemir_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Grünen_cem_oezdemir_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Linke_MartinaRenner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Linke_MartinaRenner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Linke_PetraPauMaHe_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Linke_PetraPauMaHe_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/SPD_MartinSchulz_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/SPD_MartinSchulz_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/SPD_Ralf_Stegner_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/SPD_Ralf_Stegner_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/SPD_UlrichKelber_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/SPD_UlrichKelber_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/SPD_larsklingbeil_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/SPD_larsklingbeil_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/Spdde_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/Spdde_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/twintTweets/dieLinke_tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/twintTweets/dieLinke_tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/usernamesTweepy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/usernamesTweepy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/usernamesTwint.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/usernamesTwint.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/usernamesTwint1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/usernamesTwint1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/usernamesTwint2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/usernamesTwint2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweets/usernamesTwint3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/usernamesTwint3.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/application/node_modules/" />
     <ignored path="$PROJECT_DIR$/backend/node_modules/" />
@@ -107,110 +222,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts">
+        <entry file="file://$PROJECT_DIR$/setup/querys/setupTweets.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/querys/total_num_of_tweets.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/querys/setupTweetCounts.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/querys/preprocessed_big5.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/querys/setupBig5.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/querys/loadBig5.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="86" column="26" lean-forward="true" selection-start-line="84" selection-start-column="6" selection-end-line="86" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
+        <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="120" column="2" selection-start-line="120" selection-start-column="2" selection-end-line="120" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#81#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es5.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="1342" column="4" selection-start-line="1342" selection-start-column="4" selection-end-line="1342" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            <state relative-caret-position="1570">
+              <caret line="162" column="21" lean-forward="true" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
+        <entry file="file://$PROJECT_DIR$/data/experiments/big5Computation/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+            <state relative-caret-position="302">
+              <caret line="202" column="23" lean-forward="true" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
               <folding>
-                <element signature="e#0#81#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
+        <entry file="file://$PROJECT_DIR$/setup/querys/loadProcessedTweets.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="42" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -221,8 +301,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="TypeScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -241,6 +321,7 @@
       <find>d3</find>
       <find>www</find>
       <find>get</find>
+      <find>,</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,25 +358,40 @@
         <option value="$PROJECT_DIR$/application/src/app/tabs/five-factor-model/radar-chart.service.ts" />
         <option value="$PROJECT_DIR$/application/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/application/src/index.html" />
-        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html" />
         <option value="$PROJECT_DIR$/application/package.json" />
         <option value="$PROJECT_DIR$/backend/dist/party.service.js" />
-        <option value="$PROJECT_DIR$/setup/querys/dropAllTables.sql" />
-        <option value="$PROJECT_DIR$/setup/loadProcessedTweets.sh" />
-        <option value="$PROJECT_DIR$/tweets/experiments/preprocessTweets.py" />
-        <option value="$PROJECT_DIR$/setup/querys/dbSetup.sql" />
-        <option value="$PROJECT_DIR$/setup/README.md" />
         <option value="$PROJECT_DIR$/backend/package.json" />
         <option value="$PROJECT_DIR$/application/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/backend/src/party.router.ts" />
-        <option value="$PROJECT_DIR$/backend/src/party.dao.ts" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.ts" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts" />
         <option value="$PROJECT_DIR$/application/src/app/services/chartJS.service.ts" />
-        <option value="$PROJECT_DIR$/backend/src/party.service.ts" />
         <option value="$PROJECT_DIR$/application/src/app/services/access.service.ts" />
+        <option value="$PROJECT_DIR$/tweets/experiments/preprocessTweets.py" />
+        <option value="$PROJECT_DIR$/setup/loadData.sh" />
+        <option value="$PROJECT_DIR$/setup/buildDb.sh" />
+        <option value="$PROJECT_DIR$/setup/loadAllCsvFiles.sh" />
+        <option value="$PROJECT_DIR$/setup/loadProcessedTweets.sh" />
+        <option value="$PROJECT_DIR$/setup/loadTweetCountFiles.sh" />
+        <option value="$PROJECT_DIR$/setup/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/backend/src/party.service.ts" />
+        <option value="$PROJECT_DIR$/backend/src/party.dao.ts" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html" />
+        <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html" />
         <option value="$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts" />
+        <option value="$PROJECT_DIR$/big5Computation/preprocessing.py" />
+        <option value="$PROJECT_DIR$/setup/querys/loadAllCsvFiles.sh" />
+        <option value="$PROJECT_DIR$/setup/querys/loagBig5.sh" />
+        <option value="$PROJECT_DIR$/setup/setupDB.sh" />
+        <option value="$PROJECT_DIR$/setup/querys/dropAllTables.sql" />
+        <option value="$PROJECT_DIR$/setup/querys/loadBig5.sh" />
+        <option value="$PROJECT_DIR$/setup/querys/dbSetup.sql" />
+        <option value="$PROJECT_DIR$/setup/querys/preprocessed_big5.csv" />
+        <option value="$PROJECT_DIR$/data/experiments/big5Computation/asdf.txt" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
+        <option value="$PROJECT_DIR$/data/experiments/big5Computation/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -327,81 +423,6 @@
             <path>
               <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
               <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="topic-mining" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="topic-mining" type="462c0819:PsiDirectoryNode" />
-              <item name="term-development" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="topic-mining" type="462c0819:PsiDirectoryNode" />
-              <item name="term-frequency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -409,6 +430,44 @@
               <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="big5Computation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialMediaMining" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+              <item name="querys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="socialMediaMining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -429,6 +488,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575655428721" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/setup" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -438,15 +498,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/setup" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/setup/querys" />
+      <recent name="$PROJECT_DIR$/tweets/experiments" />
       <recent name="$PROJECT_DIR$/setup" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\setup" />
       <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining\backend\src" />
-      <recent name="C:\Users\mpggo\ProjectsHpi\socialMediaMining" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/setup" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,7 +603,7 @@
       <workItem from="1579172234132" duration="9120000" />
       <workItem from="1579963114240" duration="68742000" />
       <workItem from="1581015092355" duration="1949000" />
-      <workItem from="1581764696385" duration="7172000" />
+      <workItem from="1581764696385" duration="16199000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing Python noob mistakes">
       <created>1575990610670</created>
@@ -636,11 +696,25 @@
       <option name="project" value="LOCAL" />
       <updated>1580393318172</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="implemented Term development first working version">
+      <created>1582014349421</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582014349421</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added input field, changed Readme">
+      <created>1582019254691</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582019254692</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103252000" />
+    <option name="totallyTimeSpent" value="112279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -670,11 +744,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.036144577" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32650602" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.5048193" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.41566265" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -746,7 +820,9 @@
     <MESSAGE value="added missing unqiue tweet files,&#10;fixed selection of CDU/CSU seperated/together for basic chart,&#10;fixed basic chart to show data from beginning (january) of a year" />
     <MESSAGE value="added term-frequencey-chart with first results" />
     <MESSAGE value="preprocessed Tweets for topic map" />
-    <option name="LAST_COMMIT_MESSAGE" value="preprocessed Tweets for topic map" />
+    <MESSAGE value="implemented Term development first working version" />
+    <MESSAGE value="added input field, changed Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="added input field, changed Readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Inspections" timestamp="1578417850407">
@@ -844,205 +920,12 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1575986633597" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/src/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/natural/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.collection.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/node_modules/@amcharts/amcharts4/.internal/core/utils/Instance.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="239" column="4" selection-start-line="239" selection-start-column="4" selection-end-line="239" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/dist/party.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="53" column="80" lean-forward="true" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/node_modules/typescript/lib/lib.es2015.core.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1149" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tweets/experiments/basics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="35" selection-start-line="31" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tweets/experiments/get5FactorFiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/loadTweetCountFiles.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweets.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/dropAllTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweets.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/loadAllCsvFiles.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tweets/experiments/preprocessed_data.csv" />
-    <entry file="file://$PROJECT_DIR$/tweets/experiments/preprocessTweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
-          <folding>
-            <element signature="e#42#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/loadProcessedTweets.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="119" column="37" lean-forward="true" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweetCounts.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1061,24 +944,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-428">
           <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-18" />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1118,9 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/tabs/basics/basics.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1132,13 +994,6 @@
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1159,53 +1014,293 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
+    <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="255">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+    <entry file="file://$PROJECT_DIR$/data/experiments/get5FactorFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="375">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
+    <entry file="file://$PROJECT_DIR$/data/experiments/preprocessTweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="413">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="e#42#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="600">
+            <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.router.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/party.dao.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-development/term-development.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="120" column="2" selection-start-line="120" selection-start-column="2" selection-end-line="120" selection-end-column="2" />
+        <state relative-caret-position="-432">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/app/services/access.service.ts">
+    <entry file="file://$PROJECT_DIR$/data/experiments/basics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state relative-caret-position="-269">
+          <caret line="34" column="35" selection-start-line="31" selection-start-column="12" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/src/app/tabs/topic-mining/term-frequency/term-frequency.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="765">
           <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
           <folding>
             <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/LIWC_results.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/experiments/big5Computation/cdu_combined.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/experiments/big5Computation/afd_combined.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/loadTweetCountFiles.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/dropDB.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/setupDB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/buildDb.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/dropAllTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/loadAllCsvFiles.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweets.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/finishTweetCounts.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweetCounts.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/setupTweets.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/total_num_of_tweets.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/loadProcessedTweets.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/preprocessed_tweets.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/setupBig5.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/loadBig5.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/dbSetup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1570">
+          <caret line="162" column="21" lean-forward="true" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/experiments/big5Computation/asdf.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/querys/preprocessed_big5.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/experiments/big5Computation/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="202" column="23" lean-forward="true" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
