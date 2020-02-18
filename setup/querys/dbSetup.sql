@@ -126,7 +126,6 @@ CREATE table processed_tweets(
                         id BIGSERIAL PRIMARY KEY,
                         account_id integer references accounts,
                         year integer,
-                        month_start integer,
-                        month_end integer,
+                        month integer,
                         tokens TEXT
 );

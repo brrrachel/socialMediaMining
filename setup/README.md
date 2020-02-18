@@ -5,12 +5,10 @@ In the following the steps to setup the database should be explained. Therefor i
 ## Create .pgpass 
 A common way to authenticate automatically: [Guideline](https://tableplus.com/blog/2019/09/how-to-use-pgpass-in-postgresql.html)
 
-## Load files into Database
+## Set up Database
+Simple run
 ```
 sh buildDB.sh
-sh loadAllCsvFiles.sh
-sh loadTweetCounts.sh
-sh loadProcessedTweets.sh
 ```
 
 ## Remove all Tables from Database

@@ -1,3 +1,12 @@
+<div class="filter-terms">
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" id="searchTerm" #searchTerm
+             placeholder="Enter term">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="handleInputTerm(searchTerm.value)">Submit</button>
+  </form>
+</div>
 <div>
   <canvas id="termDevelopment"></canvas>
 </div>

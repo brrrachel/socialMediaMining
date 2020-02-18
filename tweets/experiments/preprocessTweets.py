@@ -12,8 +12,7 @@ from nltk.corpus import stopwords
 
 if __name__ == '__main__':
     years = range(2009, 2020)
-    months = [(1,3), (4,6), (7,9), (10,12)]
-    days = [(1,31), (1,30), (1,30), (1,31)]
+    months = range(1, 13)
 
     connection = psycopg2.connect(user="postgres",
                                   password="postgres",
@@ -24,11 +23,17 @@ if __name__ == '__main__':
 
     index = 0
     for party in range(1, 32):
-        for year in years:
-            for i in range(len(months)):
-                query_tweets = "select tweet from tweets where account_id = %s and (%s <= date) and (date <= %s)"
-                from_date = datetime.date(year, months[i][0], days[i][0])
-                to_date = datetime.date(year, months[i][1], days[i][1])
+        for year in range(2009, 2020):
+            for month in months:
+
+                query_tweets = "select tweet from tweets where account_id = %s and (%s <= date) and (date < %s)"
+                from_date = datetime.date(year, month, 1)
+                to_date = None
+                if month == 12:
+                    to_date = datetime.date(year+1, 1, 1)
+                else:
+                    to_date = datetime.date(year, month+1, 1)
+
                 print('Preprocess data for ' + str(party) + ' in ' + from_date.__str__() + ' until ' + to_date.__str__())
 
                 cursor.execute(query_tweets, (party, from_date, to_date))
@@ -55,7 +60,7 @@ if __name__ == '__main__':
                     if meaningful:
                         with open('preprocessed_tweets.csv', 'a') as fp:
                             wr = csv.writer(fp, dialect='excel')
-                            result = [index, party, year, months[i][0], months[i][1], ' '.join(meaningful + hashtag_and_reference)]
+                            result = [index, party, year, month, ' '.join(meaningful + hashtag_and_reference)]
                             wr.writerow(result)
                         index += 1
                 else:

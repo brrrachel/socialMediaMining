@@ -41,10 +41,10 @@ export class PartyDao {
     public async getTweetsForPartyPerYear(party: string, startYear: number, endYear: number): Promise<any> {
         const db = pgp(cn);
         //language=PostgreSQL
-        const query = ' SELECT pt.year, pt.month_start, pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
+        const query = ' SELECT pt.year, pt.month, pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
             'WHERE pa.id = ac.party_id and pt.account_id = ac.id and ' +
             'pa.name = $1 and $2 <= pt.year and pt.year <= $3';
-        return db.manyOrNone<{year: number, month_start: number, tokens: string}[]>(query, [party, startYear, endYear]);
+        return db.manyOrNone<{year: number, month: number, tokens: string}[]>(query, [party, startYear, endYear]);
     }
 }
 

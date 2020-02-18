@@ -52,7 +52,7 @@ export class PartyService {
             for (let set of tweets) {
                 const splittedTokens: string[] = set.tokens.split(' ');
                 const numberOfMatching: number = splittedTokens.filter(token => token === term).length;
-                frequencies.push({year: set.year, month: set.month_start, frequency: numberOfMatching});
+                frequencies.push({year: set.year, month: set.month, frequency: numberOfMatching});
             }
             result.push({party: party, frequency: frequencies});
         }));

@@ -8,6 +8,17 @@ First you have install [Node.js](https://nodejs.org/en/download/), Version v12.1
 cd application && npm i
 ```
 
+## Set Up Database
+For the database we are using postgres. Therefore install it in order to run 
+```
+cd setup && sh setupDB.sh
+```
+to setup the database.
+For reset the database just call:
+```
+cd setup && sh dropDB.sh
+```
+
 ## Application
 To find the underlying code of our application just move into the folder by:
 ```
@@ -16,10 +27,8 @@ cd application
 
 
 ## Data
-In this folder you find all collected tweets by running:
-```
-cd tweets && python3 tweetie.py
-```
+Move into the data folder by `cd tweets`. There you find all collected tweets and the translations. Read the Readme there to get more details about it.
+
 
 ## Backend
 For the backend to run, you have to start the server. 

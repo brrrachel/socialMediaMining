@@ -149,6 +149,11 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
     return {data: values, fill: false} as ChartData
   }
 
+  handleInputTerm(term: string) {
+      this.currentSearchTerm = term;
+      this.getData();
+  }
+
   initChart() {
     let self = this;
     window.onload = function () {
