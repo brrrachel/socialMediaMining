@@ -3,7 +3,7 @@ import csv
 import psycopg2
 import re
 
-table_header = ["Index", "PartyID", "start", "end",	"Segment",	"WC",	"Analytic",	"Clout",	"Authentic",	"Tone",	"WPS",	'Sixltr',	'Dic',	'function',	'pronoun',	'ppron',	'i',	'we',	'you',	'shehe',	'they',	'ipron',	'article',	'prep',	'auxverb',	'adverb',	'conj',	'negate',	'verb',	'adj',	'compare',	'interrog',	'number',	'quant',	'affect',	'posemo',	'negemo',	'anx',	'anger',	'sad',	'social',	'family',	'friend',	'female',	'male',	'cogproc',	'insight',	'cause',	'discrep',	'tentat',	'certain',	'differ',	'percept',	'see',	'hear',	'feel',	'bio',	'body',	'health',	'sexual',	'ingest',	'drives',	'affiliation',	'achieve',	'power',	'reward',	'risk',	'focuspast',	'focuspresent',	'focusfuture',	'relativ',	'motion',	'space',	'time',	'work',	'leisure',	'home',	'money',	'relig',	'death',	'informal',	'swear',	'netspeak',	'assent',	'nonflu',	'filler',	'AllPunc',	'Period',	'Comma',	'Colon',	'SemiC',	'QMark',	'Exclam',	'Dash',	'Quote',	'Apostro',	'Parenth', "OtherP"]
+table_header = ["Index", "PartyID", "start", "end",	"Segment",	"WC",	"Analytic",	"Clout",	"Authentic",	"Tone",	"WPS",	'Sixltr',	'Dic',	'function.',	'pronoun',	'ppron',	'i',	'we',	'you',	'shehe',	'they',	'ipron',	'article',	'prep',	'auxverb',	'adverb',	'conj',	'negate',	'verb',	'adj',	'compare',	'interrog',	'number',	'quant',	'affect',	'posemo',	'negemo',	'anx',	'anger',	'sad',	'social',	'family',	'friend',	'female',	'male',	'cogproc',	'insight',	'cause',	'discrep',	'tentat',	'certain',	'differ',	'percept',	'see',	'hear',	'feel',	'bio',	'body',	'health',	'sexual',	'ingest',	'drives',	'affiliation',	'achieve',	'power',	'reward',	'risk',	'focuspast',	'focuspresent',	'focusfuture',	'relativ',	'motion',	'space',	'time',	'work',	'leisure',	'home',	'money',	'relig',	'death',	'informal',	'swear',	'netspeak',	'assent',	'nonflu',	'filler',	'AllPunc',	'Period',	'Comma',	'Colon',	'SemiC',	'QMark',	'Exclam',	'Dash',	'Quote',	'Apostro',	'Parenth', "OtherP"]
 
 data = []
 with open('LIWC_results.csv') as csvFile:
@@ -218,7 +218,7 @@ for timestamp_key in spd_combined.keys():
     spd_combined[timestamp_key] = average
 
 index = 0
-with open('../../../setup/querys/preprocessed_big5.csv', 'w') as csv_file:
+with open('../../../setup/querys/preprocessed_big5_old.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(table_header)
     for key, value in cdu_combined.items():
