@@ -53,9 +53,9 @@ for liwc_results in data:
 
 num_cdu = 4
 cdu_combined = {}
-num_csu = 3
+num_csu = 2
 csu_combined = {}
-num_fdp = 3
+num_fdp = 4
 fdp_combined = {}
 num_gruene = 5
 gruene_combined = {}
