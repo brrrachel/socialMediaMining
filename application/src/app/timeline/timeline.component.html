@@ -5,6 +5,6 @@
     </ng-container>
   </div>
   <mv-slider [range]="true" [ticks]="myTicks" [value]="[0, 48]"
-             [ticksLabels]="dateLabels" [enabled]="true" (change)="onChange($event)">
+             [ticksLabels]="dateLabels" [enabled]="true" (change)="changeListener.next($event)">
   </mv-slider>
 </div>

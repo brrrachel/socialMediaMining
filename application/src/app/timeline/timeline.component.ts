@@ -1,6 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ALL_DATE_POINTS, Timespan} from "../models/time-span.model";
 import {HintObject} from "./event-hint/event-hint.component";
+import {Subject} from "rxjs";
+import {debounceTime} from "rxjs/operators";
 
 @Component({
   selector: 'app-timeline',
@@ -9,6 +11,8 @@ import {HintObject} from "./event-hint/event-hint.component";
 })
 export class TimelineComponent implements OnInit {
   @Output() yearRangeChange: EventEmitter<Timespan> = new EventEmitter<Timespan>();
+
+  changeListener: Subject<TimelineValues> = new Subject<TimelineValues>();
 
   dateLabels: string[] = [
     '2008', '', '', '',
@@ -77,6 +81,9 @@ export class TimelineComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.changeListener.asObservable().pipe(
+      debounceTime(1000)
+    ).subscribe(next => this.onChange(next));
   }
 
   onChange(values: TimelineValues) {

@@ -2,35 +2,47 @@
   <app-party-selection (selectedPartiesChange)="selectedParties = $event"></app-party-selection>
 </div>
 <app-timeline (yearRangeChange)="selectedYears = $event"></app-timeline>
-<p style="margin-left: 10px" *ngIf="selectedYears">Aktuell sind die Jahre von {{selectedYears.startTime.year}} bis {{selectedYears.endTime.year}} ausgewählt.</p>
 
 <div class="analyze-tabs">
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#basics" role="tab"
-         aria-controls="nav-home" aria-selected="true">Basics</a>
+         aria-controls="nav-home" aria-selected="true"
+         (click)="selectTab('basics')">Basics</a>
       <a class="nav-item nav-link" id="nav-factor-tab" data-toggle="tab" href="#factor-model" role="tab"
-         aria-controls="nav-link" aria-selected="false">Five Factor Model</a>
+         aria-controls="nav-link" aria-selected="false"
+         (click)="selectTab('5factor')">Five Factor Model</a>
       <a class="nav-item nav-link" id="nav-topics-frequency-tab" data-toggle="tab" href="#nav-topic-frequency" role="tab"
-         aria-controls="nav-topic-frequency" aria-selected="false">Topics Frequency</a>
+         aria-controls="nav-topic-frequency" aria-selected="false"
+         (click)="selectTab('TopicsFrequency')">Topics Frequency</a>
       <a class="nav-item nav-link" id="nav-topic-development-tab" data-toggle="tab" href="#nav-topic-development" role="tab"
-         aria-controls="nav-topic-development" aria-selected="false">Topics Development</a>
+         aria-controls="nav-topic-development" aria-selected="false"
+         (click)="selectTab('TopicsDevelopment')">Topics Development</a>
       <a class="nav-item nav-link" id="nav-geolocation-tab" data-toggle="tab" href="#nav-geolocation" role="tab"
-         aria-controls="nav-geolocation" aria-selected="false">Geolocation</a>
+         aria-controls="nav-geolocation" aria-selected="false"
+         (click)="selectTab('Geolocation')">Geolocation</a>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="basics" role="tabpanel" aria-labelledby="nav-home-tab">
-      <app-basics [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-basics>
+      <app-basics *ngIf="activeTab === 'basics'"
+                  [selectedYears]="selectedYears" [selectedParties]="selectedParties">
+      </app-basics>
     </div>
     <div class="tab-pane fade" id="factor-model" role="tabpanel" aria-labelledby="nav-factor-tab">
-      <app-five-factor [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-five-factor>
+      <app-five-factor *ngIf="activeTab === '5factor'"
+                       [selectedYears]="selectedYears" [selectedParties]="selectedParties">
+      </app-five-factor>
     </div>
     <div class="tab-pane fade" id="nav-topic-frequency" role="tabpanel" aria-labelledby="nav-topics-frequency-tab">
-      <app-term-frequency [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-term-frequency>
+      <app-term-frequency *ngIf="activeTab === 'TopicsFrequency'"
+                          [selectedYears]="selectedYears" [selectedParties]="selectedParties">
+      </app-term-frequency>
     </div>
     <div class="tab-pane fade" id="nav-topic-development" role="tabpanel" aria-labelledby="nav-topics-development-tab">
-      <app-term-development [selectedYears]="selectedYears" [selectedParties]="selectedParties"></app-term-development>
+      <app-term-development *ngIf="activeTab === 'TopicsDevelopment'"
+                            [selectedYears]="selectedYears" [selectedParties]="selectedParties">
+      </app-term-development>
     </div>
     <div class="tab-pane fade" id="nav-geolocation" role="tabpanel" aria-labelledby="nav-geolocation-tab">
       Gelolocation

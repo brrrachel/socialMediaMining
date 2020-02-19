@@ -13,4 +13,11 @@ export class AppComponent {
   selectedParties: Parties[] = [];
   value: number = 0;
   selectedYears: Timespan = MAX_TIMESPAN;
+  private activeTab: Tab = 'basics';
+
+  selectTab(tab: Tab) {
+    this.activeTab = tab;
+  }
 }
+
+type Tab = 'basics' | '5factor' | 'TopicsFrequency' | 'TopicsDevelopment' | 'Geolocation';
