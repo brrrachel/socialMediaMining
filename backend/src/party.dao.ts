@@ -15,13 +15,26 @@ const db = pgp(cn);
 
 export class PartyDao {
 
-    public async getTweetCount(): Promise<any> {
+    public async getAllTweetCounts(startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT pa.name as party, ac.name as account, tc.year, tc.month, tc.total ' +
             ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
-            ' WHERE pa.id = ac.party_id and tc.account_id = ac.id';
-        const result = await db.manyOrNone<any>(query);
+            ' WHERE pa.id = ac.party_id and tc.account_id = ac.id and ' +
+            ' ($1 < tc.year or ($1 = tc.year and $2 <= tc.month)) and ' +
+            ' (tc.year < $3 or (tc.year = $3 and tc.month < $4))';
+        const result = await db.manyOrNone<any>(query, [startYear, startMonth, endYear, endMonth]);
         return result.map(toTweetCountDto);
+    }
+
+    public async getTweetCountForParty(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
+        //language=PostgreSQL
+        const query = ' SELECT tc.year, tc.month, sum(tc.total) as total ' +
+            ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
+            ' WHERE pa.id = ac.party_id and tc.account_id = ac.id and pa.name = $1 and' +
+            ' ($2 < tc.year or ($2 = tc.year and $3 <= tc.month)) and ' +
+            ' (tc.year < $4 or (tc.year = $4 and tc.month < $5))' +
+            ' group by tc.year, tc.month';
+        return await db.manyOrNone<{name: string, year: number, month: number, total: number}[]>(query, [party, startYear, startMonth, endYear, endMonth]);
     }
 
     public async getTweetsForParty(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
@@ -33,7 +46,7 @@ export class PartyDao {
         return db.manyOrNone<any>(query, [party, startYear, startMonth, endYear, endMonth]);
     }
 
-    public async getTweetsForPartyPerYear(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
+    public async getTweetsForPartyForTimeRange(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT pt.year, pt.month, pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
             ' WHERE pa.id = ac.party_id and pt.account_id = ac.id and pa.name = $1 and ' +

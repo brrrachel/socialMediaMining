@@ -5,7 +5,7 @@ export const router = Router();
 const partyService = new PartyService();
 
 router.get('/tweetCount', async (req, res, _) => {
-    const tweets = await partyService.getTweetCount();
+    const tweets = await partyService.getAllTweetCounts();
     return res.status(200).send(tweets);
 });
 

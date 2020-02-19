@@ -48,7 +48,6 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
   }
 
   getData() {
-    console.log('Parties', this.selectedParties);
     this.accessService.getFrequencyForTopic(this.currentSearchTerm, this.selectedParties, this.selectedYears)
       .then(data => this.prepareData(data));
   }
@@ -56,29 +55,15 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
   private prepareData(data: { party: string, frequency: TopicFrequencyModel[] }[]) {
     const labels = createLabels(this.selectedYears);
     let preparedDataSet: ChartData[] = new Array<ChartData>();
-    const party_keys = Object.keys(Parties);
-    let allAccountNames: string[] = this.generateAccountNames(party_keys.map(k => Parties[k as any]));
+    let allAccountNames: string[] = data.map(data => data.party);
 
     for (let party of allAccountNames) {
-      let partyFrequencyModelList: TopicFrequencyModel[];
+      const partyDataFrequency: any[] = data.filter(data => data.party == party)[0].frequency;
+      let dataSetForAccount = this.createDataSetForAccount(labels, partyDataFrequency);
 
-      if (party === 'CDU/CSU') {
-        let dataCDU = data.filter(data => data.party == 'CDU')[0];
-        let dataCSU = data.filter(data => data.party == 'CSU')[0];
-        partyFrequencyModelList = dataCDU ? dataCDU.frequency : [];
-        const csuFrequency = dataCSU ? dataCSU.frequency : [];
-        partyFrequencyModelList.concat(csuFrequency);
-      } else {
-        const partyData = data.filter(data => data.party == party);
-        partyFrequencyModelList = partyData.length ? partyData[0].frequency : [];
-      }
-
-      if (partyFrequencyModelList.length) {
-        let dataSetForAccount = this.createDataSetForAccount(labels, partyFrequencyModelList);
-        dataSetForAccount.label = party;
-        dataSetForAccount.borderColor = getColorForParty(party === 'CDU/CSU' ? Parties.csu : party);
-        preparedDataSet.push(dataSetForAccount);
-      }
+      dataSetForAccount.label = party;
+      dataSetForAccount.borderColor = getColorForParty(party === 'CDU/CSU' ? Parties.csu : party);
+      preparedDataSet.push(dataSetForAccount);
     }
 
     this.chart.data.labels = labels;
@@ -87,33 +72,19 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
 
   }
 
-  generateAccountNames(parties: string[]): string[] {
-    let labels = parties.map(value => value.toString());
-    let indexCDU = labels.indexOf(Parties.cdu);
-    let indexCSU = labels.indexOf(Parties.csu);
-    if (indexCDU > -1 && indexCSU > -1) {
-      if (indexCSU > indexCDU) {
-        labels.splice(indexCSU, 1);
-        labels.splice(indexCDU, 1);
-      } else {
-        labels.splice(indexCDU, 1);
-        labels.splice(indexCSU, 1);
-      }
-      labels.push('CDU/CSU');
-    }
-    return labels;
-  }
-
-  createDataSetForAccount(labels: string[], dataSet: TopicFrequencyModel[]) {
+  createDataSetForAccount(labels: string[], dataSet: any[]) {
     let values: number[] = [];
 
     for (let month of labels) {
-      let countsOfMonth: number = dataSet.filter(data => {
+      let dataOfMonth = dataSet.filter(data => {
         let date = this.datepipe.transform(new Date(data.year, data.month), 'yyyy-MM-dd');
         return date === month
-      }).map(data => data.frequency)
-        .reduce((prev, curr) => prev + curr, 0);
-      values.push(countsOfMonth);
+      });
+      if (dataOfMonth.length === 1) {
+        values.push(dataOfMonth[0].frequency);
+      } else {
+        values.push(0);
+      }
     }
     return {data: values, fill: false} as ChartData
   }

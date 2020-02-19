@@ -47,7 +47,8 @@ if __name__ == '__main__':
                     result = re.sub(r'/\s\#', ' #', result)
 
                     word_tokens = result.split(' ')
-                    hashtag_and_reference = [w for w in word_tokens if (w.startswith('@') or w.startswith('#'))]
+                    hashtag_and_reference = [w.replace(']', '') for w in word_tokens if (w.startswith('@') or w.startswith('#')) and (len(w) > 1) and ((w.count('@') == 1) or (w.count('#') == 1))]
+                    hashtag_and_reference = [w[:-1] for w in hashtag_and_reference if (w.endswith('@') or w.endswith('#'))]
 
                     # remove stopwords
                     stop_words = set(stopwords.words('english'))
