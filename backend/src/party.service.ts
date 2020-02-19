@@ -112,8 +112,14 @@ export class PartyService {
 
     public async getFiveFactors(parties: string[], timespan: Timespan): Promise<{ party: string, factors: fiveFactorModel}[]> {
         let result: { party: string, factors: fiveFactorModel}[] = [];
+        if (parties.filter(p => p === 'CDU' || p === 'CSU').length === 2) {
+            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForCDUCSU(timespan.startTime.year, timespan.startTime.quarter, timespan.endTime.year, timespan.endTime.quarter).catch(err => console.log('five factor err', err));
+            result.push({party: 'CDU/CSU', factors: partyResult});
+            parties = parties.filter(p => p !== 'CDU' && p !== 'CSU');
+        }
+
         await Promise.all(parties.map(async party => {
-            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForParty(party, timespan.startTime.year, timespan.startTime.quarter, timespan.endTime.year, timespan.endTime.quarter)
+            let partyResult: fiveFactorModel = await this.dao.getFiveFactoresForParty(party, timespan.startTime.year, timespan.startTime.quarter, timespan.endTime.year, timespan.endTime.quarter);
             result.push({party: party, factors: partyResult});
         }));
         return result;

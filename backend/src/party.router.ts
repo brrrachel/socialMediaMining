@@ -27,7 +27,7 @@ router.get('/topics/development', async (req, res, _) => {
 router.get('/fiveFactor', async (req, res, _) => {
     let timespam = JSON.parse(req.query.timespan);
     let list_with_parties = req.query.parties.split(',');
-    const topics = await partyService.getFiveFactors(list_with_parties, timespam);
-    return res.status(200).send(topics);
+    const fiveFactors = await partyService.getFiveFactors(list_with_parties, timespam);
+    return res.status(200).send(fiveFactors);
 });
 
