@@ -1,16 +1,11 @@
 import {fiveFactorModel, PartyDao} from "./party.dao";
-import {Timespan} from "./time-span.model";
+import {getMonthFromDatePoint, Timespan} from "./time-span.model";
 
 let natural = require('natural');
 let TfIdf = natural.TfIdf;
 
 export class PartyService {
     constructor(private readonly dao = new PartyDao()) {
-    }
-
-    public async getTenTweets() {
-        const results = await this.dao.getTenTweets();
-        return results;
     }
 
     public async getTweetCount() {
@@ -20,7 +15,7 @@ export class PartyService {
     public async getTopics(parties: string[], timespan: Timespan): Promise<{ party: string, terms: any[] }[]> {
         let score: any[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForParty(party, timespan.startTime.year, timespan.endTime.year);
+            const tweets = await this.dao.getTweetsForParty(party, timespan.startTime.year, getMonthFromDatePoint(timespan.startTime), timespan.endTime.year, getMonthFromDatePoint(timespan.endTime));
             score.push({party: party, document: this.preprocessTweets(tweets)});
         }));
 
@@ -48,7 +43,7 @@ export class PartyService {
     public async getFrequencyForTerm(term: string, parties: string[], timespan: Timespan): Promise<{ party: string, frequency: any[] }[]> {
         let result: { party: string, frequency: any[] }[] = [];
         await Promise.all(parties.map(async party => {
-            const tweets = await this.dao.getTweetsForPartyPerYear(party, timespan.startTime.year, timespan.endTime.year);
+            const tweets = await this.dao.getTweetsForPartyPerYear(party, timespan.startTime.year, getMonthFromDatePoint(timespan.startTime), timespan.endTime.year, getMonthFromDatePoint(timespan.endTime));
             let frequencies: { year: number, month: number, frequency: number }[] = [];
             for (let set of tweets) {
                 const splittedTokens: string[] = set.tokens.split(' ');

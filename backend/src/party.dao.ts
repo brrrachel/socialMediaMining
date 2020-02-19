@@ -1,5 +1,5 @@
 import pgPromise from 'pg-promise';
-import {DatePoint} from "./time-span.model";
+import {getMonthFromDatePoint} from "./time-span.model";
 
 const pgp = pgPromise({/* Initialization Options */});
 
@@ -15,12 +15,6 @@ const db = pgp(cn);
 
 export class PartyDao {
 
-    public async getTenTweets(): Promise<any> {
-        //language=PostgreSQL
-        const query = 'SELECT * from tweets LIMIT 10';
-        return db.manyOrNone<any>(query);
-    }
-
     public async getTweetCount(): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT pa.name as party, ac.name as account, tc.year, tc.month, tc.total ' +
@@ -30,20 +24,22 @@ export class PartyDao {
         return result.map(toTweetCountDto);
     }
 
-    public async getTweetsForParty(party: string, startYear: number, endYear: number): Promise<any> {
+    public async getTweetsForParty(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
-            'WHERE pa.id = ac.party_id and pt.account_id = ac.id and ' +
-            'pa.name = $1 and $2 <= pt.year and pt.year <= $3';
-        return db.manyOrNone<any>(query, [party, startYear, endYear]);
+            ' WHERE pa.id = ac.party_id and pt.account_id = ac.id and pa.name = $1 and ' +
+            ' ($2 < pt.year or ($2 = pt.year and $3 <= pt.month)) and ' +
+            ' (pt.year < $4 or (pt.year = $4 and pt.month < $5))';
+        return db.manyOrNone<any>(query, [party, startYear, startMonth, endYear, endMonth]);
     }
 
-    public async getTweetsForPartyPerYear(party: string, startYear: number, endYear: number): Promise<any> {
+    public async getTweetsForPartyPerYear(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
         //language=PostgreSQL
         const query = ' SELECT pt.year, pt.month, pt.tokens FROM parties as pa, accounts as ac, processed_tweets as pt ' +
-            'WHERE pa.id = ac.party_id and pt.account_id = ac.id and ' +
-            'pa.name = $1 and $2 <= pt.year and pt.year <= $3';
-        return db.manyOrNone<{year: number, month: number, tokens: string}[]>(query, [party, startYear, endYear]);
+            ' WHERE pa.id = ac.party_id and pt.account_id = ac.id and pa.name = $1 and ' +
+            ' ($2 < pt.year or ($2 = pt.year and $3 <= pt.month)) and ' +
+            ' (pt.year < $4 or (pt.year = $4 and pt.month < $5))';
+        return db.manyOrNone<{year: number, month: number, tokens: string}[]>(query, [party, startYear, startMonth, endYear, endMonth]);
     }
 
     public async getFiveFactoresForParty(party: string, startYear: number, startQuarter: number, endYear: number, endQuarter: number): Promise<any> {
@@ -52,7 +48,7 @@ export class PartyDao {
             ' FROM public.parties as pa, public.accounts as ac, public.big5_emotions as fac ' +
             ' WHERE pa.id = ac.party_id and pa.name = $1 and fac.account_id = ac.id ' +
             ' and ($2 < fac.year or ($2 = fac.year and $3 <= fac.quarter)) ' +
-            ' and (fac.year < $4 or (fac.year = $4 and fac.quarter < $5));'
+            ' and (fac.year < $4 or (fac.year = $4 and fac.quarter < $5))';
         return db.manyOrNone<fiveFactorModel>(query, [party, startYear, startQuarter, endYear, endQuarter]);
     }
 }
