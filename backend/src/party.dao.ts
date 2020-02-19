@@ -61,8 +61,18 @@ export class PartyDao {
             ' FROM public.parties as pa, public.accounts as ac, public.big5_emotions as fac ' +
             ' WHERE pa.id = ac.party_id and pa.name = $1 and fac.account_id = ac.id ' +
             ' and ($2 < fac.year or ($2 = fac.year and $3 <= fac.quarter)) ' +
-            ' and (fac.year < $4 or (fac.year = $4 and fac.quarter < $5))';
+            ' and (fac.year < $4 or (fac.year = $4 and fac.quarter < $5));';
         return db.manyOrNone<fiveFactorModel>(query, [party, startYear, startQuarter, endYear, endQuarter]);
+    }
+
+    public async getFiveFactoresForCDUCSU(startYear: number, startQuarter: number, endYear: number, endQuarter: number): Promise<any> {
+        //language=PostgreSQL
+        const query = ' SELECT avg(fac.agreeableness) as agreeableness, avg(fac.conscientiousness) as conscientiousness, avg(fac.extraversion) as extraversion, avg(fac.neuroticism) as neuroticism, avg(fac.openness) as openness ' +
+            ' FROM public.parties as pa, public.accounts as ac, public.big5_emotions as fac ' +
+            ' WHERE pa.id = ac.party_id and (pa.name = \'CSU\' or pa.name = \'CDU\') and fac.account_id = ac.id ' +
+            ' and ($1 < fac.year or ($1 = fac.year and $2 <= fac.quarter)) ' +
+            ' and (fac.year < $3 or (fac.year = $3 and fac.quarter < $4));';
+        return db.manyOrNone<fiveFactorModel>(query, [startYear, startQuarter, endYear, endQuarter]);
     }
 }
 
