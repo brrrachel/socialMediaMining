@@ -26,6 +26,9 @@ export class FiveFactorComponent implements OnInit, OnChanges {
     title: {
       display: true
     },
+    legend: {
+      onClick: (e) => e.stopPropagation()
+    },
     scale:{
       ticks: {
         suggestedMin: 0,

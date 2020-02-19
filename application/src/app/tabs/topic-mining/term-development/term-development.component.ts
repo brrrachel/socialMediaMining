@@ -24,11 +24,20 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
 
   chartOptions: Chart.ChartOptions = {
     responsive: true,
+    legend: {
+      onClick: (e) => e.stopPropagation()
+    },
     scales: {
       xAxes: [{
         type: 'time',
         time: {
           unit: 'month'
+        }
+      }],
+      yAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: 'likelihood of occurrence over all terms'
         }
       }]
     }
