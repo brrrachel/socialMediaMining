@@ -25,6 +25,29 @@
     margin-top: 2.5px;
   }
 
+  .slider-track-low, .slider-track-high {
+    background-color: #dcdcdc;
+  }
+
+  .slider-tick{
+    &:not(.in-selection) {
+      background-image: linear-gradient(to bottom, #a9a9a9 0, #f5f5f5 100%);
+    }
+
+    &.in-selection {
+      background-image: linear-gradient(to bottom, #464646, #131113 100%);
+    }
+  }
+
+  .slider-handle {
+    border: 2px solid #d2c3c3;
+    background-image: linear-gradient(to bottom, #464646, #131113 100%);
+  }
+
+  .slider-selection.tick-slider-selection {
+    background-image: linear-gradient(to bottom,#8f8394,#373037 100%);
+  }
+
   //.slider-tick-label:not(:nth-child(4n+1)) {
   //  width: 0 !important;
   //}
