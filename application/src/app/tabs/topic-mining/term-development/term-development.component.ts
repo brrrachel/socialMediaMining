@@ -114,4 +114,9 @@ export class TermDevelopmentComponent implements OnInit, OnChanges {
     this.chart.update();
   };
 
+  handleKeyPress(keyboardEvent: KeyboardEvent, searchTerm: string) {
+    if (keyboardEvent.key === 'Enter') {
+      this.handleInputTerm(searchTerm);
+    }
+  }
 }

@@ -1,16 +1,17 @@
-#canvasLeft {
-  width: 50%;
-  height: 50%;
+.party-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-canvas {
-  display: flex;
-  position: absolute;
+.basic-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .basic-element {
-  float: left;
   padding: 20px;
+  width: 100%
 }
 
 .card{

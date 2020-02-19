@@ -1,11 +1,7 @@
 <div class="filter-terms">
-  <form>
-    <div class="form-group">
-      <input type="text" class="form-control" id="searchTerm" #searchTerm
-             placeholder="Enter term">
-    </div>
-    <button type="button" class="btn btn-primary" (click)="handleInputTerm(searchTerm.value)">Submit</button>
-  </form>
+  <input type="text" class="form-control" id="searchTerm" #searchTerm
+         placeholder="Enter term" (keypress)="handleKeyPress($event, searchTerm.value)">
+  <button type="button" class="btn btn-primary" (click)="handleInputTerm(searchTerm.value)">Submit</button>
 </div>
 <div>
   <canvas id="termDevelopment"></canvas>
