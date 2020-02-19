@@ -13,6 +13,7 @@ import {BasicsComponent} from './tabs/basics/basics.component';
 import {TermFrequencyComponent } from './tabs/topic-mining/term-frequency/term-frequency.component';
 import { TermDevelopmentComponent } from './tabs/topic-mining/term-development/term-development.component';
 import {FiveFactorComponent} from "./tabs/five-factor-model/five-factor.component";
+import { EventHintComponent } from './timeline/event-hint/event-hint.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FiveFactorComponent} from "./tabs/five-factor-model/five-factor.componen
     BasicsComponent,
     FiveFactorComponent,
     TermFrequencyComponent,
-    TermDevelopmentComponent
+    TermDevelopmentComponent,
+    EventHintComponent
   ],
   imports: [
     BrowserModule,

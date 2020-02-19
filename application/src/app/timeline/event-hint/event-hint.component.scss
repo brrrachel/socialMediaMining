@@ -1,0 +1,36 @@
+.hint-wrapper {
+  z-index: 1;
+  position: absolute;
+
+  .custom-tooltip {
+    display: none;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: -48px;
+    left: -91px;
+    font-size: 14px;
+    background-color: #e7edf3;
+    border: 1px solid #a6a6a6;
+    border-radius: 10px;
+    padding: 2px;
+    color: #434346;
+
+    .tooltip-text {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .hint {
+    width: 6px;
+    background-color: #939393;
+    border: 2px solid white;
+    height: 30px;
+  }
+
+  .hint:hover ~ .custom-tooltip {
+    display: table;
+  }
+}

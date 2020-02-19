@@ -37,11 +37,27 @@ export class AccessService {
     return this.http.get<{ party: string, frequency: TopicFrequencyModel[] }[]>(
       this.baseUrl + '/topics/development', {params}).toPromise();
   }
+
+  getFiveFactors(parties: string[], selectedTimeSpan: Timespan): Promise<{ party: string, factors: fiveFactorModel}[]>{
+    const params: HttpParams = new HttpParams()
+      .set('parties', parties.toString())
+      .set('timespan', JSON.stringify(selectedTimeSpan));
+    return this.http.get<{ party: string, factors: fiveFactorModel}[]>(
+      this.baseUrl + '/fiveFactor', {params}).toPromise();
+  }
 }
 
-export class TopicFrequencyModel {
+export interface TopicFrequencyModel {
   party: string;
   year: number;
   month: number;
   frequency: number;
+}
+
+export interface fiveFactorModel {
+  agreeableness: number;
+  conscientiousness: number;
+  extraversion: number;
+  neuroticism: number;
+  openness: number;
 }

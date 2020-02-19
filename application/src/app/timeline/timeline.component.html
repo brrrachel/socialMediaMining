@@ -1,4 +1,9 @@
 <div class="slider-wrapper">
+  <div class="hint-container">
+    <ng-container *ngFor="let event of events">
+      <event-hint [hintObject]="event"></event-hint>
+    </ng-container>
+  </div>
   <mv-slider [range]="true" [ticks]="myTicks" [value]="[0, 48]"
              [ticksLabels]="dateLabels" [enabled]="true" (change)="onChange($event)">
   </mv-slider>
