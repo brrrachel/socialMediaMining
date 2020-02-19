@@ -1,5 +1,13 @@
 .slider-wrapper {
   margin: 50px 0;
+
+  .hint-container {
+    position: relative;
+    height: 30px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 :host::ng-deep {
