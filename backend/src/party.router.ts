@@ -19,7 +19,7 @@ router.get('/topics/frequency', async (req, res, _) => {
 router.get('/topics/development', async (req, res, _) => {
     const timespan = JSON.parse(req.query.timespan);
     const list_with_parties = req.query.parties.split(',');
-    const term = req.query.term;
+    const term = req.query.term.toLowerCase().trim();
     const topics = await partyService.getFrequencyForTerm(term, list_with_parties, timespan);
     return res.status(200).send(topics);
 });
