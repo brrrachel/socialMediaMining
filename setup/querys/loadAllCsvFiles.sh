@@ -3,20 +3,20 @@
 # shellcheck disable=SC2121
 set PGCLIENTENCODING=utf-8
 chcp.com 65001
-psql -U postgres -c "\encoding"
+psql -h localhost -U postgres -d postgres -c "\encoding"
 
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" || exit ; pwd -P )
 
 cd "$parent_path" || exit
-psql -U postgres -f "setupTweets.sql"
+psql -h localhost -U postgres -d postgres -f "setupTweets.sql"
 cd "../../data/translations/tweepyTweets_unique" || exit
 for filename in *.csv; do
-  psql -U postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
+  psql -h localhost -U postgres -d postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
 done
 cd "../twintTweets_unique" || exit
 for filename in *.csv; do
-  psql -U postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
+  psql -h localhost -U postgres -d postgres -c "\copy tmp_tweets FROM '${filename}' delimiter ',' csv header"
 done
 cd "$parent_path" || exit
-psql -U postgres -f "finishTweets.sql"
+psql -h localhost -U postgres -d postgres -f "finishTweets.sql"
 

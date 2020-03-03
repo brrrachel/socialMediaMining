@@ -1,3 +1,3 @@
 #!/bin/bash
 
-psql -U postgres -f "dbSetup.sql"
+psql -h localhost -U postgres -d postgres -f "dbSetup.sql"

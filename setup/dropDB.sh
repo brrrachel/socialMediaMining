@@ -1,3 +1,3 @@
 #!/bin/bash
 
-psql -U postgres -f "querys/dropAllTables.sql"
+psql -h localhost -U postgres -d postgres -f "querys/dropAllTables.sql"
