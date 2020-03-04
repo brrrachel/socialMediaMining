@@ -9,15 +9,24 @@ cd application && npm i
 ```
 
 ## Set Up Database
-For the database we are using postgres. Therefore install it in order to run 
+### For Mac/Linux
+To use the database we build and filled you can run it in docker.
+* First Go to docker-psql and unzip the postgres-volume-package.zip
+* Then you need to install docker (if you not already have)
+* Afterwards just start the postgres container with the shellscript ```startDockerDb.sh```
+* The Database should now be up and running. To stop the database just run
 ```
-cd setup && sh setupDB.sh
+docker stop pg-docker
 ```
-to setup the database.
-For reset the database just call:
-```
-cd setup && sh dropDB.sh
-```
+
+### For Windows
+Since docker and Windows don't really get along, we have to take the long way here.
+
+For the database we are using postgres. 
+We need to install Postgres via the windows installer from [here](https://www.postgresql.org/download/windows/).
+
+You need PostgreSQL Server and Command Line Tools.
+After that, just follow steps of the [README in the setup folder](setup/README.md)
 
 ## Application
 To find the underlying code of our application just move into the folder by:
