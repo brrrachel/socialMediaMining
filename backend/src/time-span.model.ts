@@ -16,32 +16,4 @@ export function getMonthFromDatePoint (dp: DatePoint): number {
   return (dp.quarter - 1) * 3 + 1
 }
 
-export function getDateFromTimeSpan (ts: Timespan, endDate?: boolean): Date {
-  if(endDate) {
-    const endMonth = getMonthFromDatePoint(ts.endTime) - 1;
-    const resultDate = new Date(ts.endTime.year, endMonth, 1);
-    resultDate.setDate(resultDate.getDate() - 1);
-    return resultDate;
-  } else {
-    const startMonth = getMonthFromDatePoint(ts.startTime) - 1;
-    return new Date(ts.startTime.year, startMonth, 1)
-  }
-}
-
-export const ALL_DATE_POINTS: DatePoint[] = [
-  {year: 2008, quarter: 1}, {year: 2008, quarter: 2}, {year: 2008, quarter: 3}, {year: 2008, quarter: 4},
-  {year: 2009, quarter: 1}, {year: 2009, quarter: 2}, {year: 2009, quarter: 3}, {year: 2009, quarter: 4},
-  {year: 2010, quarter: 1}, {year: 2010, quarter: 2}, {year: 2010, quarter: 3}, {year: 2010, quarter: 4},
-  {year: 2011, quarter: 1}, {year: 2011, quarter: 2}, {year: 2011, quarter: 3}, {year: 2011, quarter: 4},
-  {year: 2012, quarter: 1}, {year: 2012, quarter: 2}, {year: 2012, quarter: 3}, {year: 2012, quarter: 4},
-  {year: 2013, quarter: 1}, {year: 2013, quarter: 2}, {year: 2013, quarter: 3}, {year: 2013, quarter: 4},
-  {year: 2014, quarter: 1}, {year: 2014, quarter: 2}, {year: 2014, quarter: 3}, {year: 2014, quarter: 4},
-  {year: 2015, quarter: 1}, {year: 2015, quarter: 2}, {year: 2015, quarter: 3}, {year: 2015, quarter: 4},
-  {year: 2016, quarter: 1}, {year: 2016, quarter: 2}, {year: 2016, quarter: 3}, {year: 2016, quarter: 4},
-  {year: 2017, quarter: 1}, {year: 2017, quarter: 2}, {year: 2017, quarter: 3}, {year: 2017, quarter: 4},
-  {year: 2018, quarter: 1}, {year: 2018, quarter: 2}, {year: 2018, quarter: 3}, {year: 2018, quarter: 4},
-  {year: 2019, quarter: 1}, {year: 2019, quarter: 2}, {year: 2019, quarter: 3}, {year: 2019, quarter: 4},
-  {year: 2020, quarter: 1},
-];
-
 export const MAX_TIMESPAN: Timespan = {startTime: {year: 2008, quarter: 1}, endTime: {year: 2020, quarter: 1}};

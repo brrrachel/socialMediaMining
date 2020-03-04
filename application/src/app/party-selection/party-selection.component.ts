@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Parties} from "../models/party.model";
 import {AccessService} from "../services/access.service";
-import {Tweet} from "../models/tweet.model";
 
 @Component({
   selector: 'app-party-selection',
@@ -33,5 +32,4 @@ export class PartySelectionComponent implements OnInit {
     }
     this.selectedPartiesChange.emit(this.selectedParties);
   }
-
 }

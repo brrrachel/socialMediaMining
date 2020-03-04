@@ -1,5 +1,4 @@
 import pgPromise from 'pg-promise';
-import {getMonthFromDatePoint} from "./time-span.model";
 
 const pgp = pgPromise({/* Initialization Options */});
 
@@ -24,17 +23,6 @@ export class PartyDao {
             ' (tc.year < $3 or (tc.year = $3 and tc.month < $4))';
         const result = await db.manyOrNone<any>(query, [startYear, startMonth, endYear, endMonth]);
         return result.map(toTweetCountDto);
-    }
-
-    public async getTweetCountForParty(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {
-        //language=PostgreSQL
-        const query = ' SELECT tc.year, tc.month, sum(tc.total) as total ' +
-            ' FROM tweet_count as tc, parties as pa, accounts as ac ' +
-            ' WHERE pa.id = ac.party_id and tc.account_id = ac.id and pa.name = $1 and' +
-            ' ($2 < tc.year or ($2 = tc.year and $3 <= tc.month)) and ' +
-            ' (tc.year < $4 or (tc.year = $4 and tc.month < $5))' +
-            ' group by tc.year, tc.month';
-        return await db.manyOrNone<{name: string, year: number, month: number, total: number}[]>(query, [party, startYear, startMonth, endYear, endMonth]);
     }
 
     public async getTweetsForParty(party: string, startYear: number, startMonth: number, endYear: number, endMonth: number): Promise<any> {

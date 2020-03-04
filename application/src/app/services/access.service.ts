@@ -1,7 +1,6 @@
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
-import {Tweet} from "../models/tweet.model";
 import {TweetCount} from "../models/tweetCount.model";
 import {Timespan} from "../models/time-span.model";
 
@@ -10,10 +9,6 @@ export class AccessService {
   private baseUrl = environment.endpoint + '/api/parties';
 
   constructor(public http: HttpClient) {
-  }
-
-  getTenTweets(): Promise<Tweet[]> {
-    return this.http.get<Tweet[]>(this.baseUrl).toPromise();
   }
 
   getTweetCount(): Promise<TweetCount[]> {
