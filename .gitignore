@@ -2,3 +2,4 @@
 /backend/node_modules/
 /tweets/experiments/fiveFactorFiles/
 /.idea/
+/docker-psql/postgres-volume/

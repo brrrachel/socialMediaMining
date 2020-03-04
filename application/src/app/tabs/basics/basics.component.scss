@@ -1,0 +1,25 @@
+.party-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.basic-wrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.basic-element {
+  &.chart-wrapper {
+    width: calc(100vw - 54px);
+    height: calc((100vw - 54px) / 2);
+  }
+
+  padding: 20px;
+}
+
+.card {
+  margin: 10px;
+  width: 300px;
+  height: 222px;
+}

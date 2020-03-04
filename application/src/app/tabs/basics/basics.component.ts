@@ -10,7 +10,7 @@ import {createLabels} from "../../shared/helper-functions";
 @Component({
   selector: 'app-basics',
   templateUrl: './basics.component.html',
-  styleUrls: ['./basics.component.css']
+  styleUrls: ['./basics.component.scss']
 })
 export class BasicsComponent implements OnInit, OnChanges {
 
