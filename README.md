@@ -51,3 +51,9 @@ The server runs on port 3000. For communication with the backend use the Access-
 ```
 application/src/app/services/access.service.ts
 ```
+
+## Documentation
+You can find the slides of our presentation here:
+```
+cd documentation
+```
