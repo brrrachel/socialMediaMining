@@ -26,7 +26,7 @@ For the database we are using postgres.
 We need to install Postgres via the windows installer from [here](https://www.postgresql.org/download/windows/).
 
 You need PostgreSQL Server and Command Line Tools.
-After that, just follow steps of the [README in the setup folder](setup/README.md)
+After that, just follow steps of the [README](setup/README.md) in the setup folder.
 
 ## Application
 To find the underlying code of our application just move into the folder by:
@@ -36,7 +36,7 @@ cd application
 There you can also find more information in the [README](application/README.md).
 
 ## Data
-Move into the data folder by `cd tweets`. There you find all collected tweets and the translations. More details in the [README in the data folder](data/README.md).
+Move into the data folder by `cd tweets`. There you find all collected tweets and the translations. More details in the [README](data/README.md) in the data folder.
 
 
 ## Backend

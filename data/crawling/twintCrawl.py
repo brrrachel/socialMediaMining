@@ -15,5 +15,5 @@ for user in userNames:
     c.Location = True
     if user == "FraukePetry":
         c.Until = "2017-10-01"
-    c.Output = './twintTweetsGerman/' + user + '_tweets.csv'
+    c.Output = './../germanTweets/twintTweets/' + user + '_tweets.csv'
     twint.run.Search(c)

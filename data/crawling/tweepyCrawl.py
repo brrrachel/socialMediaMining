@@ -43,7 +43,7 @@ translator = Translator()
 
 for user in userNames:
     print(user)
-    csvFile = open('./tweepyTweetsGerman/' + user + 'Result.csv', 'a')
+    csvFile = open('./../germanTweets/tweepyTweets/' + user + '_tweets.csv', 'a')
     csvWriter = csv.writer(csvFile)
     try:
         csvWriter.writerow(
