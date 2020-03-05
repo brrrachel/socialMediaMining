@@ -6,10 +6,12 @@ import re
 
 table_header = ["Index", "AccountID", "PartyID", "year", "quarter",	"Segment",	"WC",	"Analytic",	"Clout",	"Authentic",	"Tone",	"WPS",	'Sixltr',	'Dic',	'function.',	'pronoun',	'ppron',	'i',	'we',	'you',	'shehe',	'they',	'ipron',	'article',	'prep',	'auxverb',	'adverb',	'conj',	'negate',	'verb',	'adj',	'compare',	'interrog',	'number',	'quant',	'affect',	'posemo',	'negemo',	'anx',	'anger',	'sad',	'social',	'family',	'friend',	'female',	'male',	'cogproc',	'insight',	'cause',	'discrep',	'tentat',	'certain',	'differ',	'percept',	'see',	'hear',	'feel',	'bio',	'body',	'health',	'sexual',	'ingest',	'drives',	'affiliation',	'achieve',	'power',	'reward',	'risk',	'focuspast',	'focuspresent',	'focusfuture',	'relativ',	'motion',	'space',	'time',	'work',	'leisure',	'home',	'money',	'relig',	'death',	'informal',	'swear',	'netspeak',	'assent',	'nonflu',	'filler',	'AllPunc',	'Period',	'Comma',	'Colon',	'SemiC',	'QMark',	'Exclam',	'Dash',	'Quote',	'Apostro',	'Parenth', "OtherP"]
 
+# load liwc results
 data = []
 with open('LIWC_results.csv') as csvFile:
     data = list(csv.reader(csvFile))
 
+# get accounts joined with parties
 connection = psycopg2.connect(user="postgres",
                               password="postgres",
                               host="localhost",
@@ -22,11 +24,13 @@ result = cursor.fetchall()
 
 regexp_account_id = re.compile("\d+(?=_)")
 regexp_timestamp = re.compile("(?<=\d_)[\d\-_]+")
-ids = []
 index = 0
 pretty_results = []
+
+# remove headers
 data.pop(0)
 
+# for each result get year, quarter, account_id and party_id
 for liwc_result in data:
     file_id = str(liwc_result[0]).replace(".txt", "")
     timestamp = regexp_timestamp.search(file_id).group(0).split('_')[0]
@@ -44,7 +48,6 @@ for liwc_result in data:
     account_id = regexp_account_id.match(file_id)
     if account_id:
         try:
-            ids.append(account_id.group(0))
             party_id = result[int(account_id.group(0)) - 1][6]
             fancy_result = [index, account_id.group(0), party_id, year, quarter] + liwc_result[1:]
             index += 1
@@ -52,6 +55,7 @@ for liwc_result in data:
         except IndexError:
             print(result[int(account_id.group(0))-1])
 
+# save preprocessed results
 with open('../../../setup/querys/preprocessed_big5.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(table_header)
