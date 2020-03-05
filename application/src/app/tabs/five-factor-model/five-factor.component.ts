@@ -73,7 +73,6 @@ export class FiveFactorComponent implements OnInit, OnChanges {
     let dataSets: RadarChartData[] = [];
     if(data.length >= 0){
       for (let partyData of data){
-        console.log(partyData);
         let partyName = partyData.party;
         let partyEnum = "";
         if (partyName === "CDU/CSU"){
@@ -95,8 +94,6 @@ export class FiveFactorComponent implements OnInit, OnChanges {
         })
       }
     }
-    console.log(this.selectedYears);
-    console.log(dataSets);
     this.chart.data.datasets = dataSets;
     this.chart.update();
   }

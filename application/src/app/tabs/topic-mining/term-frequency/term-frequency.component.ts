@@ -45,40 +45,36 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
 
     this.chartData.data = [];
 
+    let cduAndCsuInData: Boolean = false;
+    if (data.filter(dataSet => dataSet.party === "CDU" || dataSet.party === "CSU").length === 2) {
+      cduAndCsuInData = true;
+    }
+
     for (let d of data) {
       for (let i = 0; i < limitTopics; i++) {
+
         const term = d.terms[i];
-        let nodeAlreadyExist = this.chartData.data.find(node => node.name == term.term);
+        let nodeAlreadyExist = this.chartData.data.find(node => node.name === term.term);
+
         if (!nodeAlreadyExist) {
           const children: Node[] = [];
 
-          if (d.party === "CSU" || d.party === 'CDU') {
-            if (!children.find(child => child.name.includes('CSU') || child.name.includes('CDU'))) {
-              const parentChild: Node = this.createParentNodeForCsuCdu(data, term);
-              if (parentChild) {
-                children.push(parentChild);
-              }
+          if (cduAndCsuInData) {
+            const parentChild: Node = this.createParentNodeForCsuCdu(data, term);
+            if (parentChild) {
+              children.push(parentChild);
             }
-          } else {
-            children.push({name: d.party, value: term.tfidf, color: getColorForParty(d.party)} as NodeChild);
           }
 
           for (let otherData of data) {
-            if (otherData.party !== "CSU" && otherData.party !== 'CDU') {
+            if ((cduAndCsuInData && otherData.party !== "CSU" && otherData.party !== 'CDU') || (!cduAndCsuInData)) {
               const matchingTerm = otherData.terms.find(element => element.term === term.term);
-              if (d.party !== otherData.party && matchingTerm) {
+              if (matchingTerm) {
                 children.push({
                   name: otherData.party,
                   value: matchingTerm.tfidf,
                   color: getColorForParty(otherData.party)
                 } as NodeChild);
-              }
-            } else {
-              if (!children.find(child => child.name.includes('CSU') || child.name.includes('CDU'))) {
-                const parentChild: Node = this.createParentNodeForCsuCdu(data, term);
-                if (parentChild) {
-                  children.push(parentChild);
-                }
               }
             }
           }
@@ -86,7 +82,6 @@ export class TermFrequencyComponent implements OnInit, OnChanges {
           this.chartData.data.push({name: term.term, children: children, color: "grey"} as NodeParent);
         }
       }
-
     }
 
     this.chartData.data = [...this.chartData.data];
